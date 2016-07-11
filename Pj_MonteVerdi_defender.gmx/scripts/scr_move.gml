@@ -14,12 +14,10 @@ scr_collision(object);
 x+=hspd;
 
 //Stablish velocity and acceleration
-if(currentx-prevx != 0)// && place_meeting(x, y+1, obj_soil))  
-{
+if(currentx-prevx != 0) { // && place_meeting(x, y+1, obj_soil))  {
     if(movespd <30)movespd += acceleration;         //Stablish a maximum speed 
 }
-if(currentx-prevx = 0)
-{
+if(currentx-prevx = 0) {
     movespd = 2;                      //When stop moving go back to original speed 
 }
 
