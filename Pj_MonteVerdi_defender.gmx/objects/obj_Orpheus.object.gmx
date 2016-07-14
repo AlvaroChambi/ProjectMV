@@ -26,12 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize variables
-grav = 1.6;            //Gravity
-movespd = 2;         //Speed
+grav = 1.7;           //Gravity
+movespd_air = 40;     //Speed in the air
+movespd_plt = 17;     //Speed on a platform
 jumpspd = 25;         //Jumps speed
 jump = 0;             //Variable for jump height. 
 hspd = 0;             //Horizontal speed
 vspd = 0;             //Vertical speed
+mxvspd = 300;         //Max falling speed 
 acceleration = 4;     //acceleration
 currentx = x;         //x in that step 
 currenty = y;         //y in that step
@@ -61,15 +63,45 @@ prevy = 0;            //y in the previous step
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currentx = x;             //Where it is
-currenty = y;             //in that same step  
+            <string>if(global.stop) exit;
+
+//Where it is in that same step
+currentx = x;             
+currenty = y;               
+
+//Essencial scrips
 scr_platform_spawning();
 scr_move();
 scr_jump();
+
+//Its position becomes the previous position
 prevx = currentx;
 prevy = currenty;
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
 </string>
           </argument>
         </arguments>
@@ -93,8 +125,10 @@ prevy = currenty;
           <argument>
             <kind>1</kind>
             <string>draw_self();
+
 //Draw how wide will the platform be
-draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, global.platform_width/16, room_height/16, 0, c_white, 0.5);
+draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, platform_width/16, room_height/16, 0, c_white, 0.5);
+
 
 </string>
           </argument>
