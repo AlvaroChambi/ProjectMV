@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>mvy = 0;   //Initailize speed variable
+
 </string>
           </argument>
         </arguments>
@@ -54,8 +55,7 @@
 y+=mvy;                      
 
 //Destroys itself when stopped by a platform
-if(place_meeting(x, y, obj_platform_bullets)) instance_destroy();
-
+if(place_meeting(x, y, obj_platform_bullets)||(place_meeting(x, y-mvy, obj_soil))) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -79,20 +79,9 @@ if(place_meeting(x, y, obj_platform_bullets)) instance_destroy();
           <argument>
             <kind>1</kind>
             <string>draw_self();
-//If it crashes into the roof
-if (place_meeting(x, y, obj_soil)){ 
-    //Makes everything darker
-    draw_background_ext(bck_Game_Over, 0, 0, room_width/sprite_width, room_height/sprite_height, 0, c_white, 0.2) 
+//If it crashes into the roof stops itself
+if (place_meeting(x, y, obj_soil)) mvy = 0;
 
-    //Stops itself
-    mvy=0;                                                                                                                       
-    
-    //Global variable that makes evrthing stop
-    global.stop = true;                                                                                                        
-   
-    //Makes posible to restart the room
-    if(keyboard_check_pressed(vk_enter)) room_restart();                                                                  
-}
 </string>
           </argument>
         </arguments>

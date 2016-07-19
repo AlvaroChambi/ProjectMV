@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize variables
-grav = 1.7;           //Gravity
+grav = 2.3;           //Gravity
 movespd_air = 40;     //Speed in the air
 movespd_plt = 17;     //Speed on a platform
-jumpspd = 25;         //Jumps speed
+jumpspd = 31;         //Jumps speed
 jump = 0;             //Variable for jump height. 
 hspd = 0;             //Horizontal speed
 vspd = 0;             //Vertical speed
@@ -127,7 +127,7 @@ prevy = currenty;
             <string>draw_self();
 
 //Draw how wide will the platform be
-draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, platform_width/16, room_height/16, 0, c_white, 0.5);
+draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, platform_width/32, room_height/32, 0, c_white, 0.5);
 
 
 </string>

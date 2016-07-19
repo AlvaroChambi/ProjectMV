@@ -1,3 +1,3 @@
-hspc=2;
-vspc=2.5;
-bspd=25;
+hspc=2.5
+vspc=4;
+

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>scr_stairs_parameters();
-for(i=2;i&gt;-3;i--) with(instance_create(x-hspc*32*i, y-vspc*32*i, obj_bullet)) mvy=-other.bspd;
+for(i=2;i&gt;-3;i--) with(instance_create(x-hspc*32*i, y-vspc*32*i, obj_bullet)) mvy=-obj_pattern_manager.bspd;
 instance_destroy();
 </string>
           </argument>
