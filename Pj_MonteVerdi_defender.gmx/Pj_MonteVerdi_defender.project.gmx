@@ -9,8 +9,8 @@
     <sprite>sprites\spr_Orpheus</sprite>
     <sprite>sprites\spr_soil</sprite>
     <sprite>sprites\spr_platform</sprite>
-    <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_trail</sprite>
+    <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_platform_intangible</sprite>
   </sprites>
   <backgrounds name="background">

@@ -25,11 +25,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Times hte timeline has been repeated
+            <string>//Create event
+
+//Times hte timeline has been repeated
 runs = 0;
 
 //Set when to create the first pattern
-alarm[0] = random_range(20, 40);
+min_time = 20;
+max_time = 40;
+
+//Width of a vertical grig for the patterns
+cell_width = 64;
+cell_height = 96;
+
+//Space between the walls and the extremes of the object soil  
+void_width = (room_width - obj_soil.sprite_width)/2 
+
+//Space available to spawn patterns
+spawn_width = room_width - void_width 
+
+
+alarm[0] = random_range(min_time, max_time);
 </string>
           </argument>
         </arguments>
@@ -84,15 +100,29 @@ alarm[0] = random_range(20, 40);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.stop) exit;
+            <string>//Alarm 0 event
+
+//Alarm 0 event
+
+if(global.stop) exit;
 
 //Choses a pattern to create
 pattern = irandom(array_length_1d(lst_patterns)-1);
+
 //Creates that pattern
-instance_create(192 + 64 * irandom(26), room_height+112, lst_patterns[pattern]) 
+if(pattern = obj_pattern_line) {
+    pattern_height = cell_height * 4 + global.bullet_height;
+    pattern_width = global.bullet_width;    
+} else {
+    scr_stairs_parameters();
+    pattern_height = vertical_space * cell_height * 4 + global.bullet_height;
+    pattern_width = horizontal_space * cell_width *4 + global.bullet_width;
+}
+
+instance_create(pattern_width/2 + cell_width * irandom(round(spawn_width/cell_width)) + void_width, room_height + pattern_height/2, lst_patterns[pattern]) 
 
 //Restarts the alarm to create another pattern
-alarm[0] = random_range(mntime, mxtime);
+alarm[0] = random_range(min_time, max_time);
 </string>
           </argument>
         </arguments>

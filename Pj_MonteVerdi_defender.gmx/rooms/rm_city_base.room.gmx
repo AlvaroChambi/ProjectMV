@@ -10,8 +10,21 @@
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
-  <code>randomize();                 //Gets random seed
-global.stop = false;                //Create variable to make everything stop</code>
+  <code>//Room create event
+
+randomize();                        //Gets random seed
+global.stop = false;                //Create variable to make everything stop
+
+with(instance_create(-1000, -1000, obj_bullet)){
+    global.bullet_width = sprite_width; 
+    global.bullet_height = sprite_height;
+    instance_destroy();
+    }
+
+with(instance_create(-1000, -1000, obj_platform_Orpheus)){
+    global.platform_width = sprite_width;
+    instance_destroy();
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -25,8 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_stairs_parameters();
-for(i=2;i&gt;-3;i--) with(instance_create(x-hspc*32*i, y-vspc*32*i, obj_bullet)) mvy=-obj_pattern_manager.bspd;
+            <string>//Create event
+
+scr_stairs_parameters();
+
+//Spawns the bullets
+for(bullet_spacing=2; bullet_spacing&gt;-3; bullet_spacing--) with(instance_create(x - horizontal_space * obj_pattern_manager.cell_width/2 * bullet_spacing, y - vertical_space * obj_pattern_manager.cell_height/2 * bullet_spacing, obj_bullet)) movement_y =- obj_pattern_manager.bullet_speed;
+
 instance_destroy();
 </string>
           </argument>

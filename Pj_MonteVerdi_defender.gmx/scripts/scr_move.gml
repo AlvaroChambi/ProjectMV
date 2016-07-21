@@ -3,16 +3,16 @@ key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 
 // React to inputs
-move = key_left + key_right;
-if(place_meeting(x, y+1, obj_platform_Orpheus)) hspd = move * movespd_plt;
-else hspd = move * movespd_air; 
+movement_direction = key_left + key_right;
+if(place_meeting(x, y+1, obj_platform_Orpheus)) {horizontal_speed = movement_direction * movement_speed_platform;}
+else {horizontal_speed = movement_direction * movement_speed_air;} 
 
 //Collision
-object = obj_soil;
-scr_collision(object);
+collision_object = obj_soil;
+scr_collision(collision_object);
 
 //Move
-x+=hspd;
+x+=horizontal_speed;
 
 
 //Stablish velocity and acceleration

@@ -25,20 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize variables
-grav = 2.3;           //Gravity
-movespd_air = 40;     //Speed in the air
-movespd_plt = 17;     //Speed on a platform
-jumpspd = 31;         //Jumps speed
-jump = 0;             //Variable for jump height. 
-hspd = 0;             //Horizontal speed
-vspd = 0;             //Vertical speed
-mxvspd = 300;         //Max falling speed 
-acceleration = 4;     //acceleration
-currentx = x;         //x in that step 
-currenty = y;         //y in that step
-prevx = 0;            //x in the previous step
-prevy = 0;            //y in the previous step
+            <string>//Create event
+
+//Initialize variables
+grav = 2.3;                    //Gravity
+movement_speed_air = 40;       //Speed in the air
+movement_speed_platform = 17;  //Speed on a platform
+jump_speed = 31;               //Jumps speed
+jump = 0;                      //Variable for jump height. 
+horizontal_speed = 0;          //Horizontal speed
+vertical_speed = 0;            //Vertical speed
+max_vertical_speed = 300;      //Max falling speed 
+acceleration = 4;              //acceleration
+current_x = x;                 //x in that step 
+current_y = y;                 //y in that step
+previous_x = 0;                //x in the previous step
+previous_y = 0;                //y in the previous step
 
 
 </string>
@@ -63,11 +65,13 @@ prevy = 0;            //y in the previous step
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.stop) exit;
+            <string>//Step event
+
+if(global.stop) exit;
 
 //Where it is in that same step
-currentx = x;             
-currenty = y;               
+current_x = x;             
+current_y = y;               
 
 //Essencial scrips
 scr_platform_spawning();
@@ -75,8 +79,8 @@ scr_move();
 scr_jump();
 
 //Its position becomes the previous position
-prevx = currentx;
-prevy = currenty;
+previous_x = current_x;
+previous_y = current_y;
 
 
 </string>
@@ -101,7 +105,9 @@ prevy = currenty;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>//If "Ctrl" is pressed 
+
+room_restart(); 
 </string>
           </argument>
         </arguments>
@@ -124,10 +130,12 @@ prevy = currenty;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>//Draw event
+
+draw_self();
 
 //Draw how wide will the platform be
-draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, platform_width/32, room_height/32, 0, c_white, 0.5);
+draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, global.platform_width/32, room_height/32, 0, c_white, 0.5);
 
 
 </string>

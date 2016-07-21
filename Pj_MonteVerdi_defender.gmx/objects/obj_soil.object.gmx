@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>repair_time = noone;    
+            <string>//Create event
+
+//Time it takes to repair itself
+repair_time = noone;    
+
+//Damage taken
 damage = 0;
 </string>
           </argument>
@@ -49,22 +54,24 @@ damage = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(place_meeting(x, y, obj_bullet)){
-    damage++;
-    switch(damage){
+            <string>//Step event
+
+if(place_meeting(x, y, obj_bullet)){              //If hit by a bullet 
+    damage++;                                     //Increase damage
+    switch(damage){                               //Time it will take to repair itself based on the damage taken 
         case 1: repair_time = 10; break;
         case 2: repair_time = 20; break;
         case 3: repair_time = 25; break;
         case 4: case 5: repair_time = 30 break;
-        case 6: 
-            instance_destroy();
-            global.stop = true;
+        case 6:                                   
+            instance_destroy();                   //If it's hit 6 times it breaks  
+            global.stop = true;                   //Stops the game 
         break;
     }
 }
 
-repair_time--;
-if (repair_time = 0) damage = 0;    
+repair_time--;                                    //Reduce time untill it repairs
+if (repair_time = 0) damage = 0;                  //Once its over, it regenerates
 </string>
           </argument>
         </arguments>
@@ -87,7 +94,11 @@ if (repair_time = 0) damage = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>//Draw_event
+
+draw_self();
+
+//Draws red over itself based on the damage taken
 switch(damage){
     case 1: draw_sprite_ext(spr_trail, 0, x, y-16, 61, 1, 0, c_white, 0.3) break;
     case 2: draw_sprite_ext(spr_trail, 0, x, y-16, 61, 1, 0, c_white, 0.5) break;

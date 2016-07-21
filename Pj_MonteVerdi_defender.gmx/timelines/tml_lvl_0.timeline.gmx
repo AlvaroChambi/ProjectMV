@@ -22,8 +22,8 @@
             <string>//Initialize
 
 //Time between patterns
-mntime = 60;
-mxtime = 120;
+min_time = 60;
+max_time = 120;
 
 //Patterns available. First run.
 switch(runs){
@@ -34,7 +34,7 @@ switch(runs){
     break; 
 }
 //Bullet speed
-bspd = 30;
+bullet_speed = 30;
 
 
 </string>
@@ -63,8 +63,8 @@ bspd = 30;
           <argument>
             <kind>1</kind>
             <string>//Time between patterns
-mntime = 40
-mxtime = 90;
+min_time = 40;
+max_time = 90;
 
 
 
@@ -94,10 +94,10 @@ mxtime = 90;
           <argument>
             <kind>1</kind>
             <string>//Time between patterns
-mntime = 30;
-mxtime = 35;
+min_time = 30;
+max_time = 35;
 
-bspd = 30;
+bullet_speed = 30;
 
 
 </string>
@@ -126,11 +126,11 @@ bspd = 30;
           <argument>
             <kind>1</kind>
             <string>//Time between patterns
-mntime = 25;
-mxtime = 30;
+min_time = 25;
+max_time = 30;
 
 //Bullet speed
-bspd = 35;
+bullet_speed = 35;
 </string>
           </argument>
         </arguments>
@@ -157,8 +157,8 @@ bspd = 35;
           <argument>
             <kind>1</kind>
             <string>//Time between patterns
-mntime = 20;
-mxtime = 25;
+min_time = 20;
+max_time = 25;
 
 
 </string>
@@ -187,11 +187,11 @@ mxtime = 25;
           <argument>
             <kind>1</kind>
             <string>//Time between patterns
-mntime = 60;
-mxtime = 120;
+min_time = 60;
+max_time = 120;
 
 //Bullet speed
-bspd = 25;
+bullet_speed = 25;
 
 //Time the timeline has been repeated
 runs++;

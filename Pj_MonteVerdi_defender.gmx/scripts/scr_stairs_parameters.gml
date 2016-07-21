@@ -1,3 +1,3 @@
-hspc=2.5
-vspc=4;
+horizontal_space=2.5
+vertical_space=4;
 

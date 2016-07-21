@@ -1,20 +1,20 @@
 //Preasure!
-if (vspd < mxvspd) vspd += grav;        //Gravity
+if (vertical_speed < max_vertical_speed) vertical_speed += grav;        //Gravity
 
 //get the inputs
 key_jump = keyboard_check(vk_space);
        
 //Can jump?
-if ((prevy == currenty) && (key_jump)){ //If you are pressind the space bar and hadn't move vertically in the last step
-    vspd -= jumpspd                     //Jump                
+if ((previous_y == current_y) && (key_jump)){ //If you are pressind the space bar and hadn't move vertically in the last step
+    vertical_speed -= jump_speed;                 //Jump                
 }                                   
 
 //Collision
-object = obj_soil;         //From now on I'll first asign a variable that contains the object with which I'll calculate collision
-scr_collision(object);     //Then the script will use that object
-object = obj_platform_Orpheus;
-scr_collision(object);     
+collision_object = obj_soil;         //From now on I'll first asign a variable that contains the object with which I'll calculate collision
+scr_collision(collision_object);     //Then the script will use that object
+collision_object = obj_platform_Orpheus;
+scr_collision(collision_object);     
 
 //Move
-y+= vspd
+y+= vertical_speed;
 

@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>t=0;                        //Time variable
+            <string>//Create event
 
-obj_Orpheus.platform_width = sprite_width;
+time=0;                        //Time variable
+
+
  
 </string>
           </argument>
@@ -54,8 +56,8 @@ obj_Orpheus.platform_width = sprite_width;
             <string>if(global.stop) exit;
 
 //Timer
-t++;
-if (t == 45) {instance_destroy()}
+time++;
+if (time == 45) {instance_destroy()}
 </string>
           </argument>
         </arguments>
