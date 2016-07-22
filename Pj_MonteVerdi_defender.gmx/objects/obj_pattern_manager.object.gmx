@@ -34,7 +34,7 @@ runs = 0;
 min_time = 20;
 max_time = 40;
 
-//Width of a vertical grig for the patterns
+//Width of the cell of a grid for the patterns
 cell_width = 64;
 cell_height = 96;
 
