@@ -29,9 +29,9 @@ if(key_platform_spawn_pressed){
 if(platform_spawn_timer > 0) { 
     platform_spawn_timer--;
 }
-
+*/
 //Spawn a platform when the space bar is pressed in mid air
-if(key_platform_spawn_pressed && !place_meeting(x, y+1, obj_platform_Orpheus)) {
+if(key_platform_spawn_pressed && !place_meeting(x, y+1, obj_platform_Orpheus) && jump_available_timer <= 0) {
         
     //Spawn platform
     if(vertical_speed > 0) {vertical_speed = 0;}
@@ -41,9 +41,9 @@ if(key_platform_spawn_pressed && !place_meeting(x, y+1, obj_platform_Orpheus)) {
     instance_create(x, y+sprite_height/2+vertical_separation, obj_platform_bullets) 
     instance_create(x, y+sprite_height/2+vertical_separation, obj_platform_Orpheus) 
 }
-*/
-//spawn platforms by pressing down or up in the D-pad
 
+//spawn platforms by pressing down or up in the D-pad
+/*
 //Inputs
 key_up_pressed = keyboard_check_pressed(vk_up);
 key_down_pressed = keyboard_check_pressed(vk_down);
@@ -58,6 +58,4 @@ if(platform_spawn) {
     
     instance_create(x, y+sprite_height/2+vertical_separation, obj_platform_bullets) 
     instance_create(x, y+sprite_height/2+vertical_separation, obj_platform_Orpheus) 
-}
-
- 
+} 
