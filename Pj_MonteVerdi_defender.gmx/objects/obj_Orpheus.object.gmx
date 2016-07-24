@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Create event
 
-//Initialize variables
+//Initialize movement variables
 grav = 2.3;                    //Gravity
 movement_speed_air = 40;       //Speed in the air
 movement_speed_platform = 17;  //Speed on a platform
@@ -41,6 +41,10 @@ current_x = x;                 //x in that step
 current_y = y;                 //y in that step
 previous_x = 0;                //x in the previous step
 previous_y = 0;                //y in the previous step
+
+//Iniatialize platform spawning variables
+platform_spawn = 0;
+platform_spawn_timer = 0; 
 
 
 </string>

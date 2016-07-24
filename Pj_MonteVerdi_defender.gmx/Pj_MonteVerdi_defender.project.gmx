@@ -39,6 +39,7 @@
     <timeline>timelines\tml_lvl_0</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_test</room>
     <room>rooms\rm_city_base</room>
   </rooms>
   <help>
