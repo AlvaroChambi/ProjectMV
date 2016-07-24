@@ -3,7 +3,7 @@
   <spriteName>spr_bullet</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -59,7 +59,9 @@ if(global.stop) exit;
 y+=movement_y;                      
 
 //Destroys itself when stopped by a platform
-if(place_meeting(x, y, obj_platform_bullets)||(place_meeting(x, y-movement_y, obj_soil))) instance_destroy();
+if(place_meeting(x, y, obj_platform_bullets)||(place_meeting(x, y-movement_y, obj_soil))) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -87,7 +89,7 @@ if(place_meeting(x, y, obj_platform_bullets)||(place_meeting(x, y-movement_y, ob
 draw_self();
 
 //If it crashes into the roof stops itself
-if (place_meeting(x, y, obj_soil)) movement_y = 0;
+if (place_meeting(x, y, obj_soil)) {movement_y = 0;}
 
 </string>
           </argument>

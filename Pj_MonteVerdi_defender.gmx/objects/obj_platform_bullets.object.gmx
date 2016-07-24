@@ -28,6 +28,7 @@
             <string>//Create event
 
 time=0;                        //Time variable
+life_time = 45;                //Steps the platform will exist
 
 
  
@@ -57,7 +58,7 @@ time=0;                        //Time variable
 
 //Timer
 time++;
-if (time == 45) {instance_destroy()}
+if (time == life_time) {instance_destroy()}
 </string>
           </argument>
         </arguments>

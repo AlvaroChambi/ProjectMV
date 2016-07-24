@@ -71,7 +71,7 @@ if(place_meeting(x, y, obj_bullet)){              //If hit by a bullet
 }
 
 repair_time--;                                    //Reduce time untill it repairs
-if (repair_time = 0) damage = 0;                  //Once its over, it regenerates
+if (repair_time = 0) {damage = 0;}                  //Once its over, it regenerates
 </string>
           </argument>
         </arguments>

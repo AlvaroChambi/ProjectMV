@@ -31,13 +31,13 @@ if(global.stop) exit;
 
 //Check if its tangible
 if(instance_exists(obj_Orpheus)){
-    if(round(obj_Orpheus.y+(obj_Orpheus.sprite_height/2))&lt;=round(y-sprite_height/2)) mask_index = spr_platform  //If the players' feet are over the top and it isn`t in the same horizontal space of the platform it becomes solid  
-    else mask_index = spr_platform_intangible;                                                                  //Otherwise it makes its collision mask the one of and non-existing sprite            
+    if(round(obj_Orpheus.y+(obj_Orpheus.sprite_height/2))&lt;=round(y-sprite_height/2)) {mask_index = spr_platform}  //If the players' feet are over the top and it isn`t in the same horizontal space of the platform it becomes solid  
+    else {mask_index = spr_platform_intangible;}                                                                  //Otherwise it makes its collision mask the one of and non-existing sprite            
 }
 
 //Timer
 time++;
-if (time == 45) instance_destroy()
+if (time == life_time) {instance_destroy()}
 </string>
           </argument>
         </arguments>

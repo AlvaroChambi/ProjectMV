@@ -115,8 +115,9 @@ if(pattern = obj_pattern_line) {
     pattern_width = global.bullet_width;    
 } else {
     scr_stairs_parameters();
-    pattern_height = vertical_space * cell_height * 4 + global.bullet_height;
-    pattern_width = horizontal_space * cell_width *4 + global.bullet_width;
+    spaces_between_bullets = 4;
+    pattern_height = vertical_space * cell_height * spaces_between_bullets + global.bullet_height;
+    pattern_width = horizontal_space * cell_width * spaces_between_bullets + global.bullet_width;
 }
 
 instance_create(pattern_width/2 + cell_width * irandom(round(spawn_width/cell_width)) + void_width, room_height + pattern_height/2, lst_patterns[pattern]) 

@@ -3,7 +3,7 @@
   <spriteName>spr_Orpheus</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -135,7 +135,8 @@ room_restart();
 draw_self();
 
 //Draw how wide will the platform be
-draw_sprite_ext(spr_trail, 0, x, y+sprite_height/2+1, global.platform_width/32, room_height/32, 0, c_white, 0.5);
+//draws a red fade with origin in the right top corner of a platform and end in the left side of the platform and in the base of the room
+draw_rectangle_colour(x-global.platform_width/2, y+sprite_height/2, x+global.platform_width/2, room_height, c_white, c_white, c_red, c_red, false);
 
 
 </string>

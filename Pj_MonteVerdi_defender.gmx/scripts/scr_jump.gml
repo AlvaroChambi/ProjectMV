@@ -1,12 +1,12 @@
 //Preasure!
-if (vertical_speed < max_vertical_speed) vertical_speed += grav;        //Gravity
+if (vertical_speed < max_vertical_speed) {vertical_speed += grav;}        //Gravity
 
 //get the inputs
-key_jump = keyboard_check(vk_space);
+key_jump_pressed = keyboard_check(vk_space);
        
 //Can jump?
-if ((previous_y == current_y) && (key_jump)){ //If you are pressind the space bar and hadn't move vertically in the last step
-    vertical_speed -= jump_speed;                 //Jump                
+if ((previous_y == current_y) && (key_jump_pressed)){ //If you are pressind the space bar and hadn't move vertically in the last step
+    vertical_speed -= jump_speed;             //Jump                
 }                                   
 
 //Collision
