@@ -30,7 +30,7 @@
 //Initialize movement variables
 grav = 2.3;                    //Gravity
 movement_speed_air = 40;       //Speed in the air
-movement_speed_platform = 17;  //Speed on a platform
+movement_speed_platform = 20;  //Speed on a platform
 jump_speed = 31;               //Jumps speed
 jump_available_timer = 0;      //Variable to check if it's jumping 
 horizontal_speed = 0;          //Horizontal speed
