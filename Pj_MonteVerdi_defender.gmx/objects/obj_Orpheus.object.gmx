@@ -29,18 +29,29 @@
 
 //Initialize variables
 grav = 2.3;                    //Gravity
-movement_speed_air = 40;       //Speed in the air
-movement_speed_platform = 17;  //Speed on a platform
 jump_speed = 31;               //Jumps speed
 jump = 0;                      //Variable for jump height. 
 horizontal_speed = 0;          //Horizontal speed
 vertical_speed = 0;            //Vertical speed
 max_vertical_speed = 300;      //Max falling speed 
-acceleration = 4;              //acceleration
 current_x = x;                 //x in that step 
 current_y = y;                 //y in that step
 previous_x = 0;                //x in the previous step
 previous_y = 0;                //y in the previous step
+
+//Acceleration / friction
+movement_direction = 0;                     //Side at which to run   
+on_ground = noone;                          //Tells if it's on the ground      
+acceleration_platform = 2;                  //acceleration on the ground
+acceleration_air = 3.5;                     //acceleration in midair
+deceleration_platform = 55;                 //deceleration on the ground
+deceleration_air = 25;                      //deceleration in mid air
+initial_movement_speed = 10;                //initial speed
+movement_speed = initial_movement_speed;    //Speed at which to move 
+
+//diferent max speeds in midair and on the ground
+max_movement_speed_air = 50;                //Max speed in midair
+max_movement_speed_platform = 20;           //Max speed on the ground
 
 
 </string>
