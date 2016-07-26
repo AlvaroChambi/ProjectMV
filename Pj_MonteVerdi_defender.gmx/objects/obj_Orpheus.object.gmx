@@ -28,8 +28,8 @@
             <string>//Initialize variables
 
 //Basic movement varaibles
-grav = 2.3;           //Gravity
-jumpspd = 31;         //Jumps speed
+grav = 3.1;           //Gravity
+jumpspd = 34;         //Jumps speed
 jump = 0;             //Variable for jump height. 
 hspd = 0;             //Horizontal speed
 vspd = 0;             //Vertical speed
@@ -43,17 +43,15 @@ prevy = y;            //y in the previous step
 //Acceleration / friction
 move = 0;                     //Side at which to run   
 on_ground = noone;                          //Tells if it's on the ground      
-acceleration_plat = 2;                  //acceleration on the ground
-acceleration_air = 3.5;                     //acceleration in midair
-deceleration_plat = 55;                 //deceleration on the ground
-deceleration_air = 25;                      //deceleration in mid air
-initial_movespd = 10;                //initial speed
-movespd = initial_movespd;    //Speed at which to move 
 
-//diferent max speeds in midair and on the ground
-mx_movespd_air = 50;                //Max speed in midair
-mx_movespd_plat = 20;           //Max speed on the ground
+reactivity_percent =1;
 
+acceleration = 9;
+deceleration = 20;
+
+max_speed = 40;
+
+hspd = 0;    //Speed at which to move 
 </string>
           </argument>
         </arguments>
