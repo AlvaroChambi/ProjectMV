@@ -14,4 +14,7 @@ if (move != 0) {
     if (sign(hspd + deceleration * -sign(hspd)) == sign(hspd))hspd += deceleration * -sign(hspd); else hspd = 0;
 }
 
+object = obj_soil;
+scr_collision(object); 
+
 x += hspd;
