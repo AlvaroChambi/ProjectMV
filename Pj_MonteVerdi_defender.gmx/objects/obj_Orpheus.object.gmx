@@ -39,19 +39,15 @@ current_y = y;                 //y in that step
 previous_x = 0;                //x in the previous step
 previous_y = 0;                //y in the previous step
 
-//Acceleration / friction
-movement_direction = 0;                     //Side at which to run   
-on_ground = noone;                          //Tells if it's on the ground      
-acceleration_platform = 2;                  //acceleration on the ground
-acceleration_air = 3.5;                     //acceleration in midair
-deceleration_platform = 55;                 //deceleration on the ground
-deceleration_air = 25;                      //deceleration in mid air
-initial_movement_speed = 10;                //initial speed
-movement_speed = initial_movement_speed;    //Speed at which to move 
+on_ground = noone;             //Tells if it's on the ground      
 
-//diferent max speeds in midair and on the ground
-max_movement_speed_air = 50;                //Max speed in midair
-max_movement_speed_platform = 20;           //Max speed on the ground
+//Acceleration / friction
+movement_direction = 0;        //Side at which to run   
+reactivity_percent = 1;        //Added acceleration when turning around
+horizontal_speed = 0;          //Speed at which to move 
+acceleration = 9;              
+deceleration = 20;
+max_speed = 40;
 
 
 </string>
