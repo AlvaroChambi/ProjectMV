@@ -18,7 +18,7 @@ if (!key_right_pressed && !key_left_pressed) {
 if (movement_direction != 0) {
     //if its going in the other direction
     if (sign(movement_direction) != sign(horizontal_speed)) {
-        reactivity_percent = 2; 
+        reactivity_percent = 1.7; 
     } else {
         reactivity_percent = 1;
     }
