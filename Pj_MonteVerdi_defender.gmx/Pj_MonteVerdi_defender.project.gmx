@@ -40,7 +40,6 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_city_base</room>
-    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
