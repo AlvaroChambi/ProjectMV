@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Pixelated Platform Characters</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
@@ -12,6 +14,15 @@
     <sprite>sprites\spr_trail</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_platform_intangible</sprite>
+    <sprite>sprites\Run_1</sprite>
+    <sprite>sprites\Run_2</sprite>
+    <sprite>sprites\Run_3</sprite>
+    <sprite>sprites\InAir_1</sprite>
+    <sprite>sprites\Idle_1</sprite>
+    <sprite>sprites\Idle_2</sprite>
+    <sprite>sprites\Idle_3</sprite>
+    <sprite>sprites\InAir_2</sprite>
+    <sprite>sprites\InAir_3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -23,6 +34,11 @@
     <script>scripts\scr_collision.gml</script>
     <script>scripts\scr_jump.gml</script>
     <script>scripts\scr_stairs_parameters.gml</script>
+    <script>scripts\idle_state.gml</script>
+    <script>scripts\jumping_state.gml</script>
+    <script>scripts\running_state.gml</script>
+    <script>scripts\on_update.gml</script>
+    <script>scripts\on_event_received.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_soil</object>
