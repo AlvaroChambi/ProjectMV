@@ -49,8 +49,12 @@ acceleration = 15;
 deceleration = 20;
 max_speed = 40;
 
+//Platform spawning variables
+jump_available_timer = 0;
 platform_spawn = 0;
-platform_spawn_timer = 30;
+platform_spawn_timer = 0;
+
+
 </string>
           </argument>
         </arguments>
@@ -82,9 +86,9 @@ current_x = x;
 current_y = y;               
 
 //Essencial scrips
-scr_platform_spawning();
 scr_move();
 scr_jump();
+scr_platform_spawning();
 
 //Its position becomes the previous position
 previous_x = current_x;
@@ -166,5 +170,3 @@ draw_rectangle_colour(x-global.platform_width/2, y+sprite_height/2, x+global.pla
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>
 </object>
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help

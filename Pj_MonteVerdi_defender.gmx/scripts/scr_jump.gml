@@ -1,18 +1,23 @@
 //Preasure!
 if (vertical_speed < max_vertical_speed) {vertical_speed += grav;}        //Gravity
 
+on_ground = place_meeting(x, y + 1, obj_platform_Orpheus);
 //get the input
 key_jump_pressed = keyboard_check_pressed(vk_space);
 
 //Can jump?                                    //The idea is to make possible to jump a little while after falling from a platform
-if(previous_y == current_y) {                  //If on the ground: restarts the timer        
-    jump_available_timer = 4;                              
+if(on_ground) {                  //If on the ground: restarts the timer        
+    jump_available_timer = 5;                              
 }
 if(jump_available_timer > 0) {jump_available_timer--;}  
 
 
 if ((jump_available_timer > 0) && (key_jump_pressed)){ //If you are pressind the space bar and are able to jump
-    vertical_speed -= jump_speed;                      //Jump                
+    if (vertical_speed > 0) {
+        vertical_speed -= jump_speed;                      //Jump                
+    } else { 
+        vertical_speed = -jump_speed + grav;
+    }
 }                                   
 
 

@@ -28,7 +28,7 @@
             <string>//Create event
 
 time=0;                        //Time variable
-life_time = 45;                //Steps the platform will exist
+life_time = 15;                //Steps the platform will exist
 
 
  
@@ -57,7 +57,11 @@ life_time = 45;                //Steps the platform will exist
             <string>if(global.stop) exit;
 
 //Timer
+if(place_meeting(x, y+obj_pattern_manager.bullet_speed, obj_bullet)) {
+    time -= 5;
+}
 time++;
+
 if (time == life_time) {instance_destroy()}
 </string>
           </argument>

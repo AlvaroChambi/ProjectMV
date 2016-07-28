@@ -36,7 +36,11 @@ if(instance_exists(obj_Orpheus)){
 }
 
 //Timer
+if(place_meeting(x, y+obj_pattern_manager.bullet_speed, obj_bullet)) {
+    time -= 5;
+}
 time++;
+
 if (time == life_time) {instance_destroy()}
 </string>
           </argument>
