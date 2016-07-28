@@ -39,6 +39,7 @@
     <script>scripts\running_state.gml</script>
     <script>scripts\on_update.gml</script>
     <script>scripts\on_event_received.gml</script>
+    <script>scripts\enter_state.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_soil</object>
@@ -50,14 +51,23 @@
     <object>objects\obj_pattern_stairs_crescendo</object>
     <object>objects\obj_pattern_stairs_decrescendo</object>
     <object>objects\obj_pattern_line</object>
+    <object>objects\vector</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rm_city_base</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_city_base</room>
   </rooms>
+  <constants number="6">
+    <constant name="NULL_EVENT">-1</constant>
+    <constant name="ON_SPACE_PRESSED">4</constant>
+    <constant name="ON_RIGHT_UNPRESSED">3</constant>
+    <constant name="ON_RIGHT_PRESSED">2</constant>
+    <constant name="ON_LEFT_UNPRESSED">1</constant>
+    <constant name="ON_LEFT_PRESSED">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
