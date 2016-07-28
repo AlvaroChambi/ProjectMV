@@ -23,15 +23,16 @@ if (movement_direction != 0) {
         reactivity_percent = 1;
     }
     //Apply  acceleration
-    if (abs(horizontal_speed + acceleration * movement_direction * reactivity_percent) < max_speed) {
+    if (abs(horizontal_speed) < max_speed) {
         horizontal_speed += acceleration * movement_direction * reactivity_percent; 
     } else {
         horizontal_speed = (max_speed) * movement_direction;
     }  
 } else {
     //Decelartion
-    if (sign(horizontal_speed + deceleration * -sign(horizontal_speed)) == sign(horizontal_speed)) {
-        horizontal_speed += deceleration * -sign(horizontal_speed); 
+    new_horizontal_speed = horizontal_speed + deceleration * -sign(horizontal_speed);
+    if (sign(new_horizontal_speed) == sign(horizontal_speed)) {
+         horizontal_speed = new_horizontal_speed;
     } else {
         horizontal_speed = 0;
     }
