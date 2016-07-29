@@ -27,7 +27,6 @@
   <objects name="objects">
     <object>objects\obj_soil</object>
     <object>objects\obj_Orpheus</object>
-    <object>objects\obj_platform_bullets</object>
     <object>objects\obj_platform_Orpheus</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_pattern_manager</object>

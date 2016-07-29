@@ -10,7 +10,6 @@ if(key_platform_spawn_pressed && !place_meeting(x, y+4, obj_platform_Orpheus) &&
     
     platform_vertical_separation = 4;
     
-    instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_bullets) 
     instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
 
     jump_available_timer = 2;
@@ -20,13 +19,9 @@ if(key_platform_spawn_pressed && !place_meeting(x, y+4, obj_platform_Orpheus) &&
 if(key_platform_spawn_hold) {                                   
     //Get which platform are you standing on
     platform_Orpheus_surviving = instance_place(x, y+1, obj_platform_Orpheus);        //It's necesary to make the same for the two kind of platforms
-    platform_bullets_surviving = instance_place(x, y+1, obj_platform_bullets);
     
     //If it has detected a platform it will make its life time longer as long as you hold the space bar 
     if(platform_Orpheus_surviving != noone) {                                         
         platform_Orpheus_surviving.life_time++;
-    }
-    if(platform_bullets_surviving != noone) {
-        platform_bullets_surviving.life_time++;    
     }
 } 

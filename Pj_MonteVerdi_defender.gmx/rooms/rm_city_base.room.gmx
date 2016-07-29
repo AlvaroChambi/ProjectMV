@@ -67,7 +67,7 @@ with(instance_create(-1000, -1000, obj_platform_Orpheus)){
   <instances>
     <instance objName="obj_soil" x="1024" y="16" name="inst_20CDE05C" locked="0" code="" scaleX="61" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Orpheus" x="1056" y="128" name="inst_8C0E0503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform_bullets" x="1056" y="224" name="inst_CFF89DF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="1056" y="224" name="inst_CFF89DF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_Orpheus" x="1056" y="224" name="inst_009ED9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pattern_manager" x="0" y="0" name="inst_FA4B1484" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
