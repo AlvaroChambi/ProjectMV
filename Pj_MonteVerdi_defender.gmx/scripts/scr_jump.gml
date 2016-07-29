@@ -25,7 +25,7 @@ if ((jump_available_timer > 0) && (key_jump_pressed)){ //If you are pressind the
 collision_object = obj_soil;         //From now on I'll first asign a variable that contains the object with which I'll calculate collision
 scr_collision(collision_object);     //Then the script will use that object
 
-if (place_meeting(x, y + vertical_speed + 1, obj_platform_Orpheus) && vertical_speed > 0) {
+if (place_meeting(x, y + vertical_speed, obj_platform_Orpheus) && vertical_speed > 0 && !place_meeting(x, y, obj_platform_Orpheus))  {
     collision_object = obj_platform_Orpheus;
     scr_collision(collision_object);
 }
