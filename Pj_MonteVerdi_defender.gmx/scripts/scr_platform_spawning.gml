@@ -6,7 +6,8 @@ key_platform_spawn_hold = (keyboard_check(vk_space))
 if(key_platform_spawn_pressed && !place_meeting(x, y+4, obj_platform_Orpheus) && jump_available_timer <= 0) {
         
     //Spawn platform
-    if(vertical_speed > 0) {vertical_speed = 0;}
+    if(vertical_speed > 0) {vertical_speed = 0;
+    }
     
     platform_vertical_separation = 4;
     
