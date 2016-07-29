@@ -7,7 +7,7 @@ key_jump_pressed = keyboard_check_pressed(vk_space);
 
 //Can jump?                                    //The idea is to make possible to jump a little while after falling from a platform
 if(on_ground) {                  //If on the ground: restarts the timer        
-    jump_available_timer = 5;                              
+    jump_available_timer = 6;                              
 }
 if(jump_available_timer > 0) {jump_available_timer--;}  
 

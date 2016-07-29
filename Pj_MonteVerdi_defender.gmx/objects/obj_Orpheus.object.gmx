@@ -28,8 +28,8 @@
             <string>//Create event
 
 //Initialize variables
-grav = 2.3;                    //Gravity
-jump_speed = 31;               //Jumps speed
+grav = 4.1;                    //Gravity
+jump_speed = 48;               //Jumps speed
 jump = 0;                      //Variable for jump height. 
 horizontal_speed = 0;          //Horizontal speed
 vertical_speed = 0;            //Vertical speed
@@ -45,9 +45,9 @@ on_ground = noone;             //Tells if it's on the ground
 movement_direction = 0;        //Side at which to run   
 reactivity_percent = 1;        //Added acceleration when turning around
 horizontal_speed = 0;          //Speed at which to move 
-acceleration = 15;              
+acceleration = 5;              
 deceleration = 20;
-max_speed = 40;
+max_speed = 36;
 
 //Platform spawning variables
 jump_available_timer = 0;
