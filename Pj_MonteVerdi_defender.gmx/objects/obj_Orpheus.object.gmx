@@ -29,11 +29,11 @@
 
 //Initialize variables
 grav = 4.1;                    //Gravity
-jump_speed = 48;               //Jumps speed
+jump_speed = 50;               //Jumps speed
 jump = 0;                      //Variable for jump height. 
 horizontal_speed = 0;          //Horizontal speed
 vertical_speed = 0;            //Vertical speed
-max_vertical_speed = 300;      //Max falling speed 
+max_vertical_speed = 70;      //Max falling speed 
 current_x = x;                 //x in that step 
 current_y = y;                 //y in that step
 previous_x = 0;                //x in the previous step

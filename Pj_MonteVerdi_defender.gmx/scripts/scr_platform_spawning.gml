@@ -13,7 +13,7 @@ if(key_platform_spawn_pressed && !place_meeting(x, y+4, obj_platform_Orpheus) &&
     
     instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
 
-    jump_available_timer = 2;
+    jump_available_timer = 10;
 }
 
 //Make a platform infinite if you hold the space bar standing on it
@@ -23,6 +23,6 @@ if(key_platform_spawn_hold) {
     
     //If it has detected a platform it will make its life time longer as long as you hold the space bar 
     if(platform_Orpheus_surviving != noone) {                                         
-        platform_Orpheus_surviving.life_time++;
+        platform_Orpheus_surviving.time--;
     }
 } 
