@@ -29,10 +29,8 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_move.gml</script>
     <script>scripts\scr_platform_spawning.gml</script>
-    <script>scripts\scr_collision.gml</script>
-    <script>scripts\scr_jump.gml</script>
+    <script>scripts\find_collision.gml</script>
     <script>scripts\scr_stairs_parameters.gml</script>
     <script>scripts\idle_state.gml</script>
     <script>scripts\jumping_state.gml</script>
@@ -60,8 +58,18 @@
     <room>rooms\rm_test</room>
     <room>rooms\rm_city_base</room>
   </rooms>
-  <constants number="6">
-    <constant name="NULL_EVENT">-1</constant>
+  <constants number="16">
+    <constant name="HORIZONTAL_COLLISION">12</constant>
+    <constant name="NONE">-10</constant>
+    <constant name="CEILING_COLLISION">11</constant>
+    <constant name="GROUND_COLLISION">10</constant>
+    <constant name="OFF">0</constant>
+    <constant name="UP">-1</constant>
+    <constant name="RIGHT">1</constant>
+    <constant name="LEFT">-1</constant>
+    <constant name="ON_ORPHEUS_STOPPED">-3</constant>
+    <constant name="ON_GROUND_COLLISION">-2</constant>
+    <constant name="ON_ENTER_STATE">-1</constant>
     <constant name="ON_SPACE_PRESSED">4</constant>
     <constant name="ON_RIGHT_UNPRESSED">3</constant>
     <constant name="ON_RIGHT_PRESSED">2</constant>

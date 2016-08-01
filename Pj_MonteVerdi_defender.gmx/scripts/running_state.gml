@@ -2,29 +2,30 @@ event = argument0;
 
 switch( event ) {
     case ON_LEFT_PRESSED:
-        impulse_vector.x = -1;
+        impulse_vector.x = LEFT;
         if ( horizontal_speed > 0 ) {
             impulse_vector.x *= reactivity_percent;
         }
         break;
     case ON_RIGHT_PRESSED:
-        impulse_vector.x = 1;
+        impulse_vector.x = RIGHT;
         if( horizontal_speed < 0 ) {
             impulse_vector.x *= reactivity_percent;
         }
         break;
     case ON_LEFT_UNPRESSED:
-        impulse_vector.x = 0;
-        friction_vector.x = 1;
-        break;
     case ON_RIGHT_UNPRESSED:
-        impulse_vector.x = 0;
-        friction_vector.x = -1
+        friction_vector.x = -impulse_vector.x;
+        impulse_vector.x = OFF;
         break;
     case ON_SPACE_PRESSED:
-        impulse_vector.y = -1;
+        impulse_vector.y = UP;
+        enter_state( OrpheusState.JUMPING_STATE );
         break;
-    case NULL_EVENT:
-        sprite_index = Run_1;
+    case ON_ORPHEUS_STOPPED:
+        enter_state( OrpheusState.IDLE_STATE );
+        break;
+    case ON_ENTER_STATE:
+        sprite_index = Run_2;
         break;
 }
