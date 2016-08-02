@@ -3,12 +3,14 @@ event = argument0;
 switch( event ) {
     case ON_LEFT_PRESSED:
         impulse_vector.x = LEFT;
+        image_xscale = -abs( image_xscale );
         if ( horizontal_speed > 0 ) {
             impulse_vector.x *= reactivity_percent;
         }
         break;
     case ON_RIGHT_PRESSED:
         impulse_vector.x = RIGHT;
+        image_xscale = abs( image_xscale );
         if( horizontal_speed < 0 ) {
             impulse_vector.x *= reactivity_percent;
         }

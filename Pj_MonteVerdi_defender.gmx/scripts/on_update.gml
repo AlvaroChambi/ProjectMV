@@ -4,29 +4,16 @@ impulse_modifier = acceleration * impulse_vector.x;
 friction_modifier = abs( horizontal_speed ) * terrain_friction * friction_vector.x;
 
 new_horizontal_speed = horizontal_speed + impulse_modifier + friction_modifier; 
-
-if( abs( new_horizontal_speed ) <= 3 ) {
+if( abs( new_horizontal_speed ) <= max_horizontal_speed*terrain_friction ) {
     new_horizontal_speed = 0;
 }
 
-/*
-if( friction_vector.x != 0 && horizontal_speed != 0 ) {
-    if( sign( horizontal_speed ) != sign( new_horizontal_speed ) ) {
-        new_horizontal_speed = 0;
-        friction_vector.x = OFF;
-    }    
-}*/
-
-if( abs( new_horizontal_speed ) <= max_speed ) {
+if( abs( new_horizontal_speed ) <= max_horizontal_speed ) {
     horizontal_speed = new_horizontal_speed;
 }
 
-if( abs( vertical_speed ) < max_speed ) {
-    vertical_speed = vertical_speed + acceleration * impulse_vector.y;
-    vertical_speed += grav;
-} else {
-    impulse_vector.y = 0;
-    vertical_speed = 0;
+if( vertical_speed < max_vertical_speed ) {
+    vertical_speed += gravity_acceleration;
 }
 
 //update speed on collision

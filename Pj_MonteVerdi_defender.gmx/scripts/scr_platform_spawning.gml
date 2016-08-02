@@ -1,7 +1,9 @@
 //Checks if you have pulsed "Z" and are in midair
-if (keyboard_check_pressed(ord("Z")) && !place_meeting(x, y-1, obj_soil)) {  
+if ( keyboard_check_pressed( ord( "Z" ) ) && !place_meeting (x, y-1, obj_soil) ) {  
     
-    if(vertical_speed > 0) {vertical_speed = 0;}
+    if(vertical_speed > 0) {
+        vertical_speed = 0;
+    }
     
     //Creates the platforms
     vertical_separation = 4;

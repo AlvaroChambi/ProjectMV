@@ -11,58 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>enum OrpheusState {
-    IDLE_STATE,
-    RUNNING_STATE,
-    JUMPING_STATE,
-    DIVING_STATE
-}
-
-impulse_vector = instance_create( 0, 0, vector );
-friction_vector = instance_create( 0, 0, vector );
-
-terrain_friction = 0.25;
-
-state = OrpheusState.IDLE_STATE;
-
-//Initialize variables
-grav = 2.3;                    //Gravity
-jump_speed = 61;               //Jumps speed
-jump = 0;                      //Variable for jump height. 
-horizontal_speed = 0;          //Horizontal speed
-vertical_speed = 0;            //Vertical speed
-max_vertical_speed = 300;      //Max falling speed 
-current_x = x;                 //x in that step 
-current_y = y;                 //y in that step
-previous_x = 0;                //x in the previous step
-previous_y = 0;                //y in the previous step
-
-on_ground = noone;             //Tells if it's on the ground      
-
-//Acceleration / friction
-movement_direction = 0;        //Side at which to run   
-reactivity_percent = 1;        //Added acceleration when turning around
-horizontal_speed = 0;          //Speed at which to move 
-acceleration = 15;              
-deceleration = 10;
-max_speed = 40;
-
-
-</string>
+            <kind>9</kind>
+            <script>on_orpheus_created</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
