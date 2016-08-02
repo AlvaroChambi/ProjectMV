@@ -28,7 +28,8 @@
             <string>enum OrpheusState {
     IDLE_STATE,
     RUNNING_STATE,
-    JUMPING_STATE
+    JUMPING_STATE,
+    DIVING_STATE
 }
 
 impulse_vector = instance_create( 0, 0, vector );
