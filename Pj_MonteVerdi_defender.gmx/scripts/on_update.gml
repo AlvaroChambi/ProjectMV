@@ -1,22 +1,21 @@
-if( impulse_vector.x != 0 ) {
-    friction_vector.x = -impulse_vector.x;
-}
+friction_vector.x = -sign( horizontal_speed );
 
 impulse_modifier = acceleration * impulse_vector.x;
-friction_modifier = deceleration * friction_vector.x;
+friction_modifier = abs( horizontal_speed ) * terrain_friction * friction_vector.x;
 
 new_horizontal_speed = horizontal_speed + impulse_modifier + friction_modifier; 
 
-if( impulse_vector.x == 0 && friction_vector.x == 0 ) {
+if( abs( new_horizontal_speed ) <= 3 ) {
     new_horizontal_speed = 0;
 }
 
+/*
 if( friction_vector.x != 0 && horizontal_speed != 0 ) {
     if( sign( horizontal_speed ) != sign( new_horizontal_speed ) ) {
         new_horizontal_speed = 0;
         friction_vector.x = OFF;
     }    
-}
+}*/
 
 if( abs( new_horizontal_speed ) <= max_speed ) {
     horizontal_speed = new_horizontal_speed;
