@@ -40,5 +40,13 @@ if( collision == GROUND_COLLISION ) {
 if( horizontal_speed == 0 ) {
     on_event_received( ON_ORPHEUS_STOPPED );
 }
+
+if( impulse_vector.x == 0 ) {
+    if( keyboard_check( vk_left ) ) {
+        on_event_received( ON_LEFT_PRESSED );
+    } else if( keyboard_check( vk_right ) ) {
+        on_event_received( ON_RIGHT_PRESSED );
+    }
+}
 x += horizontal_speed;
 y += vertical_speed;
