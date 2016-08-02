@@ -1,3 +1,7 @@
+if( impulse_vector.x != 0 ) {
+    friction_vector.x = -impulse_vector.x;
+}
+
 impulse_modifier = acceleration * impulse_vector.x;
 friction_modifier = deceleration * friction_vector.x;
 
@@ -7,7 +11,7 @@ if( impulse_vector.x == 0 && friction_vector.x == 0 ) {
     new_horizontal_speed = 0;
 }
 
-if( friction_vector.x != 0 ) {
+if( friction_vector.x != 0 && horizontal_speed != 0 ) {
     if( sign( horizontal_speed ) != sign( new_horizontal_speed ) ) {
         new_horizontal_speed = 0;
         friction_vector.x = OFF;

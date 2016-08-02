@@ -15,7 +15,6 @@ switch( event ) {
         break;
     case ON_LEFT_UNPRESSED:
     case ON_RIGHT_UNPRESSED:
-        friction_vector.x = -impulse_vector.x;
         impulse_vector.x = OFF;
         break;
     case ON_SPACE_PRESSED:

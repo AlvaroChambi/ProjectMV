@@ -56,7 +56,7 @@ movement_direction = 0;        //Side at which to run
 reactivity_percent = 1;        //Added acceleration when turning around
 horizontal_speed = 0;          //Speed at which to move 
 acceleration = 15;              
-deceleration = 20;
+deceleration = 5;
 max_speed = 40;
 
 

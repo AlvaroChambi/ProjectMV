@@ -15,5 +15,7 @@ switch( event ) {
         break;
     case ON_ENTER_STATE:
         sprite_index = Idle_1;
+        impulse_vector.x = OFF;
+        friction_vector.x = OFF;
         break;
 }
