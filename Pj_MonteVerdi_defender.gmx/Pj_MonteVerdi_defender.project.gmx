@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Pixelated Platform Characters</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
@@ -12,17 +14,32 @@
     <sprite>sprites\spr_trail</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_platform_intangible</sprite>
+    <sprite>sprites\Run_1</sprite>
+    <sprite>sprites\Run_2</sprite>
+    <sprite>sprites\Run_3</sprite>
+    <sprite>sprites\InAir_1</sprite>
+    <sprite>sprites\Idle_1</sprite>
+    <sprite>sprites\Idle_2</sprite>
+    <sprite>sprites\Idle_3</sprite>
+    <sprite>sprites\InAir_2</sprite>
+    <sprite>sprites\InAir_3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_move.gml</script>
     <script>scripts\scr_platform_spawning.gml</script>
-    <script>scripts\scr_collision.gml</script>
-    <script>scripts\scr_jump.gml</script>
+    <script>scripts\find_collision.gml</script>
     <script>scripts\scr_stairs_parameters.gml</script>
+    <script>scripts\idle_state.gml</script>
+    <script>scripts\jumping_state.gml</script>
+    <script>scripts\running_state.gml</script>
+    <script>scripts\on_update.gml</script>
+    <script>scripts\on_event_received.gml</script>
+    <script>scripts\enter_state.gml</script>
+    <script>scripts\diving_state.gml</script>
+    <script>scripts\on_orpheus_created.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_soil</object>
@@ -33,14 +50,33 @@
     <object>objects\obj_pattern_stairs_crescendo</object>
     <object>objects\obj_pattern_stairs_decrescendo</object>
     <object>objects\obj_pattern_line</object>
+    <object>objects\vector</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rm_city_base</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_city_base</room>
   </rooms>
+  <constants number="16">
+    <constant name="HORIZONTAL_COLLISION">12</constant>
+    <constant name="NONE">-10</constant>
+    <constant name="CEILING_COLLISION">11</constant>
+    <constant name="GROUND_COLLISION">10</constant>
+    <constant name="OFF">0</constant>
+    <constant name="UP">-1</constant>
+    <constant name="RIGHT">1</constant>
+    <constant name="LEFT">-1</constant>
+    <constant name="ON_ORPHEUS_STOPPED">-3</constant>
+    <constant name="ON_GROUND_COLLISION">-2</constant>
+    <constant name="ON_ENTER_STATE">-1</constant>
+    <constant name="ON_SPACE_PRESSED">4</constant>
+    <constant name="ON_RIGHT_UNPRESSED">3</constant>
+    <constant name="ON_RIGHT_PRESSED">2</constant>
+    <constant name="ON_LEFT_UNPRESSED">1</constant>
+    <constant name="ON_LEFT_PRESSED">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
