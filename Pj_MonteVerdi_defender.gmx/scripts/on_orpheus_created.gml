@@ -10,6 +10,7 @@ impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );
 
 terrain_friction = 0.25;
+
 //Added acceleration when turning around
 reactivity_percent = 1.5;
 
@@ -23,3 +24,8 @@ vertical_speed = 0;
 
 max_vertical_speed = 40;
 max_horizontal_speed = 40;  
+
+//Platform spawning variables
+jump_available_timer = 0;
+platform_spawn = 0;
+platform_spawn_timer = 0;

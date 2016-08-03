@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //Inputs
 key_platform_spawn_pressed = (keyboard_check_pressed(vk_space))
 key_platform_spawn_hold = (keyboard_check(vk_space))
@@ -11,15 +11,7 @@ if(key_platform_spawn_pressed && !place_meeting(x, y+4, obj_platform_Orpheus) &&
     }
     
     platform_vertical_separation = 4;
-=======
-//Checks if you have pulsed "Z" and are in midair
-if ( keyboard_check_pressed( ord( "Z" ) ) && !place_meeting (x, y-1, obj_soil) ) {  
-    
-    if(vertical_speed > 0) {
-        vertical_speed = 0;
-    }
->>>>>>> a9806d741bf4fcaedd48bd1d88f0f9fbbbad66fe
-    
+     
     instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
 
     jump_available_timer = 10;
