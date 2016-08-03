@@ -2,12 +2,12 @@ event = argument0;
 
 switch( event ) {
     case ON_LEFT_PRESSED:
-        impulse_vector.x = LEFT;
+        ds_map_replace( impulse_vector, "x_axis", LEFT );;
         image_xscale = -abs( image_xscale );
         enter_state( OrpheusState.DIVING_STATE );
         break;
     case ON_RIGHT_PRESSED:
-        impulse_vector.x = RIGHT;
+        ds_map_replace( impulse_vector, "x_axis", RIGHT );
         image_xscale = abs( image_xscale );
         enter_state( OrpheusState.DIVING_STATE );
         break;

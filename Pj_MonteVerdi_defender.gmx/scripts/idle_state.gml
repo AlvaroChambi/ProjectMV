@@ -2,12 +2,12 @@ event = argument0;
 
 switch( event ) {
     case ON_LEFT_PRESSED:
-        impulse_vector.x = LEFT;
+        ds_map_replace( impulse_vector, "x_axis", LEFT );
         image_xscale = -abs( image_xscale );
         enter_state( OrpheusState.RUNNING_STATE );
         break;
     case ON_RIGHT_PRESSED:
-        impulse_vector.x = RIGHT;
+        ds_map_replace( impulse_vector, "x_axis", RIGHT );
         image_xscale = abs( image_xscale );
         enter_state( OrpheusState.RUNNING_STATE );
         break;
@@ -17,7 +17,7 @@ switch( event ) {
         break;
     case ON_ENTER_STATE:
         sprite_index = Idle_1;
-        impulse_vector.x = OFF;
-        friction_vector.x = OFF;
+        ds_map_replace( impulse_vector, "x_axis", OFF );
+        ds_map_replace( friction_vector, "x_axis", OFF );
         break;
 }
