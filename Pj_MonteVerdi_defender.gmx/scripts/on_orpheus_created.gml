@@ -6,8 +6,14 @@ enum OrpheusState {
 }
 state = OrpheusState.IDLE_STATE;
 
-impulse_vector = instance_create( 0, 0, vector );
-friction_vector = instance_create( 0, 0, vector );
+impulse_vector = ds_map_create();
+ds_map_add( impulse_vector, "x_axis", OFF );
+ds_map_add( impulse_vector, "x_axis", OFF );
+
+friction_vector = ds_map_create();
+ds_map_add( friction_vector, "x_axis", OFF );
+ds_map_add( friction_vector, "x_axis", OFF );
+
 
 terrain_friction = 0.25;
 //Added acceleration when turning around
