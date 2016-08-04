@@ -29,3 +29,8 @@ max_horizontal_speed = 40;
 jump_available_timer = 0;
 platform_spawn = 0;
 platform_spawn_timer = 0;
+
+//Collision variables
+vertical_collision = OFF;
+horizontal_collision = OFF;
+collision = OFF;

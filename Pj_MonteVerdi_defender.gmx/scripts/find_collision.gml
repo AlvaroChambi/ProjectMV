@@ -1,25 +1,27 @@
-collision_object = argument0;
-
 ///Collsion(object)
 //Vertical colision
 if( place_meeting ( x, y+vertical_speed, collision_object ) ) {
-    while ( !place_meeting (x, y+sign(vertical_speed ), collision_object) ) {
-        y += sign( vertical_speed );
+    switch( sign( vertical_speed ) ) {
+        case 1:
+            vertical_collision = "down";
+            break;
+        case -1:
+            vertical_collision = "up";
+            break;
     }
- 
-    if( vertical_speed > 0 ) {
-        vertical_speed = 0;
-        return GROUND_COLLISION;
-    } else {
-        vertical_speed = 0;
-    }
+} else {
+    vertical_collision = OFF;
 }
 //Horizontal colision
 if( place_meeting ( x+horizontal_speed, y, collision_object ) ) {
-    while ( !place_meeting (x+sign(horizontal_speed ), y, collision_object ) ) {
-        x+=sign(horizontal_speed);
-    }
-    
-    horizontal_speed = 0;
-    return HORIZONTAL_COLLISION;
+    switch( sign( horizontal_speed ) ) {
+        case 1:
+            horizontal_collision = "right";
+            break;
+        case -1:
+            horizontal_collision = "left";
+            break;
+    }       
+} else {
+    horizontal_collision = OFF;
 }
