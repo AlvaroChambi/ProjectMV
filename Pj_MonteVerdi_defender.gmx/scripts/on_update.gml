@@ -24,7 +24,7 @@ if( platform_spawn ) {
 }
 
 //update speed on collision
-collision = find_collision( obj_soil );
+collision = find_collision( obj_city_ground );
 if( collision == GROUND_COLLISION ) {
     on_event_received( ON_GROUND_COLLISION );
 }
