@@ -35,10 +35,10 @@
     <script>scripts\idle_state.gml</script>
     <script>scripts\jumping_state.gml</script>
     <script>scripts\running_state.gml</script>
+    <script>scripts\diving_state.gml</script>
     <script>scripts\on_update.gml</script>
     <script>scripts\on_event_received.gml</script>
     <script>scripts\enter_state.gml</script>
-    <script>scripts\diving_state.gml</script>
     <script>scripts\on_orpheus_created.gml</script>
   </scripts>
   <objects name="objects">

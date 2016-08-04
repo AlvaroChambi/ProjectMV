@@ -16,11 +16,24 @@ if( vertical_speed < max_vertical_speed ) {
     vertical_speed += gravity_acceleration;
 }
 
+//Spawn platform
+if( platform_spawn ) {
+    platform_vertical_separation = 4;
+    instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
+    platform_spawn = false;
+}
+
 //update speed on collision
 collision = find_collision( obj_soil );
-
 if( collision == GROUND_COLLISION ) {
     on_event_received( ON_GROUND_COLLISION );
+}
+
+collision = find_collision( obj_platform_Orpheus );
+if( vertical_speed > 0 && !place_meeting( x, y, obj_platform_Orpheus ) ) {
+    if( collision == GROUND_COLLISION ) {
+        on_event_received( ON_GROUND_COLLISION );
+    }
 }
 
 if( horizontal_speed == 0 ) {
