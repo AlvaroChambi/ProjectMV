@@ -29,8 +29,8 @@ if( collision == GROUND_COLLISION ) {
     on_event_received( ON_GROUND_COLLISION );
 }
 
-collision = find_collision( obj_platform_Orpheus );
 if( vertical_speed > 0 && !place_meeting( x, y, obj_platform_Orpheus ) ) {
+    collision = find_collision( obj_platform_Orpheus );
     if( collision == GROUND_COLLISION ) {
         on_event_received( ON_GROUND_COLLISION );
     }
