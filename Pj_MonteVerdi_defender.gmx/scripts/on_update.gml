@@ -27,20 +27,20 @@ if( platform_spawn ) {
 collision_object = obj_city_ground;
 find_collision( collision_object );
 collide();
-if( collision == GROUND_COLLISION ) {
+if( vertical_collision == "down" ) {
     on_event_received( ON_GROUND_COLLISION );
+} else {
+    on_event_received( ON_FALLING );
 }
 
 collision_object = obj_platform_Orpheus;
 find_collision( collision_object );
-if( vertical_collision == "down" && !place_meeting(x, y, collision_object)) {
+if( vertical_collision == "down" && !place_meeting( x, y, collision_object ) ) {
     horizontal_collision = OFF;
     collide();    
-}
-
-if( collision == GROUND_COLLISION ) {
     on_event_received( ON_GROUND_COLLISION );
 }
+
 
 
 if( horizontal_speed == 0 ) {
