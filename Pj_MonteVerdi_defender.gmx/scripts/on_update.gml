@@ -19,10 +19,17 @@ if( vertical_speed < max_vertical_speed ) {
 //Spawn platform
 if( platform_spawn ) {
     platform_vertical_separation = 4;
-    instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
+    new_platform = instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
     platform_spawn = false;
 }
-
+if( sustain_platform ) {
+    with( new_platform ) {
+    time--;
+    }
+    if( keyboard_check_released( vk_space ) ) {
+        sustain_platform = false;
+    }
+}
 //update speed on collision
 collision_object = obj_city_ground;
 find_collision( collision_object );
@@ -40,7 +47,6 @@ if( vertical_collision == "down" && !place_meeting( x, y, collision_object ) ) {
     collide();    
     on_event_received( ON_GROUND_COLLISION );
 }
-
 
 
 if( horizontal_speed == 0 ) {
