@@ -29,7 +29,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_platform_spawning.gml</script>
     <script>scripts\find_collision.gml</script>
     <script>scripts\collide.gml</script>
     <script>scripts\scr_stairs_parameters.gml</script>

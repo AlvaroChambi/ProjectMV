@@ -6,6 +6,13 @@ enum OrpheusState {
 }
 state = OrpheusState.IDLE_STATE;
 
+enum CollisionSide {
+    up,
+    down,
+    right,
+    left
+}
+
 impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );
 
@@ -26,9 +33,7 @@ max_vertical_speed = 40;
 max_horizontal_speed = 40;  
 
 //Platform spawning variables
-jump_available_timer = 0;
 platform_spawn = 0;
-platform_spawn_timer = 0;
 sustain_platform = false;
 
 //Collision variables
