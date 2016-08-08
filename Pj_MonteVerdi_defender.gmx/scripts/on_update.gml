@@ -16,12 +16,38 @@ if( vertical_speed < max_vertical_speed ) {
     vertical_speed += gravity_acceleration;
 }
 
+//Spawn platform
+if( platform_spawn ) {
+    platform_vertical_separation = 4;
+    new_platform = instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
+    platform_spawn = false;
+}
+if( sustain_platform ) {
+    with( new_platform ) {
+    time--;
+    }
+    if( keyboard_check_released( vk_space ) ) {
+        sustain_platform = false;
+    }
+}
 //update speed on collision
-collision = find_collision( obj_soil );
+collision_object = obj_city_ground;
+find_collision( collision_object );
+collide();
+if( vertical_collision == CollisionSide.down ) {
+    on_event_received( ON_GROUND_COLLISION );
+} else {
+    on_event_received( ON_FALLING );
+}
 
-if( collision == GROUND_COLLISION ) {
+collision_object = obj_platform_Orpheus;
+find_collision( collision_object );
+if( vertical_collision == CollisionSide.down && !place_meeting( x, y, collision_object ) ) {
+    horizontal_collision = noone;
+    collide();    
     on_event_received( ON_GROUND_COLLISION );
 }
+
 
 if( horizontal_speed == 0 ) {
     on_event_received( ON_ORPHEUS_STOPPED );

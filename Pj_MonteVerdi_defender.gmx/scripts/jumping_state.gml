@@ -11,6 +11,10 @@ switch( event ) {
         image_xscale = abs( image_xscale );
         enter_state( OrpheusState.DIVING_STATE );
         break;
+    case ON_SPACE_PRESSED:
+        platform_spawn = true;
+        sustain_platform = true;
+        break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.IDLE_STATE );
         break;

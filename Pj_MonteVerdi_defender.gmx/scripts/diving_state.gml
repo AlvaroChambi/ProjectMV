@@ -19,6 +19,10 @@ switch( event ) {
     case ON_RIGHT_UNPRESSED:
         impulse_vector.x = OFF;
         break;
+    case ON_SPACE_PRESSED:
+        platform_spawn = true;
+        sustain_platform = true;
+        break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.RUNNING_STATE );
         break;
