@@ -17,18 +17,13 @@ if( vertical_speed < max_vertical_speed ) {
 }
 
 //Spawn platform
-if( platform_spawn ) {
-    platform_vertical_separation = 4;
-    new_platform = instance_create(x, y+sprite_height/2+platform_vertical_separation, obj_platform_Orpheus) 
-    platform_spawn = false;
+if( new_platform != OFF && !place_meeting( x, y+1, new_platform )) {
+    new_platform.sustain = false;
+    new_platform = OFF;
 }
-if( sustain_platform ) {
-    with( new_platform ) {
-    time--;
-    }
-    if( keyboard_check_released( vk_space ) ) {
-        sustain_platform = false;
-    }
+
+if( keyboard_check_released( vk_space ) && new_platform != noone) {
+        new_platform.sustain = false;
 }
 //update speed on collision
 collision_object = obj_city_ground;

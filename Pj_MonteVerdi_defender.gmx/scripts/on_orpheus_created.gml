@@ -18,6 +18,11 @@ friction_vector = instance_create( 0, 0, vector );
 
 terrain_friction = 0.25;
 
+
+new_platform = OFF;
+
+
+
 //Added acceleration when turning around
 reactivity_percent = 1.5;
 

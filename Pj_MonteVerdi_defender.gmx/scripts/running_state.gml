@@ -23,6 +23,11 @@ switch( event ) {
         vertical_speed = -jump_initial_speed;
         enter_state( OrpheusState.DIVING_STATE );
         break;
+    case ON_SPACE_RELEASED:
+        if( new_platform != OFF ) {
+            new_platform.sustain = false;
+        }
+        break;
     case ON_FALLING:
         enter_state( OrpheusState.DIVING_STATE );
         break;
