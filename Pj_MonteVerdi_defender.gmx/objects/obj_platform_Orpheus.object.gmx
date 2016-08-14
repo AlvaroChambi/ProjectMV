@@ -33,11 +33,12 @@ if(global.stop) exit;
 /*if(place_meeting(x, y+obj_pattern_manager.bullet_speed, obj_bullet)) {
     time -= 5;
 }*/
+
 if( !sustain ) {
     time++;
     if ( time == life_time ) {
+        obj_Orpheus.current_platform = noone;
         instance_destroy();
-        obj_Orpheus.new_platform = OFF;
     }
 }
 

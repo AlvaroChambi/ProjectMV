@@ -11,6 +11,7 @@
     <sprite>sprites\spr_Orpheus</sprite>
     <sprite>sprites\spr_soil</sprite>
     <sprite>sprites\spr_platform</sprite>
+    <sprite>sprites\spr_current_platform</sprite>
     <sprite>sprites\spr_trail</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_platform_intangible</sprite>
@@ -60,7 +61,7 @@
     <room>rooms\rm_test</room>
     <room>rooms\rm_city_base</room>
   </rooms>
-  <constants number="19">
+  <constants number="18">
     <constant name="HORIZONTAL_COLLISION">12</constant>
     <constant name="NONE">-10</constant>
     <constant name="CEILING_COLLISION">11</constant>
@@ -74,7 +75,6 @@
     <constant name="ON_ORPHEUS_STOPPED">-3</constant>
     <constant name="ON_GROUND_COLLISION">-2</constant>
     <constant name="ON_ENTER_STATE">-1</constant>
-    <constant name="ON_SPACE_RELEASED">5</constant>
     <constant name="ON_SPACE_PRESSED">4</constant>
     <constant name="ON_RIGHT_UNPRESSED">3</constant>
     <constant name="ON_RIGHT_PRESSED">2</constant>

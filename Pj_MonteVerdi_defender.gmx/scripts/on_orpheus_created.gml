@@ -19,7 +19,9 @@ friction_vector = instance_create( 0, 0, vector );
 terrain_friction = 0.25;
 
 
-new_platform = OFF;
+current_platform = noone;
+platform_avalable = true;
+platform_timer = 0;
 
 
 

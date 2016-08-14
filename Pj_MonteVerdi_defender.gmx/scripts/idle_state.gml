@@ -16,11 +16,6 @@ switch( event ) {
     case ON_FALLING:
         enter_state( OrpheusState.JUMPING_STATE );
         break;
-    case ON_SPACE_RELEASED:
-        if( new_platform != OFF ) {
-            new_platform.sustain = false;
-        }
-        break;
     case ON_ENTER_STATE:
         sprite_index = Idle_1;
         impulse_vector.x = OFF;

@@ -1,6 +1,7 @@
 ///Collsion(object)
 //Vertical colision
-if( place_meeting ( x, y+vertical_speed, collision_object ) ) {
+vertical_collided_object = instance_place( x, y + vertical_speed, collision_object )
+if( vertical_collided_object != noone ) {
     switch( sign( vertical_speed ) ) {
         case 1:
             vertical_collision = CollisionSide.down;
@@ -12,8 +13,10 @@ if( place_meeting ( x, y+vertical_speed, collision_object ) ) {
 } else {
     vertical_collision = noone;
 }
+
 //Horizontal colision
-if( place_meeting ( x+horizontal_speed, y, collision_object ) ) {
+horizontal_collided_object = instance_place( x + horizontal_speed, y, collision_object )
+if( horizontal_collided_object != noone ) {
     switch( sign( horizontal_speed ) ) {
         case 1:
             horizontal_collision = CollisionSide.right;

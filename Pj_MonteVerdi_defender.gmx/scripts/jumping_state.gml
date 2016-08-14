@@ -12,12 +12,7 @@ switch( event ) {
         enter_state( OrpheusState.DIVING_STATE );
         break;
     case ON_SPACE_PRESSED:
-        spawn_platform( 20, true );
-        break;
-    case ON_SPACE_RELEASED:
-        if( new_platform != OFF ) {
-            new_platform.sustain = false;
-        }
+        spawn_platform( 20, false );
         break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.IDLE_STATE );
