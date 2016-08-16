@@ -21,8 +21,6 @@ switch( event ) {
         break;
     case ON_SPACE_PRESSED:
         vertical_speed = -jump_initial_speed;
-        enter_state( OrpheusState.DIVING_STATE );
-        break;
     case ON_FALLING:
         enter_state( OrpheusState.DIVING_STATE );
         break;

@@ -25,24 +25,12 @@ if( vertical_collision == CollisionSide.down ) {
 } else {
     on_event_received( ON_FALLING );
 }
+      
 
 collision_object = obj_platform_Orpheus;
 find_collision( collision_object );
 
-if( vertical_collision == CollisionSide.down ) {
-        if( current_platform == noone ) {
-            current_platform = vertical_collided_object;
-            current_platform.sustain = true;
-            current_platform.sprite_index = spr_current_platform;    
-        }
-} else {
-    if( current_platform != noone ) {
-        current_platform.sustain = false;
-        current_platform.sprite_index = spr_platform;
-        current_platform = noone;
-    }
-}
-
+update_current_platform();
 if( vertical_collision == CollisionSide.down) {
     if( !place_meeting( x, y, collision_object ) ) {
         horizontal_collision = noone;
@@ -50,6 +38,7 @@ if( vertical_collision == CollisionSide.down) {
         on_event_received( ON_GROUND_COLLISION );
     }
 }
+
 
 if( horizontal_speed == 0 ) {
     on_event_received( ON_ORPHEUS_STOPPED );
