@@ -1,13 +1,12 @@
-///Collsion(object)
 //Vertical colision
 vertical_collided_object = instance_place( x, y + vertical_speed, collision_object )
 if( vertical_collided_object != noone ) {
     switch( sign( vertical_speed ) ) {
-        case 1:
-            vertical_collision = CollisionSide.down;
+        case DOWN:
+            vertical_collision = Side.COLLISION_DOWN;
             break;
-        case -1:
-            vertical_collision = CollisionSide.up;
+        case UP:
+            vertical_collision = Side.COLLISION_UP;
             break;
     }
 } else {
@@ -18,11 +17,11 @@ if( vertical_collided_object != noone ) {
 horizontal_collided_object = instance_place( x + horizontal_speed, y, collision_object )
 if( horizontal_collided_object != noone ) {
     switch( sign( horizontal_speed ) ) {
-        case 1:
-            horizontal_collision = CollisionSide.right;
+        case RIGHT:
+            horizontal_collision = Side.COLLISION_RIGHT;
             break;
-        case -1:
-            horizontal_collision = CollisionSide.left;
+        case LEFT:
+            horizontal_collision = Side.COLLISION_LEFT;
             break;
     }       
 } else {

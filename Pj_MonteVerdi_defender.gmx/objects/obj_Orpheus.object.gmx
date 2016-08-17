@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>on_update</script>
+            <script>on_update_Orpheus</script>
           </argument>
           <argument>
             <kind>0</kind>

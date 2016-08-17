@@ -1,4 +1,4 @@
-if( vertical_collision == CollisionSide.down ) {
+if( vertical_collision == Side.COLLISION_DOWN ) {
     if( current_platform == noone ) {
         current_platform = vertical_collided_object;
         current_platform.sustain = true;

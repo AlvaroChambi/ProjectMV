@@ -37,12 +37,13 @@
     <script>scripts\jumping_state.gml</script>
     <script>scripts\running_state.gml</script>
     <script>scripts\diving_state.gml</script>
-    <script>scripts\on_update.gml</script>
+    <script>scripts\on_update_Orpheus.gml</script>
     <script>scripts\on_event_received.gml</script>
     <script>scripts\enter_state.gml</script>
     <script>scripts\on_orpheus_created.gml</script>
     <script>scripts\spawn_platform.gml</script>
     <script>scripts\update_current_platform.gml</script>
+    <script>scripts\on_update_Orpheus_platform.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_city_ground</object>

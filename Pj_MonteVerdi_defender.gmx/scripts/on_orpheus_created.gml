@@ -6,11 +6,11 @@ enum OrpheusState {
 }
 state = OrpheusState.IDLE_STATE;
 
-enum CollisionSide {
-    up,
-    down,
-    right,
-    left
+enum Side {
+    COLLISION_UP,
+    COLLISION_DOWN,
+    COLLISION_RIGHT,
+    COLLISION_LEFT
 }
 
 impulse_vector = instance_create( 0, 0, vector );

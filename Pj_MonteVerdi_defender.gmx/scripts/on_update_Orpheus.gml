@@ -20,7 +20,7 @@ if( vertical_speed < max_vertical_speed ) {
 collision_object = obj_city_ground;
 find_collision( collision_object );
 collide();
-if( vertical_collision == CollisionSide.down ) {
+if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
 } else {
     on_event_received( ON_FALLING );
@@ -31,7 +31,7 @@ collision_object = obj_platform_Orpheus;
 find_collision( collision_object );
 
 update_current_platform();
-if( vertical_collision == CollisionSide.down) {
+if( vertical_collision == Side.COLLISION_DOWN ) {
     if( !place_meeting( x, y, collision_object ) ) {
         horizontal_collision = noone;
         collide();    
