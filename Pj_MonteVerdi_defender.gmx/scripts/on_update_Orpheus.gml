@@ -17,11 +17,28 @@ if( vertical_speed < max_vertical_speed ) {
 }
 
 //update speed on collision
-collision = find_collision( obj_soil );
-
-if( collision == GROUND_COLLISION ) {
+collision_object = obj_city_ground;
+find_collision( collision_object );
+collide();
+if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
+} else {
+    on_event_received( ON_FALLING );
 }
+      
+
+collision_object = obj_platform_Orpheus;
+find_collision( collision_object );
+
+update_current_platform();
+if( vertical_collision == Side.COLLISION_DOWN ) {
+    if( !place_meeting( x, y, collision_object ) ) {
+        horizontal_collision = noone;
+        collide();    
+        on_event_received( ON_GROUND_COLLISION );
+    }
+}
+
 
 if( horizontal_speed == 0 ) {
     on_event_received( ON_ORPHEUS_STOPPED );
@@ -36,3 +53,9 @@ if( impulse_vector.x == 0 ) {
 }
 x += horizontal_speed;
 y += vertical_speed;
+
+if( platform_timer == 0 ) {
+    platform_available = true;
+} else {
+    platform_timer--;
+}
