@@ -44,6 +44,10 @@
     <script>scripts\spawn_platform.gml</script>
     <script>scripts\update_current_platform.gml</script>
     <script>scripts\on_update_Orpheus_platform.gml</script>
+    <script>scripts\draw_city_base_surface.gml</script>
+    <script>scripts\create_city_base_surface.gml</script>
+    <script>scripts\update_current_view.gml</script>
+    <script>scripts\change_window_size.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_city_ground</object>
@@ -55,13 +59,14 @@
     <object>objects\obj_pattern_stairs_decrescendo</object>
     <object>objects\obj_pattern_line</object>
     <object>objects\vector</object>
+    <object>objects\obj_surface_controller</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_city_base</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <constants number="18">
     <constant name="HORIZONTAL_COLLISION">12</constant>
