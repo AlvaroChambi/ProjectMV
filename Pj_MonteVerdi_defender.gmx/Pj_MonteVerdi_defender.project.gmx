@@ -63,6 +63,7 @@
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
+    <timeline>timelines\tml_set_full_window</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_city_base</room>

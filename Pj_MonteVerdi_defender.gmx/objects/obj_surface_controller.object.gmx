@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>surface_city_base = noone;
 current_view = 0;
+loading = false;
 create_city_base_surface();
 
 </string>
@@ -57,7 +58,7 @@ create_city_base_surface();
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -186,41 +187,33 @@ create_city_base_surface();
     <event eventtype="9" enumb="16">
       <action>
         <libid>1</libid>
-        <id>601</id>
+        <id>305</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <functionname>action_timeline_set</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>9</kind>
-            <script>change_window_size</script>
+            <kind>14</kind>
+            <timeline>tml_set_full_window</timeline>
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>0</string>
           </argument>
           <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
           <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
