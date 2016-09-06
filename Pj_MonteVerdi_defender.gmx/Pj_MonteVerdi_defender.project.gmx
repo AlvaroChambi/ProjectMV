@@ -46,7 +46,6 @@
     <script>scripts\on_update_Orpheus_platform.gml</script>
     <script>scripts\draw_city_base_surface.gml</script>
     <script>scripts\create_city_base_surface.gml</script>
-    <script>scripts\update_current_view.gml</script>
     <script>scripts\change_window_size.gml</script>
   </scripts>
   <objects name="objects">
