@@ -12,10 +12,17 @@ switch( event ) {
         enter_state( OrpheusState.DIVING_STATE );
         break;
     case ON_SPACE_PRESSED:
-        spawn_platform( 20, false );
+        if( jump_available ) {
+            vertical_speed = -jump_initial_speed;
+            jump_avalable = false;
+        } else {
+            spawn_platform( 20, false );
+        }
         break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.IDLE_STATE );
+        jump_available = true;
+        jump_timer = jump_timer_default;
         break;
     case ON_ENTER_STATE:
         sprite_index = InAir_1;

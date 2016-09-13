@@ -4,9 +4,11 @@ impulse_modifier = acceleration * impulse_vector.x;
 friction_modifier = abs( horizontal_speed ) * terrain_friction * friction_vector.x;
 
 new_horizontal_speed = horizontal_speed + impulse_modifier + friction_modifier; 
-if( abs( new_horizontal_speed ) <= max_horizontal_speed*terrain_friction ) {
+
+if( abs( new_horizontal_speed ) <= max_horizontal_speed*terrain_friction && impulse_modifier == 0) {
     new_horizontal_speed = 0;
 }
+
 
 if( abs( new_horizontal_speed ) <= max_horizontal_speed ) {
     horizontal_speed = new_horizontal_speed;
@@ -54,8 +56,10 @@ if( impulse_vector.x == 0 ) {
 x += horizontal_speed;
 y += vertical_speed;
 
-if( platform_timer == 0 ) {
-    platform_available = true;
-} else {
-    platform_timer--;
+if( state = OrpheusState.JUMPING_STATE || state = OrpheusState.DIVING_STATE ) {
+    if( jump_timer > 0 ){
+        jump_timer--;
+    } else {
+        jump_available = false;
+    }
 }

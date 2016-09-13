@@ -12,24 +12,23 @@ enum Side {
     COLLISION_RIGHT,
     COLLISION_LEFT
 }
-
+//Movement variables
 impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );
 
-terrain_friction = 0.25;
+terrain_friction = 0.5;
 
+jump_timer_default = 3;
+jump_timer = 0;
+jump_available = true;
 
 current_platform = noone;
 platform_avalable = true;
 platform_timer = 0;
 
-
-
-//Added acceleration when turning around
-reactivity_percent = 1.5;
+reactivity_percent = 1.75;   //Added acceleration when turning around 
 
 acceleration = 15;              
-deceleration = 10;
 jump_initial_speed = 40;
 gravity_acceleration = 4;
 

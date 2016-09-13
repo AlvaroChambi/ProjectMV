@@ -13,6 +13,8 @@ switch( event ) {
         break;
     case ON_SPACE_PRESSED:
         vertical_speed = -jump_initial_speed;
+        jump_available = false;
+        jumptimer = 0;
     case ON_FALLING:
         enter_state( OrpheusState.JUMPING_STATE );
         break;
