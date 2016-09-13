@@ -23,6 +23,11 @@ switch( event ) {
         enter_state( OrpheusState.IDLE_STATE );
         jump_available = true;
         jump_timer = jump_timer_default;
+
+        current_friction = ground_friction;
+        current_reactivity_percent = ground_reactivity_percent;
+        current_acceleration = ground_acceleration;
+        curent_max_horizontal_speed = max_ground_horizontal_speed;
         break;
     case ON_ENTER_STATE:
         sprite_index = InAir_1;

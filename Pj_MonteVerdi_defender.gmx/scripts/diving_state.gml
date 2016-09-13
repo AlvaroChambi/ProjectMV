@@ -5,14 +5,14 @@ switch( event ) {
         impulse_vector.x = LEFT;
         image_xscale = -abs( image_xscale );
         if ( horizontal_speed > 0 ) {
-            impulse_vector.x *= reactivity_percent;
+            impulse_vector.x *= current_reactivity_percent;
         }
         break;
     case ON_RIGHT_PRESSED:
         impulse_vector.x = RIGHT;
         image_xscale = abs( image_xscale );
         if( horizontal_speed < 0 ) {
-            impulse_vector.x *= reactivity_percent;
+            impulse_vector.x *= current_reactivity_percent;
         }
         break;
     case ON_LEFT_UNPRESSED:
@@ -31,6 +31,11 @@ switch( event ) {
         enter_state( OrpheusState.IDLE_STATE );
         jump_available = true;
         jump_timer = jump_timer_default;
+
+        current_friction = ground_friction;
+        current_reactivity_percent = ground_reactivity_percent;
+        current_acceleration = ground_acceleration;
+        curent_max_horizontal_speed = max_ground_horizontal_speed;
         break;
     case ON_ORPHEUS_STOPPED:
         enter_state( OrpheusState.JUMPING_STATE );
