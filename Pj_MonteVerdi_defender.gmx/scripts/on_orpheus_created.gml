@@ -28,7 +28,7 @@ current_platform = noone;
 platform_avalable = true;
 platform_timer = 0;
 
-ground_reactivity_percent = 1.75;   //Added acceleration when turning around 
+ground_reactivity_percent = 1.25;   //Added acceleration when turning around 
 air_reactivity_percent = air_friction * 0.80;
 current_reactivity_percent = ground_reactivity_percent; 
 
