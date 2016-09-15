@@ -12,6 +12,8 @@ if( abs( new_horizontal_speed ) <= current_max_horizontal_speed * current_fricti
 
 if( abs( new_horizontal_speed ) <= current_max_horizontal_speed ) {
     horizontal_speed = new_horizontal_speed;
+} else {
+    horizontal_speed = current_max_horizontal_speed * impulse_vector.x;
 }
 
 if( vertical_speed < max_vertical_speed ) {

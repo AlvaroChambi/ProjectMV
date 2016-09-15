@@ -69,9 +69,7 @@ with(instance_create(-1000, -1000, obj_platform_Orpheus)){
     <instance objName="obj_Orpheus" x="480" y="112" name="inst_8C0E0503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_Orpheus" x="480" y="160" name="inst_009ED9A7" locked="0" code="time = 0;&#xA;life_time = -1;&#xA;sustain = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_surface_controller" x="0" y="0" name="inst_F0610FD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_city_ground" x="672" y="1184" name="inst_359A5DC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_city_ground" x="672" y="880" name="inst_387CBC43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_city_ground" x="608" y="544" name="inst_7C2BDB07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_city_ground" x="896" y="464" name="inst_0C6A752B" locked="0" code="" scaleX="61" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

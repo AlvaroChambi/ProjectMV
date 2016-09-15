@@ -22,9 +22,12 @@ switch( event ) {
     case ON_SPACE_PRESSED:
         if( jump_available ) {
             vertical_speed = -jump_initial_speed;
-            jump_avalable = false;
+            jump_available = false;
+            jump_timer = 0;
         } else {
             spawn_platform( 20, false );
+            jump_availalbe = true;
+            jump_timer = 5;                                                               //Any smaller number here wouldn`t work. Not sure if it would just leave a lapse of time too short or if it just doesn`t work. 
         }
         break;
     case ON_GROUND_COLLISION:

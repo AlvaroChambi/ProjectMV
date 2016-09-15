@@ -16,8 +16,8 @@ enum Side {
 impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );
 
-ground_friction = 0.5;
-air_friction = 0.2;
+ground_friction = 0.4;
+air_friction = 0.3;
 current_friction = ground_friction;
 
 jump_timer_default = 3;
@@ -29,10 +29,10 @@ platform_avalable = true;
 platform_timer = 0;
 
 ground_reactivity_percent = 1.75;   //Added acceleration when turning around 
-air_reactivity_percent = 1.05;
+air_reactivity_percent = air_friction * 0.80;
 current_reactivity_percent = ground_reactivity_percent; 
 
-ground_acceleration = 15;              
+ground_acceleration = 13;              
 air_acceleration = 10;
 current_acceleration = ground_acceleration;
 
@@ -44,8 +44,8 @@ vertical_speed = 0;
 
 max_vertical_speed = 40;
 
-max_ground_horizontal_speed = 40;  
-max_air_horizontal_speed = 25;
+max_ground_horizontal_speed = 35;  
+max_air_horizontal_speed = 30;
 current_max_horizontal_speed = max_ground_horizontal_speed;
 
 //Platform spawning variables
