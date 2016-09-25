@@ -28,15 +28,15 @@ current_platform = noone;
 platform_avalable = true;
 platform_timer = 0;
 
-ground_reactivity_percent = 1.25;   //Added acceleration when turning around 
-air_reactivity_percent = air_friction * 0.80;
+ground_reactivity_percent = 1.10;                       //Added acceleration when turning around 
+air_reactivity_percent = 0.7;
 current_reactivity_percent = ground_reactivity_percent; 
 
-ground_acceleration = 13;              
-air_acceleration = 10;
+ground_acceleration = 12;              
+air_acceleration = 11;
 current_acceleration = ground_acceleration;
 
-jump_initial_speed = 40;
+jump_initial_speed = 50;
 gravity_acceleration = 4;
 
 horizontal_speed = 0;
@@ -44,8 +44,8 @@ vertical_speed = 0;
 
 max_vertical_speed = 40;
 
-max_ground_horizontal_speed = 35;  
-max_air_horizontal_speed = 30;
+max_ground_horizontal_speed = 33;  
+max_air_horizontal_speed = 27;
 current_max_horizontal_speed = max_ground_horizontal_speed;
 
 //Platform spawning variables
