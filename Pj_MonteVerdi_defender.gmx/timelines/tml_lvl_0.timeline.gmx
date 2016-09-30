@@ -25,14 +25,6 @@
 min_time = 60;
 max_time = 120;
 
-//Patterns available. First run.
-switch(runs){
-    case 0: default: lst_patterns[0] = obj_pattern_line; break;
-    case 1: 
-        lst_patterns[1] = obj_pattern_stairs_crescendo;
-        lst_patterns[2] = obj_pattern_stairs_crescendo;    
-    break; 
-}
 //Bullet speed
 bullet_speed = 30;
 
@@ -97,7 +89,7 @@ max_time = 90;
 min_time = 30;
 max_time = 35;
 
-bullet_speed = 30;
+bullet_speed = 35;
 
 
 </string>
@@ -130,7 +122,7 @@ min_time = 25;
 max_time = 30;
 
 //Bullet speed
-bullet_speed = 35;
+bullet_speed = 40;
 </string>
           </argument>
         </arguments>
@@ -191,10 +183,9 @@ min_time = 60;
 max_time = 120;
 
 //Bullet speed
-bullet_speed = 25;
+bullet_speed = 50;
 
-//Time the timeline has been repeated
-runs++;
+
 </string>
           </argument>
         </arguments>

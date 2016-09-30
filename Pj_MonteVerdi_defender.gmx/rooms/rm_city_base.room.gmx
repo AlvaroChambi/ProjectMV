@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>2160</height>
-  <vsnap>16</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>128</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -14,12 +14,6 @@
 
 randomize();                        //Gets random seed
 global.stop = false;                //Create variable to make everything stop
-
-with(instance_create(-1000, -1000, obj_bullet)){
-    global.bullet_width = sprite_width; 
-    global.bullet_height = sprite_height;
-    instance_destroy();
-    }
 
 with(instance_create(-1000, -1000, obj_platform_Orpheus)){
     global.platform_width = sprite_width;
@@ -65,11 +59,12 @@ with(instance_create(-1000, -1000, obj_platform_Orpheus)){
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_city_ground" x="1024" y="16" name="inst_20CDE05C" locked="0" code="" scaleX="61" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Orpheus" x="480" y="112" name="inst_8C0E0503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_platform_Orpheus" x="480" y="160" name="inst_009ED9A7" locked="0" code="time = 0;&#xA;life_time = -1;&#xA;sustain = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Orpheus" x="832" y="208" name="inst_8C0E0503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_Orpheus" x="800" y="256" name="inst_009ED9A7" locked="0" code="time = 0;&#xA;life_time = -1;&#xA;sustain = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_surface_controller" x="0" y="0" name="inst_F0610FD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_city_ground" x="896" y="464" name="inst_0C6A752B" locked="0" code="" scaleX="61" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_city_ground" x="960" y="32" name="inst_B6CBBF88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pattern_manager" x="32" y="0" name="inst_4E684CC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bullet" x="-1280" y="64" name="inst_B9274F3B" locked="0" code="movement_y = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -9,12 +9,11 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
-    <sprite>sprites\spr_soil</sprite>
+    <sprite>sprites\spr_city_ground</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_current_platform</sprite>
     <sprite>sprites\spr_trail</sprite>
     <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_platform_intangible</sprite>
     <sprite>sprites\Run_1</sprite>
     <sprite>sprites\Run_2</sprite>
     <sprite>sprites\Run_3</sprite>
@@ -30,7 +29,11 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_stairs_parameters.gml</script>
+    <scripts name="Bullet_patterns">
+      <script>scripts\on_pattern_manager_created.gml</script>
+      <script>scripts\on_bullet_step.gml</script>
+      <script>scripts\spawn_bullet_pattern.gml</script>
+    </scripts>
     <scripts name="Platform_Orpheus">
       <script>scripts\on_update_Orpheus_platform.gml</script>
     </scripts>
@@ -66,11 +69,8 @@
     <object>objects\obj_platform_Orpheus</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_pattern_manager</object>
-    <object>objects\obj_pattern_stairs_crescendo</object>
-    <object>objects\obj_pattern_stairs_decrescendo</object>
-    <object>objects\obj_pattern_line</object>
-    <object>objects\vector</object>
     <object>objects\obj_surface_controller</object>
+    <object>objects\vector</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
