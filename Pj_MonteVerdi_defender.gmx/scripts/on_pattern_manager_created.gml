@@ -1,11 +1,14 @@
-//Times hte timeline has been repeated
-runs = 0;
-
 //Set when to create the first pattern
-min_time = 20;
-max_time = 40;
+wave_separation_min = 50;
+wave_separation_max = 70;
 
 //Width of the cell of a grid for the patterns
-cell_width = 128;
+cell_width = 398;
 
-alarm[0] = random_range(min_time, max_time);
+//Bullets` variables
+bullet_speed = 35;
+bullets_per_wave = 4;
+bullets_in_wave = 0;
+time_between_bullets = 35;
+
+alarm[0] = random_range(wave_separation_min, wave_separation_max);
