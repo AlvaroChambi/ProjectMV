@@ -2,7 +2,7 @@ if(global.stop) exit;
 
 if( bullets_in_wave == 0 ) {
     first_bullet_x = irandom( room_width );
-    first_bullet_y = room_height + obj_bullet.sprite_height/2;
+    first_bullet_y = room_height + bullet_height/2;
     
     var first_bullet = instance_create( first_bullet_x, first_bullet_y, obj_bullet ); 
     with( first_bullet ){

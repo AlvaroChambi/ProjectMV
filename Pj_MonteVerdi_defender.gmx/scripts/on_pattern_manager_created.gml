@@ -9,6 +9,6 @@ cell_width = 398;
 bullet_speed = 35;
 bullets_per_wave = 4;
 bullets_in_wave = 0;
-time_between_bullets = 35;
+time_between_bullets = 20;
 
 alarm[0] = random_range(wave_separation_min, wave_separation_max);

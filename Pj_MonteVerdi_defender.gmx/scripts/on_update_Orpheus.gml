@@ -34,7 +34,10 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
 collision_object = obj_platform_Orpheus;
 find_collision( collision_object );
 
-update_current_platform();
+if( instance_exists( obj_platform_Orpheus ) ) {
+    update_current_platform();
+}
+
 if( vertical_collision == Side.COLLISION_DOWN ) {
     if( !place_meeting( x, y, collision_object ) ) {
         horizontal_collision = noone;

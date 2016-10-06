@@ -29,6 +29,11 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="City">
+      <script>scripts\on_city_ground_created.gml</script>
+      <script>scripts\on_city_ground_step.gml</script>
+      <script>scripts\on_city_ground_drawn.gml</script>
+    </scripts>
     <scripts name="Bullet_patterns">
       <script>scripts\on_pattern_manager_created.gml</script>
       <script>scripts\on_bullet_step.gml</script>
