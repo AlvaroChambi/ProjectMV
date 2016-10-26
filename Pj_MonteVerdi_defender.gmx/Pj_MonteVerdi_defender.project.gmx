@@ -23,6 +23,9 @@
     <sprite>sprites\Idle_3</sprite>
     <sprite>sprites\InAir_2</sprite>
     <sprite>sprites\InAir_3</sprite>
+    <sprite>sprites\character_idle</sprite>
+    <sprite>sprites\platform_base</sprite>
+    <sprite>sprites\character_run</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -82,6 +85,7 @@
     <timeline>timelines\tml_set_full_window</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_vertical_minimal_resolution</room>
     <room>rooms\rm_city_base</room>
     <room>rooms\rm_test</room>
   </rooms>

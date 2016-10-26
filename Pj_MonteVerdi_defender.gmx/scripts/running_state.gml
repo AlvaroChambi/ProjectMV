@@ -34,6 +34,6 @@ switch( event ) {
         enter_state( OrpheusState.IDLE_STATE );
         break;
     case ON_ENTER_STATE:
-        sprite_index = Run_1;
+        sprite_index = character_run;
         break;
 }

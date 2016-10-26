@@ -33,6 +33,6 @@ switch( event ) {
         curent_max_horizontal_speed = max_ground_horizontal_speed;
         break;
     case ON_ENTER_STATE:
-        sprite_index = InAir_1;
+        sprite_index = character_idle;
         break;
 }

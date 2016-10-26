@@ -16,7 +16,7 @@ enum Side {
 impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );
 
-ground_friction = 0.4;
+ground_friction = 0.2;
 air_friction = 0.3;
 current_friction = ground_friction;
 
@@ -32,11 +32,11 @@ ground_reactivity_percent = 1.10;                       //Added acceleration whe
 air_reactivity_percent = 0.7;
 current_reactivity_percent = ground_reactivity_percent; 
 
-ground_acceleration = 12;              
-air_acceleration = 11;
+ground_acceleration = 2;              
+air_acceleration = 5;
 current_acceleration = ground_acceleration;
 
-jump_initial_speed = 50;
+jump_initial_speed = 20;
 gravity_acceleration = 4;
 
 horizontal_speed = 0;
@@ -44,7 +44,7 @@ vertical_speed = 0;
 
 max_vertical_speed = 40;
 
-max_ground_horizontal_speed = 33;  
+max_ground_horizontal_speed = 10;  
 max_air_horizontal_speed = 27;
 current_max_horizontal_speed = max_ground_horizontal_speed;
 

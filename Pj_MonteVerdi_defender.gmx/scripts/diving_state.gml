@@ -44,6 +44,6 @@ switch( event ) {
         enter_state( OrpheusState.JUMPING_STATE );
         break;
     case ON_ENTER_STATE:
-        sprite_index = InAir_1;
+        sprite_index = character_idle;
         break;
 }

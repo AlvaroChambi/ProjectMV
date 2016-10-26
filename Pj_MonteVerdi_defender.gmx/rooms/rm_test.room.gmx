@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_city_ground" x="1248" y="608" name="inst_DBE3E2ED" locked="0" code="" scaleX="100" scaleY="5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_city_ground" x="1248" y="576" name="inst_DBE3E2ED" locked="0" code="" scaleX="100" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_Orpheus" x="544" y="256" name="inst_F208E446" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_Orpheus" x="544" y="352" name="inst_DD516917" locked="0" code="life_time = -1;&#xA;time = 0;&#xA;sustain = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_city_ground" x="192" y="1792" name="inst_1AFEAECD" locked="0" code="" scaleX="3" scaleY="10" colour="4294967295" rotation="0"/>
