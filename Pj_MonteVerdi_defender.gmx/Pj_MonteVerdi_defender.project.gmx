@@ -9,12 +9,11 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
-    <sprite>sprites\spr_soil</sprite>
+    <sprite>sprites\spr_city_ground</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_current_platform</sprite>
     <sprite>sprites\spr_trail</sprite>
     <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_platform_intangible</sprite>
     <sprite>sprites\Run_1</sprite>
     <sprite>sprites\Run_2</sprite>
     <sprite>sprites\Run_3</sprite>
@@ -30,20 +29,44 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\find_collision.gml</script>
-    <script>scripts\collide.gml</script>
-    <script>scripts\scr_stairs_parameters.gml</script>
-    <script>scripts\idle_state.gml</script>
-    <script>scripts\jumping_state.gml</script>
-    <script>scripts\running_state.gml</script>
-    <script>scripts\diving_state.gml</script>
-    <script>scripts\on_update_Orpheus.gml</script>
-    <script>scripts\on_event_received.gml</script>
-    <script>scripts\enter_state.gml</script>
-    <script>scripts\on_orpheus_created.gml</script>
-    <script>scripts\spawn_platform.gml</script>
-    <script>scripts\update_current_platform.gml</script>
-    <script>scripts\on_update_Orpheus_platform.gml</script>
+    <scripts name="City">
+      <script>scripts\on_city_ground_created.gml</script>
+      <script>scripts\on_city_ground_step.gml</script>
+      <script>scripts\on_city_ground_drawn.gml</script>
+    </scripts>
+    <scripts name="Bullet_patterns">
+      <script>scripts\on_pattern_manager_created.gml</script>
+      <script>scripts\on_bullet_step.gml</script>
+      <script>scripts\spawn_bullet_pattern.gml</script>
+    </scripts>
+    <scripts name="Platform_Orpheus">
+      <script>scripts\on_update_Orpheus_platform.gml</script>
+    </scripts>
+    <scripts name="Player">
+      <script>scripts\on_orpheus_created.gml</script>
+      <script>scripts\on_update_Orpheus.gml</script>
+      <scripts name="Collision">
+        <script>scripts\find_collision.gml</script>
+        <script>scripts\collide.gml</script>
+      </scripts>
+      <scripts name="Platforms">
+        <script>scripts\spawn_platform.gml</script>
+        <script>scripts\update_current_platform.gml</script>
+      </scripts>
+      <scripts name="States">
+        <script>scripts\idle_state.gml</script>
+        <script>scripts\running_state.gml</script>
+        <script>scripts\jumping_state.gml</script>
+        <script>scripts\diving_state.gml</script>
+        <script>scripts\on_event_received.gml</script>
+        <script>scripts\enter_state.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Surface_controller">
+      <script>scripts\draw_city_base_surface.gml</script>
+      <script>scripts\create_city_base_surface.gml</script>
+      <script>scripts\change_window_size.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_city_ground</object>
@@ -51,17 +74,16 @@
     <object>objects\obj_platform_Orpheus</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_pattern_manager</object>
-    <object>objects\obj_pattern_stairs_crescendo</object>
-    <object>objects\obj_pattern_stairs_decrescendo</object>
-    <object>objects\obj_pattern_line</object>
+    <object>objects\obj_surface_controller</object>
     <object>objects\vector</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
+    <timeline>timelines\tml_set_full_window</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_city_base</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <constants number="18">
     <constant name="HORIZONTAL_COLLISION">12</constant>

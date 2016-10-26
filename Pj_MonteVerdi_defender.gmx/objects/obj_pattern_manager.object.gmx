@@ -11,47 +11,6 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Create event
-
-//Times hte timeline has been repeated
-runs = 0;
-
-//Set when to create the first pattern
-min_time = 20;
-max_time = 40;
-
-//Width of the cell of a grid for the patterns
-cell_width = 64;
-cell_height = 96;
-
-//Space between the walls and the extremes of the object soil  
-void_width = (room_width - obj_soil.sprite_width)/2 
-
-//Space available to spawn patterns
-spawn_width = room_width - void_width 
-
-
-alarm[0] = random_range(min_time, max_time);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>305</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -82,49 +41,85 @@ alarm[0] = random_range(min_time, max_time);
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>//Alarm 0 event
-
-//Alarm 0 event
-
-if(global.stop) exit;
-
-//Choses a pattern to create
-pattern = irandom(array_length_1d(lst_patterns)-1);
-
-//Creates that pattern
-if(pattern = obj_pattern_line) {
-    pattern_height = cell_height * 4 + global.bullet_height;
-    pattern_width = global.bullet_width;    
-} else {
-    scr_stairs_parameters();
-    spaces_between_bullets = 4;
-    pattern_height = vertical_space * cell_height * spaces_between_bullets + global.bullet_height;
-    pattern_width = horizontal_space * cell_width * spaces_between_bullets + global.bullet_width;
-}
-
-instance_create(pattern_width/2 + cell_width * irandom(round(spawn_width/cell_width)) + void_width, room_height + pattern_height/2, lst_patterns[pattern]) 
-
-//Restarts the alarm to create another pattern
-alarm[0] = random_range(min_time, max_time);
-</string>
+            <kind>9</kind>
+            <script>on_pattern_manager_created</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>spawn_bullet_pattern</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

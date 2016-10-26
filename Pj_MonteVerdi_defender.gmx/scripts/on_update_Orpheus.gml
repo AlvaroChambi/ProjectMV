@@ -1,15 +1,19 @@
 friction_vector.x = -sign( horizontal_speed );
 
-impulse_modifier = acceleration * impulse_vector.x;
-friction_modifier = abs( horizontal_speed ) * terrain_friction * friction_vector.x;
+impulse_modifier = current_acceleration * impulse_vector.x;
+friction_modifier = abs( horizontal_speed ) * current_friction * friction_vector.x;
 
 new_horizontal_speed = horizontal_speed + impulse_modifier + friction_modifier; 
-if( abs( new_horizontal_speed ) <= max_horizontal_speed*terrain_friction ) {
+
+if( abs( new_horizontal_speed ) <= current_max_horizontal_speed * current_friction && impulse_modifier == 0) {
     new_horizontal_speed = 0;
 }
 
-if( abs( new_horizontal_speed ) <= max_horizontal_speed ) {
+
+if( abs( new_horizontal_speed ) <= current_max_horizontal_speed ) {
     horizontal_speed = new_horizontal_speed;
+} else {
+    horizontal_speed = current_max_horizontal_speed * impulse_vector.x;
 }
 
 if( vertical_speed < max_vertical_speed ) {
@@ -30,7 +34,10 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
 collision_object = obj_platform_Orpheus;
 find_collision( collision_object );
 
-update_current_platform();
+if( instance_exists( obj_platform_Orpheus ) ) {
+    update_current_platform();
+}
+
 if( vertical_collision == Side.COLLISION_DOWN ) {
     if( !place_meeting( x, y, collision_object ) ) {
         horizontal_collision = noone;
@@ -54,8 +61,10 @@ if( impulse_vector.x == 0 ) {
 x += horizontal_speed;
 y += vertical_speed;
 
-if( platform_timer == 0 ) {
-    platform_available = true;
-} else {
-    platform_timer--;
+if( state = OrpheusState.JUMPING_STATE || state = OrpheusState.DIVING_STATE ) {
+    if( jump_timer > 0 ){
+        jump_timer--;
+    } else {
+        jump_available = false;
+    }
 }
