@@ -43,7 +43,11 @@ switch( event ) {
     case ON_ORPHEUS_STOPPED:
         enter_state( OrpheusState.JUMPING_STATE );
         break;
+    case ON_ANIMATION_END:
+        image_speed = 0;
+        image_index = image_number - 1;
+        break; 
     case ON_ENTER_STATE:
-        sprite_index = character_idle;
+        sprite_index = character_jumping;
         break;
 }

@@ -32,20 +32,20 @@ ground_reactivity_percent = 1.10;                       //Added acceleration whe
 air_reactivity_percent = 0.7;
 current_reactivity_percent = ground_reactivity_percent; 
 
-ground_acceleration = 2;              
-air_acceleration = 5;
+ground_acceleration = 1;              
+air_acceleration = 1;
 current_acceleration = ground_acceleration;
 
 jump_initial_speed = 20;
-gravity_acceleration = 4;
+gravity_acceleration = 2;
 
 horizontal_speed = 0;
 vertical_speed = 0;
 
-max_vertical_speed = 40;
+max_vertical_speed = 10;
 
 max_ground_horizontal_speed = 10;  
-max_air_horizontal_speed = 27;
+max_air_horizontal_speed = 10;
 current_max_horizontal_speed = max_ground_horizontal_speed;
 
 //Platform spawning variables

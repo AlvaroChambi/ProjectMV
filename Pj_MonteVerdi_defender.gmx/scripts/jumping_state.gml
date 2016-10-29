@@ -32,7 +32,11 @@ switch( event ) {
         current_acceleration = ground_acceleration;
         curent_max_horizontal_speed = max_ground_horizontal_speed;
         break;
+    case ON_ANIMATION_END:
+        image_speed = 0;
+        image_index = image_number - 1;
+        break;    
     case ON_ENTER_STATE:
-        sprite_index = character_idle;
+        sprite_index = character_jumping;
         break;
 }

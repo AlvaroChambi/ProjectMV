@@ -117,6 +117,48 @@ room_restart();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>on_event_received</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>ON_ANIMATION_END</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -142,7 +184,7 @@ draw_self();
 //draws a red fade with origin in the right top corner of a platform and end in the left side of the platform and in the base of the room
 //draw_rectangle_colour(x-global.platform_width/2, y+sprite_height/2, x+global.platform_width/2, room_height, c_white, c_white, c_red, c_red, false);
 
-draw_text_transformed( x - sprite_width/2, y - sprite_height, string(current_platform), 2, 2, 0 );
+
 </string>
           </argument>
         </arguments>

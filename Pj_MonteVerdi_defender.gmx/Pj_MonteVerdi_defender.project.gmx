@@ -26,6 +26,10 @@
     <sprite>sprites\character_idle</sprite>
     <sprite>sprites\platform_base</sprite>
     <sprite>sprites\character_run</sprite>
+    <sprite>sprites\bullet_sprite</sprite>
+    <sprite>sprites\platform_sprite</sprite>
+    <sprite>sprites\wall_sprite</sprite>
+    <sprite>sprites\character_jumping</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -64,6 +68,7 @@
         <script>scripts\on_event_received.gml</script>
         <script>scripts\enter_state.gml</script>
       </scripts>
+      <script>scripts\on_animation_end.gml</script>
     </scripts>
     <scripts name="Surface_controller">
       <script>scripts\draw_city_base_surface.gml</script>
@@ -79,6 +84,7 @@
     <object>objects\obj_pattern_manager</object>
     <object>objects\obj_surface_controller</object>
     <object>objects\vector</object>
+    <object>objects\wall</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
@@ -89,7 +95,7 @@
     <room>rooms\rm_city_base</room>
     <room>rooms\rm_test</room>
   </rooms>
-  <constants number="18">
+  <constants number="19">
     <constant name="HORIZONTAL_COLLISION">12</constant>
     <constant name="NONE">-10</constant>
     <constant name="CEILING_COLLISION">11</constant>
@@ -103,6 +109,7 @@
     <constant name="ON_ORPHEUS_STOPPED">-3</constant>
     <constant name="ON_GROUND_COLLISION">-2</constant>
     <constant name="ON_ENTER_STATE">-1</constant>
+    <constant name="ON_ANIMATION_END">5</constant>
     <constant name="ON_SPACE_PRESSED">4</constant>
     <constant name="ON_RIGHT_UNPRESSED">3</constant>
     <constant name="ON_RIGHT_PRESSED">2</constant>

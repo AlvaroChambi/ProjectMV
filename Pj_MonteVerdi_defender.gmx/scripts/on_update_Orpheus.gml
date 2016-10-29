@@ -29,7 +29,15 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
 } else {
     on_event_received( ON_FALLING );
 }
-      
+
+collision_object = wall;
+find_collision( collision_object );
+collide();
+if( vertical_collision == Side.COLLISION_DOWN ) {
+    on_event_received( ON_GROUND_COLLISION );
+} else {
+    on_event_received( ON_FALLING );
+}
 
 collision_object = obj_platform_Orpheus;
 find_collision( collision_object );

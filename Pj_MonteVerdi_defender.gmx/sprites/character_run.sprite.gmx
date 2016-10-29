@@ -38,15 +38,5 @@
     <frame index="15">images\character_run_15.png</frame>
     <frame index="16">images\character_run_16.png</frame>
     <frame index="17">images\character_run_17.png</frame>
-    <frame index="18">images\character_run_18.png</frame>
-    <frame index="19">images\character_run_19.png</frame>
-    <frame index="20">images\character_run_20.png</frame>
-    <frame index="21">images\character_run_21.png</frame>
-    <frame index="22">images\character_run_22.png</frame>
-    <frame index="23">images\character_run_23.png</frame>
-    <frame index="24">images\character_run_24.png</frame>
-    <frame index="25">images\character_run_25.png</frame>
-    <frame index="26">images\character_run_26.png</frame>
-    <frame index="27">images\character_run_27.png</frame>
   </frames>
 </sprite>
