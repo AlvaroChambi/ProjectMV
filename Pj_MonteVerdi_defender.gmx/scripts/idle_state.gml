@@ -12,6 +12,7 @@ switch( event ) {
         enter_state( OrpheusState.RUNNING_STATE );
         break;
     case ON_SPACE_PRESSED:
+        audio_play_sound(jump_sound_1, 10, false);
         vertical_speed = -jump_initial_speed;
         jump_available = false;
         jumptimer = 0;
@@ -24,8 +25,6 @@ switch( event ) {
         break;
     case ON_ENTER_STATE:
         sprite_index = character_idle;
-        //key_animation_index[0] = 0;
-        //sound = play_sound( step_sound, key_animation_index );
         impulse_vector.x = OFF;
         friction_vector.x = OFF;
         break;

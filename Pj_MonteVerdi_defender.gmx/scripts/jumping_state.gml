@@ -39,6 +39,5 @@ switch( event ) {
         break;    
     case ON_ENTER_STATE:
         sprite_index = character_jumping;
-        //audio_play_sound(jump_sound_0, 10, false);
         break;
 }

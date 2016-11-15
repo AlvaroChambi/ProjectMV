@@ -7,5 +7,5 @@ for ( var i = 0; i < array_length_1d( sound_player.key_index ); i++ ) {
 }
 
 if( index_founded ) {
-    audio_play_sound( sound_player.sound_index, 10, false );
+    audio_play_sound( sound_player.sound_index, 1, false );
 }

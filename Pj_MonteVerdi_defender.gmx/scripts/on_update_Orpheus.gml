@@ -21,13 +21,17 @@ if( vertical_speed < max_vertical_speed ) {
 }
 
 //update speed on collision
+var hasCollided = false;
+var isFalling = false;
 collision_object = obj_city_ground;
 find_collision( collision_object );
 collide();
 if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
+    hasCollided = true;
 } else {
-    on_event_received( ON_FALLING );
+    //on_event_received( ON_FALLING );
+    isFalling = true;
 }
 
 collision_object = wall;
@@ -35,8 +39,10 @@ find_collision( collision_object );
 collide();
 if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
+    hasCollided = true;
 } else {
-    on_event_received( ON_FALLING );
+    //on_event_received( ON_FALLING );
+    isFalling = true;
 }
 
 collision_object = obj_platform_Orpheus;
@@ -47,11 +53,16 @@ if( instance_exists( obj_platform_Orpheus ) ) {
 }
 
 if( vertical_collision == Side.COLLISION_DOWN ) {
+    hasCollided = true;
     if( !place_meeting( x, y, collision_object ) ) {
         horizontal_collision = noone;
         collide();    
         on_event_received( ON_GROUND_COLLISION );
     }
+}
+
+if( !hasCollided && isFalling ) {
+    on_event_received( ON_FALLING );
 }
 
 

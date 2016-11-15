@@ -20,6 +20,7 @@ switch( event ) {
         impulse_vector.x = OFF;
         break;
     case ON_SPACE_PRESSED:
+        audio_play_sound(jump_sound_1, 10, false);
         vertical_speed = -jump_initial_speed;
         jump_available = false;
         jumptimer = 0;
@@ -39,6 +40,9 @@ switch( event ) {
         sprite_index = character_run;
         //audio_play_sound(step_sound, 10, true);
         key_animation_index[0] = 0;
+        key_animation_index[1] = 5;
+        key_animation_index[2] = 10;
+        key_animation_index[3] = 15;
         sound = play_sound( step_sound, key_animation_index );
         break;
 }

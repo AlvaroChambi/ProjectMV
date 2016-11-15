@@ -2,6 +2,7 @@ if( vertical_collision != noone ) {
     while ( !place_meeting (x, y+sign(vertical_speed), vertical_collided_object) ) {
         y += sign(vertical_speed);
     }
+    
     vertical_speed = 0;
 }
 
