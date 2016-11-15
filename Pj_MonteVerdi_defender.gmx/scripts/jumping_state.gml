@@ -24,6 +24,7 @@ switch( event ) {
         break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.IDLE_STATE );
+        image_speed = 1;
         jump_available = true;
         jump_timer = jump_timer_default;
 
@@ -38,5 +39,6 @@ switch( event ) {
         break;    
     case ON_ENTER_STATE:
         sprite_index = character_jumping;
+        //audio_play_sound(jump_sound_0, 10, false);
         break;
 }

@@ -184,7 +184,8 @@ draw_self();
 //draws a red fade with origin in the right top corner of a platform and end in the left side of the platform and in the base of the room
 //draw_rectangle_colour(x-global.platform_width/2, y+sprite_height/2, x+global.platform_width/2, room_height, c_white, c_white, c_red, c_red, false);
 
-
+draw_text( 10, 10, obj_Orpheus.state );
+draw_text( 30, 10, image_speed);
 </string>
           </argument>
         </arguments>

@@ -6,7 +6,11 @@
   <NewExtensions>
     <extension index="0">extensions\Pixelated Platform Characters</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\jump_sound_0</sound>
+    <sound>sound\jump_sound_1</sound>
+    <sound>sound\step_sound</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
     <sprite>sprites\spr_city_ground</sprite>
@@ -68,7 +72,9 @@
         <script>scripts\on_event_received.gml</script>
         <script>scripts\enter_state.gml</script>
       </scripts>
-      <script>scripts\on_animation_end.gml</script>
+      <script>scripts\play_sound.gml</script>
+      <script>scripts\on_sound_player_update.gml</script>
+      <script>scripts\stop_sound.gml</script>
     </scripts>
     <scripts name="Surface_controller">
       <script>scripts\draw_city_base_surface.gml</script>
@@ -85,6 +91,7 @@
     <object>objects\obj_surface_controller</object>
     <object>objects\vector</object>
     <object>objects\wall</object>
+    <object>objects\sound_player</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>

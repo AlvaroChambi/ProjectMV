@@ -24,6 +24,8 @@ switch( event ) {
         break;
     case ON_ENTER_STATE:
         sprite_index = character_idle;
+        //key_animation_index[0] = 0;
+        //sound = play_sound( step_sound, key_animation_index );
         impulse_vector.x = OFF;
         friction_vector.x = OFF;
         break;

@@ -32,6 +32,7 @@ switch( event ) {
         break;
     case ON_GROUND_COLLISION:
         enter_state( OrpheusState.IDLE_STATE );
+        image_speed = 1;
         jump_available = true;
         jump_timer = jump_timer_default;
 

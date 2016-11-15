@@ -25,6 +25,7 @@ switch( event ) {
         jumptimer = 0;
     case ON_FALLING:
         enter_state( OrpheusState.DIVING_STATE );
+        stop_sound( sound );
         current_friction = air_friction;
         current_reactivity_percent = air_reactivity_percent;
         current_acceleration = air_acceleration;
@@ -32,8 +33,12 @@ switch( event ) {
         break;
     case ON_ORPHEUS_STOPPED:
         enter_state( OrpheusState.IDLE_STATE );
+        stop_sound( sound );
         break;
     case ON_ENTER_STATE:
         sprite_index = character_run;
+        //audio_play_sound(step_sound, 10, true);
+        key_animation_index[0] = 0;
+        sound = play_sound( step_sound, key_animation_index );
         break;
 }
