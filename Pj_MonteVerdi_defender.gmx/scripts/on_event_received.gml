@@ -13,5 +13,8 @@ switch( state ) {
     case OrpheusState.DIVING_STATE:
         diving_state( event );
         break;
+    case OrpheusState.DEATH_STATE:
+        death_state( event );
+        break;
 }
 

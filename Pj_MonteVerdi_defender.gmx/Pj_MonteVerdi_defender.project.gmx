@@ -14,6 +14,7 @@
     <sound>sound\jump_3</sound>
     <sound>sound\boom_0</sound>
     <sound>sound\platform_spawn_0</sound>
+    <sound>sound\death_sound</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
@@ -38,6 +39,7 @@
     <sprite>sprites\platform_sprite</sprite>
     <sprite>sprites\wall_sprite</sprite>
     <sprite>sprites\character_jumping</sprite>
+    <sprite>sprites\character_death</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -75,10 +77,13 @@
         <script>scripts\diving_state.gml</script>
         <script>scripts\on_event_received.gml</script>
         <script>scripts\enter_state.gml</script>
+        <script>scripts\death_state.gml</script>
       </scripts>
-      <script>scripts\play_sound.gml</script>
-      <script>scripts\on_sound_player_update.gml</script>
-      <script>scripts\stop_sound.gml</script>
+      <scripts name="sound">
+        <script>scripts\on_sound_player_update.gml</script>
+        <script>scripts\stop_sound.gml</script>
+        <script>scripts\play_sound.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Surface_controller">
       <script>scripts\draw_city_base_surface.gml</script>
@@ -106,7 +111,7 @@
     <room>rooms\rm_city_base</room>
     <room>rooms\rm_test</room>
   </rooms>
-  <constants number="19">
+  <constants number="20">
     <constant name="HORIZONTAL_COLLISION">12</constant>
     <constant name="NONE">-10</constant>
     <constant name="CEILING_COLLISION">11</constant>
@@ -120,6 +125,7 @@
     <constant name="ON_ORPHEUS_STOPPED">-3</constant>
     <constant name="ON_GROUND_COLLISION">-2</constant>
     <constant name="ON_ENTER_STATE">-1</constant>
+    <constant name="ON_CHARACTER_DEAD">6</constant>
     <constant name="ON_ANIMATION_END">5</constant>
     <constant name="ON_SPACE_PRESSED">4</constant>
     <constant name="ON_RIGHT_UNPRESSED">3</constant>

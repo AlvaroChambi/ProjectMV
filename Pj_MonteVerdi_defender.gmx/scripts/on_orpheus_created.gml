@@ -2,7 +2,8 @@ enum OrpheusState {
     IDLE_STATE,
     RUNNING_STATE,
     JUMPING_STATE,
-    DIVING_STATE
+    DIVING_STATE,
+    DEATH_STATE
 }
 state = OrpheusState.IDLE_STATE;
 

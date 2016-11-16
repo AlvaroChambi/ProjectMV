@@ -23,6 +23,9 @@ switch( event ) {
         current_acceleration = air_acceleration;
         curent_max_horizontal_speed = max_air_horizontal_speed;
         break;
+    case ON_CHARACTER_DEAD:
+        enter_state( OrpheusState.DEATH_STATE );
+        break;
     case ON_ENTER_STATE:
         sprite_index = character_idle;
         impulse_vector.x = OFF;

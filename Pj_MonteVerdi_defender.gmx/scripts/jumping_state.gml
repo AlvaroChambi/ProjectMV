@@ -36,6 +36,9 @@ switch( event ) {
     case ON_ANIMATION_END:
         image_speed = 0;
         image_index = image_number - 1;
+        break;
+    case ON_CHARACTER_DEAD:
+        enter_state( OrpheusState.DEATH_STATE );
         break;    
     case ON_ENTER_STATE:
         sprite_index = character_jumping;
