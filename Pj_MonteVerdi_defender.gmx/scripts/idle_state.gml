@@ -12,7 +12,7 @@ switch( event ) {
         enter_state( OrpheusState.RUNNING_STATE );
         break;
     case ON_SPACE_PRESSED:
-        audio_play_sound(jump_sound_1, 10, false);
+        audio_play_sound(jump_3, 10, false);
         vertical_speed = -jump_initial_speed;
         jump_available = false;
         jumptimer = 0;

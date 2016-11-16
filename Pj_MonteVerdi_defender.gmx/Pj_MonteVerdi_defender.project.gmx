@@ -11,6 +11,9 @@
     <sound>sound\jump_sound_1</sound>
     <sound>sound\step_sound</sound>
     <sound>sound\jump_sound_2</sound>
+    <sound>sound\jump_3</sound>
+    <sound>sound\boom_0</sound>
+    <sound>sound\platform_spawn_0</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Orpheus</sprite>
