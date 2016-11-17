@@ -6,7 +6,7 @@ wave_separation_max = 70;
 cell_width = room_width/6;
 
 //Bullets` variables
-bullet_speed = 5;
+bullet_speed = 5 + 5/*room movement*/;
 bullets_per_wave = 4;
 bullets_in_wave = 0;
 time_between_bullets = 20;

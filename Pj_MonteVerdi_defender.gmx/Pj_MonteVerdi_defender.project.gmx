@@ -40,6 +40,12 @@
     <sprite>sprites\wall_sprite</sprite>
     <sprite>sprites\character_jumping</sprite>
     <sprite>sprites\character_death</sprite>
+    <sprite>sprites\void_terrain</sprite>
+    <sprite>sprites\electric_sprite</sprite>
+    <sprite>sprites\electric_sprite_top</sprite>
+    <sprite>sprites\electric_sprite_bottom</sprite>
+    <sprite>sprites\electric_sprite_up</sprite>
+    <sprite>sprites\electric_sprite_down</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -90,6 +96,7 @@
       <script>scripts\create_city_base_surface.gml</script>
       <script>scripts\change_window_size.gml</script>
     </scripts>
+    <script>scripts\set_view_state.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_city_ground</object>
@@ -101,6 +108,9 @@
     <object>objects\vector</object>
     <object>objects\wall</object>
     <object>objects\sound_player</object>
+    <object>objects\void_object</object>
+    <object>objects\electric_obj</object>
+    <object>objects\terrain_obj</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
