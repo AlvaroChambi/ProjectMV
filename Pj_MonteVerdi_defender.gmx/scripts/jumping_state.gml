@@ -38,6 +38,7 @@ switch( event ) {
         image_index = image_number - 1;
         break;
     case ON_CHARACTER_DEAD:
+        image_speed = 1;
         enter_state( OrpheusState.DEATH_STATE );
         break;    
     case ON_ENTER_STATE:
