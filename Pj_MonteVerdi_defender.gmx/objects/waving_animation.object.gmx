@@ -11,35 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>numUnits = 12;
-last_created = -1;
-num_view_states = 3;
-
-animation_reduction = 2;
-current_tick = 0;
-
-triggered = false;
-
-//Create all the assets in the correct position with the correct animation view
-for( i = 0; i &lt; numUnits; i++ ) {
-    units[i] = instance_create( x + i*( sprite_get_width(electric_sprite) - 10 ), y, electric_obj );
-    set_view_state( units[i] );
-}
-</string>
+            <kind>9</kind>
+            <script>on_waving_animation_created</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -47,53 +53,41 @@ for( i = 0; i &lt; numUnits; i++ ) {
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>var vertical_speed = 4;
-with( electric_obj ) {
-    y -= vertical_speed;    
-}
-view_yview[0] -= vertical_speed;
-current_tick++;
-if( current_tick == animation_reduction ) {
-    current_tick = 0;
-    for( i = 0; i &lt; array_length_1d( units ); i++ ) {
-    current_id = units[i];
-    with( current_id ) {
-        current_view++;
-        if( current_view &gt; 3 ) {
-            current_view = 0;
-        }
-        switch( current_view ) {
-            case 0:
-                sprite_index = electric_sprite_up;
-                break;
-            case 1:
-                sprite_index = electric_sprite_top;
-                break;
-            case 2:
-                sprite_index = electric_sprite_down;
-                break;
-            case 3:
-                sprite_index = electric_sprite_bottom;
-                break;
-        }
-    }
-    }    
-}
-</string>
+            <kind>9</kind>
+            <script>on_waving_animation_update</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

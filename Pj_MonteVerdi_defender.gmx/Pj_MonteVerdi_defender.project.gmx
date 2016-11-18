@@ -96,7 +96,22 @@
       <script>scripts\create_city_base_surface.gml</script>
       <script>scripts\change_window_size.gml</script>
     </scripts>
-    <script>scripts\set_view_state.gml</script>
+    <scripts name="view">
+      <script>scripts\on_view_created.gml</script>
+      <script>scripts\on_view_update.gml</script>
+    </scripts>
+    <scripts name="ground">
+      <script>scripts\on_ground_created.gml</script>
+      <script>scripts\on_ground_update.gml</script>
+      <scripts name="animation">
+        <script>scripts\on_waving_animation_created.gml</script>
+        <script>scripts\on_waving_animation_update.gml</script>
+      </scripts>
+      <scripts name="tiles">
+        <script>scripts\on_tile_update.gml</script>
+        <script>scripts\on_tile_created.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_city_ground</object>
@@ -110,7 +125,10 @@
     <object>objects\sound_player</object>
     <object>objects\void_object</object>
     <object>objects\electric_obj</object>
-    <object>objects\terrain_obj</object>
+    <object>objects\ground_obj</object>
+    <object>objects\moving_view</object>
+    <object>objects\waving_animation</object>
+    <object>objects\ground_tile</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tml_lvl_0</timeline>
