@@ -28,7 +28,7 @@ if( bullets_in_wave == 0 ) {
         
         bullets_in_wave++;
         last_bullet_x = new_bullet_x;
-        alarm[0] = time_between_bullets;
+        alarm[0] = time_between_bullets; 
     } else {
         bullets_in_wave = 0;
         alarm[0] = random_range(wave_separation_min, wave_separation_max);    

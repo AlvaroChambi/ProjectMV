@@ -11,8 +11,12 @@ for( i = 0; i < num_tiles; i++ ) {
 }
 
 //define an animation for the builded tiles
-var reference_tiles = tiles;
 animation = instance_create( 0, 0, waving_animation );
 with( animation ) {
-    tiles = reference_tiles;
+    tiles = other.tiles;
+}
+
+shooting_manager = instance_create(0, 0, projectiles_manager);
+with( shooting_manager ) {
+    tiles = other.tiles;
 }

@@ -1,5 +1,3 @@
-if(global.stop) exit;
-
 //Move
 y-=movement_y;                      
 

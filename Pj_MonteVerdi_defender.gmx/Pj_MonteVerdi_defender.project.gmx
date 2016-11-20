@@ -52,31 +52,30 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="City">
-      <script>scripts\on_city_ground_created.gml</script>
-      <script>scripts\on_city_ground_step.gml</script>
-      <script>scripts\on_city_ground_drawn.gml</script>
-    </scripts>
-    <scripts name="Bullet_patterns">
-      <script>scripts\on_pattern_manager_created.gml</script>
+    <scripts name="bullet">
       <script>scripts\on_bullet_step.gml</script>
-      <script>scripts\spawn_bullet_pattern.gml</script>
+      <script>scripts\on_bullet_created.gml</script>
+      <scripts name="projectiles_manager">
+        <script>scripts\on_projectiles_manager_created.gml</script>
+        <script>scripts\on_projectiles_manager_update.gml</script>
+        <script>scripts\on_projectile_manager_alarm.gml</script>
+      </scripts>
     </scripts>
-    <scripts name="Platform_Orpheus">
+    <scripts name="platform">
       <script>scripts\on_update_Orpheus_platform.gml</script>
     </scripts>
-    <scripts name="Player">
+    <scripts name="player">
       <script>scripts\on_orpheus_created.gml</script>
-      <script>scripts\on_update_Orpheus.gml</script>
-      <scripts name="Collision">
+      <script>scripts\on_orpheus_update.gml</script>
+      <scripts name="collision">
         <script>scripts\find_collision.gml</script>
         <script>scripts\collide.gml</script>
       </scripts>
-      <scripts name="Platforms">
+      <scripts name="platform">
         <script>scripts\spawn_platform.gml</script>
         <script>scripts\update_current_platform.gml</script>
       </scripts>
-      <scripts name="States">
+      <scripts name="states">
         <script>scripts\idle_state.gml</script>
         <script>scripts\running_state.gml</script>
         <script>scripts\jumping_state.gml</script>
@@ -90,11 +89,6 @@
         <script>scripts\stop_sound.gml</script>
         <script>scripts\play_sound.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="Surface_controller">
-      <script>scripts\draw_city_base_surface.gml</script>
-      <script>scripts\create_city_base_surface.gml</script>
-      <script>scripts\change_window_size.gml</script>
     </scripts>
     <scripts name="view">
       <script>scripts\on_view_created.gml</script>
@@ -114,12 +108,9 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_city_ground</object>
     <object>objects\obj_Orpheus</object>
     <object>objects\obj_platform_Orpheus</object>
     <object>objects\obj_bullet</object>
-    <object>objects\obj_pattern_manager</object>
-    <object>objects\obj_surface_controller</object>
     <object>objects\vector</object>
     <object>objects\wall</object>
     <object>objects\sound_player</object>
@@ -129,11 +120,9 @@
     <object>objects\moving_view</object>
     <object>objects\waving_animation</object>
     <object>objects\ground_tile</object>
+    <object>objects\projectiles_manager</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\tml_lvl_0</timeline>
-    <timeline>timelines\tml_set_full_window</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>
     <room>rooms\rm_city_base</room>

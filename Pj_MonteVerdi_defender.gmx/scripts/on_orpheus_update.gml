@@ -23,16 +23,6 @@ if( vertical_speed < max_vertical_speed ) {
 //update speed on collision
 var hasCollided = false;
 var isFalling = false;
-collision_object = obj_city_ground;
-find_collision( collision_object );
-collide();
-if( vertical_collision == Side.COLLISION_DOWN ) {
-    on_event_received( ON_GROUND_COLLISION );
-    hasCollided = true;
-} else {
-    //on_event_received( ON_FALLING );
-    isFalling = true;
-}
 
 collision_object = wall;
 find_collision( collision_object );
