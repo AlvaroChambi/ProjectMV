@@ -12,26 +12,12 @@
     <sound>sound\step_sound</sound>
     <sound>sound\jump_sound_2</sound>
     <sound>sound\jump_3</sound>
-    <sound>sound\boom_0</sound>
+    <sound>sound\bullet_explode</sound>
     <sound>sound\platform_spawn_0</sound>
     <sound>sound\death_sound</sound>
+    <sound>sound\bullet_spawn</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_Orpheus</sprite>
-    <sprite>sprites\spr_city_ground</sprite>
-    <sprite>sprites\spr_platform</sprite>
-    <sprite>sprites\spr_current_platform</sprite>
-    <sprite>sprites\spr_trail</sprite>
-    <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\Run_1</sprite>
-    <sprite>sprites\Run_2</sprite>
-    <sprite>sprites\Run_3</sprite>
-    <sprite>sprites\InAir_1</sprite>
-    <sprite>sprites\Idle_1</sprite>
-    <sprite>sprites\Idle_2</sprite>
-    <sprite>sprites\Idle_3</sprite>
-    <sprite>sprites\InAir_2</sprite>
-    <sprite>sprites\InAir_3</sprite>
     <sprite>sprites\character_idle</sprite>
     <sprite>sprites\platform_base</sprite>
     <sprite>sprites\character_run</sprite>
@@ -40,12 +26,13 @@
     <sprite>sprites\wall_sprite</sprite>
     <sprite>sprites\character_jumping</sprite>
     <sprite>sprites\character_death</sprite>
-    <sprite>sprites\void_terrain</sprite>
-    <sprite>sprites\electric_sprite</sprite>
-    <sprite>sprites\electric_sprite_top</sprite>
-    <sprite>sprites\electric_sprite_bottom</sprite>
     <sprite>sprites\electric_sprite_up</sprite>
     <sprite>sprites\electric_sprite_down</sprite>
+    <sprite>sprites\wave_up_sprite</sprite>
+    <sprite>sprites\wave_top_sprite</sprite>
+    <sprite>sprites\wave_down_sprite</sprite>
+    <sprite>sprites\wave_bottom_sprite</sprite>
+    <sprite>sprites\trigger_bullet_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_Game_Over</background>
@@ -104,6 +91,7 @@
       <scripts name="tiles">
         <script>scripts\on_tile_update.gml</script>
         <script>scripts\on_tile_created.gml</script>
+        <script>scripts\on_animation_end.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -114,8 +102,7 @@
     <object>objects\vector</object>
     <object>objects\wall</object>
     <object>objects\sound_player</object>
-    <object>objects\void_object</object>
-    <object>objects\electric_obj</object>
+    <object>objects\waving_tile_obj</object>
     <object>objects\ground_obj</object>
     <object>objects\moving_view</object>
     <object>objects\waving_animation</object>

@@ -1,7 +1,7 @@
 /* the ground is defined by a set of tiles, handles tiles animation logic*/
 //base definition
-tile_object = electric_obj;
-tile_sprite = electric_sprite;
+tile_object = waving_tile_obj;
+tile_sprite = wave_up_sprite;
 num_tiles = 12;
 gap = -10; //gap between tiles
 
