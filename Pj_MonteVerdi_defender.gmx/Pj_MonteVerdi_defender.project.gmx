@@ -11,6 +11,7 @@
     <sound>sound\platform_spawn_0</sound>
     <sound>sound\death_sound</sound>
     <sound>sound\bullet_spawn</sound>
+    <sound>sound\background_music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\character_idle</sprite>
@@ -36,6 +37,15 @@
       <scripts name="projectiles_manager">
         <script>scripts\on_projectiles_manager_created.gml</script>
         <script>scripts\on_projectile_manager_alarm.gml</script>
+        <script>scripts\on_wave_tick.gml</script>
+        <scripts name="patterns">
+          <script>scripts\on_pattern_tick.gml</script>
+          <script>scripts\on_pattern_created.gml</script>
+          <scripts name="line_pattern">
+            <script>scripts\on_line_pattern_tick.gml</script>
+            <script>scripts\on_line_pattern_created.gml</script>
+          </scripts>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="platform">
@@ -98,6 +108,10 @@
     <object>objects\waving_animation</object>
     <object>objects\ground_tile</object>
     <object>objects\projectiles_manager</object>
+    <objects name="patterns">
+      <object>objects\projectile_pattern</object>
+      <object>objects\line_pattern</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>

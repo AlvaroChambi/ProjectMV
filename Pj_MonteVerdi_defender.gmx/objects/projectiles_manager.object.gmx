@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>on_projectile_manager_alarm</script>
+            <script>on_wave_tick</script>
           </argument>
           <argument>
             <kind>0</kind>

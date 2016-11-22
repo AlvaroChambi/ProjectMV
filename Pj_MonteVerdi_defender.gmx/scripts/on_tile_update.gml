@@ -1,4 +1,4 @@
-if( trigger_projectile && !on_animation ) {
+if( trigger_projectile /*&& !on_animation*/ ) {
     //trigger shoot animation
     //on_animation_end trigger_projectile = false;
     //image_speed = image_speed/6;
