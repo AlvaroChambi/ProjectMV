@@ -3,14 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions>
-    <extension index="0">extensions\Pixelated Platform Characters</extension>
-  </NewExtensions>
+  <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\jump_sound_0</sound>
-    <sound>sound\jump_sound_1</sound>
     <sound>sound\step_sound</sound>
-    <sound>sound\jump_sound_2</sound>
     <sound>sound\jump_3</sound>
     <sound>sound\bullet_explode</sound>
     <sound>sound\platform_spawn_0</sound>
@@ -26,17 +21,13 @@
     <sprite>sprites\wall_sprite</sprite>
     <sprite>sprites\character_jumping</sprite>
     <sprite>sprites\character_death</sprite>
-    <sprite>sprites\electric_sprite_up</sprite>
-    <sprite>sprites\electric_sprite_down</sprite>
     <sprite>sprites\wave_up_sprite</sprite>
     <sprite>sprites\wave_top_sprite</sprite>
     <sprite>sprites\wave_down_sprite</sprite>
     <sprite>sprites\wave_bottom_sprite</sprite>
     <sprite>sprites\trigger_bullet_sprite</sprite>
   </sprites>
-  <backgrounds name="background">
-    <background>background\bck_Game_Over</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="bullet">
@@ -44,7 +35,6 @@
       <script>scripts\on_bullet_created.gml</script>
       <scripts name="projectiles_manager">
         <script>scripts\on_projectiles_manager_created.gml</script>
-        <script>scripts\on_projectiles_manager_update.gml</script>
         <script>scripts\on_projectile_manager_alarm.gml</script>
       </scripts>
     </scripts>
@@ -109,7 +99,6 @@
     <object>objects\ground_tile</object>
     <object>objects\projectiles_manager</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>
     <room>rooms\rm_city_base</room>
