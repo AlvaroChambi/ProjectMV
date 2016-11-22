@@ -36,7 +36,6 @@
       <script>scripts\on_bullet_created.gml</script>
       <scripts name="projectiles_manager">
         <script>scripts\on_projectiles_manager_created.gml</script>
-        <script>scripts\on_projectile_manager_alarm.gml</script>
         <script>scripts\on_wave_tick.gml</script>
         <scripts name="patterns">
           <script>scripts\on_pattern_tick.gml</script>
