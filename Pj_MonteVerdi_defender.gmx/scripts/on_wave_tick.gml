@@ -29,6 +29,7 @@ if( current_tempo_tick == tempo ) {
             tiles = other.tiles;
             num_projectiles = 4;
             bullet_time_gap = 10;
+            double = true;
         }
     } else {
         with( pattern ) {

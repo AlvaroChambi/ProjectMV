@@ -14,10 +14,20 @@ if( bullet_count < num_projectiles ) {
         trigger_projectile = true;
     }
     
-    if( !invert ) {
+    if( double ) {
+        if( invert ) {
+            current_offset++;   
+            invert = !invert; 
+        } else {
+            invert = !invert;
+        }
+    } else {
+        current_offset++;
+    }
+ /*   if( !invert ) {
         current_offset++;
     } else {
         current_offset--;
-    }
+    }*/
     alarm[0] = bullet_time_gap;    
 }
