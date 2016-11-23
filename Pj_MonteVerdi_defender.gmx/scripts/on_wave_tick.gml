@@ -2,18 +2,17 @@ current_tempo_tick++;
 if( current_tempo_tick == tempo ) {
     current_tempo_tick = 0;
     
-    var random_index = irandom( array_length_1d( tiles ) - 1 );
-    var current_tile_index = random_index;
-    
-    if( current_tile_index < 0 ) {
-        current_tile_index = 0;
+    var max_offset = 3;
+    var random_index = irandom_range( -max_offset, max_offset );
+    //show_message( string( random_index ) );
+    var current_tile_index = last_tile_index + random_index;
+    if( current_tile_index > ( array_length_1d( tiles ) - 1 ) || current_tile_index < 0 ) {
+        current_tile_index = last_tile_index - random_index;
     }
+    //show_message( string( current_tile_index ) );
+    last_tile_index = current_tile_index;
     
-    if( current_tile_index >= array_length_1d( tiles ) ) {
-        current_tile_index = array_length_1d( tiles ) - 1;
-    }
-    
-    var pattern = instance_create( 0, 0, stairs_pattern );
+    var pattern = instance_create( 0, 0, line_pattern );
     
     if( wave_tick >= 7 && wave_tick < 15) {
         with( pattern ) {
@@ -29,7 +28,6 @@ if( current_tempo_tick == tempo ) {
             tiles = other.tiles;
             num_projectiles = 4;
             bullet_time_gap = 10;
-            double = true;
         }
     } else {
         with( pattern ) {

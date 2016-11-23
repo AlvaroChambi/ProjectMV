@@ -1,2 +1,2 @@
-num_projectiles = 4;
-bullet_time_gap = 5;
+num_projectiles = 2;
+bullet_time_gap = 20;
