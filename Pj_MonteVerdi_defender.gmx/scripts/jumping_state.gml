@@ -17,7 +17,7 @@ switch( event ) {
             jump_available = false;
             jump_timer = 0;
         } else {
-            spawn_platform( 20, false );
+            spawn_platform( 5, false );
             jump_timer = 5;                                                               //Any smaller number here wouldn`t work. Not sure if it would just leave a lapse of time too short or if it just doesn`t work. 
             jump_available = true;
         }

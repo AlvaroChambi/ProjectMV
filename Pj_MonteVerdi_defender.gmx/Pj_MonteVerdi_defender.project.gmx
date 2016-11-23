@@ -44,11 +44,16 @@
             <script>scripts\on_line_pattern_tick.gml</script>
             <script>scripts\on_line_pattern_created.gml</script>
           </scripts>
+          <scripts name="stairs_pattern">
+            <script>scripts\on_stairs_pattern_created.gml</script>
+            <script>scripts\on_stairs_patter_tick.gml</script>
+          </scripts>
         </scripts>
       </scripts>
     </scripts>
     <scripts name="platform">
-      <script>scripts\on_update_Orpheus_platform.gml</script>
+      <script>scripts\on_platform_update.gml</script>
+      <script>scripts\on_platform_created.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\on_orpheus_created.gml</script>
@@ -110,6 +115,7 @@
     <objects name="patterns">
       <object>objects\projectile_pattern</object>
       <object>objects\line_pattern</object>
+      <object>objects\stairs_pattern</object>
     </objects>
   </objects>
   <rooms name="rooms">
