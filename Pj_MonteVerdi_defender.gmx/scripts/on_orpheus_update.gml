@@ -31,7 +31,6 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
     hasCollided = true;
 } else {
-    //on_event_received( ON_FALLING );
     isFalling = true;
 }
 

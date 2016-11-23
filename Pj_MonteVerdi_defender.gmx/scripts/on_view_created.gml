@@ -1,3 +1,3 @@
-vertical_speed = 2;
+vertical_speed = 6;
 //define objects that will follow the moving view
 moving_objects[0] = waving_tile_obj;

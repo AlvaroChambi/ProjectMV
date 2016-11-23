@@ -49,6 +49,7 @@
     </scripts>
     <scripts name="platform">
       <script>scripts\on_update_Orpheus_platform.gml</script>
+      <script>scripts\on_platform_created.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\on_orpheus_created.gml</script>
