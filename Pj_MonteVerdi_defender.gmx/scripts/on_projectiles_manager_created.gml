@@ -1,4 +1,5 @@
-randomize();                        //Gets random seed
+randomize(); 
+last_tile_index = 0;                       //Gets random seed
 wave_lenght = 40;
 wave_tick = 0;
 
