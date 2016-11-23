@@ -34,10 +34,10 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
     isFalling = true;
 }
 
-collision_object = obj_platform_Orpheus;
+collision_object = obj_platform_orpheus;
 find_collision( collision_object );
 
-if( instance_exists( obj_platform_Orpheus ) ) {
+if( instance_exists( obj_platform_orpheus ) ) {
     update_current_platform();
 }
 

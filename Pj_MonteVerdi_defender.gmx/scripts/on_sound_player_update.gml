@@ -1,7 +1,7 @@
 var index_founded = false;
 
 for ( var i = 0; i < array_length_1d( sound_player.key_index ); i++ ) {
-    if( sound_player.key_index[i] == obj_Orpheus.image_index ) {
+    if( sound_player.key_index[i] == obj_orpheus.image_index ) {
         index_founded = true;
     }
 }
