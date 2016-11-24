@@ -96,12 +96,13 @@
         <script>scripts\on_tile_update.gml</script>
         <script>scripts\on_tile_created.gml</script>
         <script>scripts\on_animation_end.gml</script>
+        <script>scripts\on_waving_tile_update.gml</script>
       </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_Orpheus</object>
-    <object>objects\obj_platform_Orpheus</object>
+    <object>objects\obj_orpheus</object>
+    <object>objects\obj_platform_orpheus</object>
     <object>objects\obj_bullet</object>
     <object>objects\vector</object>
     <object>objects\wall</object>

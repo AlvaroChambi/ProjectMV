@@ -31,14 +31,13 @@ if( vertical_collision == Side.COLLISION_DOWN ) {
     on_event_received( ON_GROUND_COLLISION );
     hasCollided = true;
 } else {
-    //on_event_received( ON_FALLING );
     isFalling = true;
 }
 
-collision_object = obj_platform_Orpheus;
+collision_object = obj_platform_orpheus;
 find_collision( collision_object );
 
-if( instance_exists( obj_platform_Orpheus ) ) {
+if( instance_exists( obj_platform_orpheus ) ) {
     update_current_platform();
 }
 

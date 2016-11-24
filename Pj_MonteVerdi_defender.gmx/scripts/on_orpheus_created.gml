@@ -21,7 +21,7 @@ ground_friction = 0.2;
 air_friction = 0.3;
 current_friction = ground_friction;
 
-jump_timer_default = 3;
+jump_timer_default = 10;
 jump_timer = 0;
 jump_available = true;
 

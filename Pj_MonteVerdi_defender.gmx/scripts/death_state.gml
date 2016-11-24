@@ -4,6 +4,13 @@ switch( event ) {
    case ON_ANIMATION_END:
         image_speed = 0;
         image_index = image_number - 1;
+        audio_stop_sound( background_music );
+        /*with( projectiles_manager ) {
+            instance_destroy();
+        }
+        with( waving_animation ) {
+            instance_destroy();
+        }*/
         break;
    case ON_SPACE_PRESSED:
         room_restart();
