@@ -35,8 +35,8 @@
       <script>scripts\on_bullet_step.gml</script>
       <script>scripts\on_bullet_created.gml</script>
       <scripts name="projectiles_manager">
-        <script>scripts\on_projectiles_manager_created.gml</script>
-        <script>scripts\on_wave_tick.gml</script>
+        <script>scripts\on_waves_manager_created.gml</script>
+        <script>scripts\on_waves_manager_tick.gml</script>
         <scripts name="patterns">
           <script>scripts\on_pattern_tick.gml</script>
           <script>scripts\on_pattern_created.gml</script>
@@ -49,6 +49,15 @@
             <script>scripts\on_stairs_patter_tick.gml</script>
           </scripts>
         </scripts>
+        <scripts name="waves">
+          <scripts name="random_wave">
+            <script>scripts\on_random_wave_created.gml</script>
+            <script>scripts\on_random_wave_tick.gml</script>
+          </scripts>
+          <script>scripts\on_wave_created.gml</script>
+          <script>scripts\on_wave_tick.gml</script>
+        </scripts>
+        <script>scripts\on_wave_configuration_created.gml</script>
       </scripts>
     </scripts>
     <scripts name="platform">
@@ -112,12 +121,18 @@
     <object>objects\moving_view</object>
     <object>objects\waving_animation</object>
     <object>objects\ground_tile</object>
-    <object>objects\projectiles_manager</object>
+    <object>objects\waves_manager</object>
     <objects name="patterns">
       <object>objects\projectile_pattern</object>
       <object>objects\line_pattern</object>
       <object>objects\stairs_pattern</object>
     </objects>
+    <objects name="waves">
+      <object>objects\random_wave</object>
+      <object>objects\wave</object>
+    </objects>
+    <object>objects\wave_frame</object>
+    <object>objects\wave_configuration</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>

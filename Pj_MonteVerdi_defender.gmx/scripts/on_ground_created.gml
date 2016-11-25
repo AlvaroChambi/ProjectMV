@@ -16,7 +16,7 @@ with( animation ) {
     tiles = other.tiles;
 }
 
-shooting_manager = instance_create(0, 0, projectiles_manager);
+shooting_manager = instance_create(0, 0, waves_manager);
 with( shooting_manager ) {
     tiles = other.tiles;
 }
