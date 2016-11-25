@@ -18,6 +18,7 @@ with( configuration ) {
 //update the frame configuration if needed
 if( frame_update ) {
     current_wave_index++;
+    //delete previous projectile pattern
     with( current_wave_frame ) {
         with( current_wave ) {
             with( pattern ) {
@@ -41,6 +42,7 @@ if( frame_update ) {
 //trigger current wave frame tick
 with( current_wave_frame ) {
     with( current_wave ) {
+        wave_tick = current_wave_tick;
         event_user( 1 );
     }
 }
