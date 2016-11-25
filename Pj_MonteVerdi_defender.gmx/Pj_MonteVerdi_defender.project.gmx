@@ -149,8 +149,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>
-    <room>rooms\rm_city_base</room>
-    <room>rooms\rm_test</room>
   </rooms>
   <constants number="20">
     <constant name="HORIZONTAL_COLLISION">12</constant>
