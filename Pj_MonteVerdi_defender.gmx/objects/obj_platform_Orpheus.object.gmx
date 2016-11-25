@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>on_update_Orpheus_platform</script>
+            <script>on_platform_update</script>
           </argument>
           <argument>
             <kind>0</kind>

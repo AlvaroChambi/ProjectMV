@@ -31,24 +31,36 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="projectiles_manager">
+      <script>scripts\on_waves_manager_created.gml</script>
+      <script>scripts\on_waves_manager_tick.gml</script>
+      <scripts name="patterns">
+        <script>scripts\on_pattern_tick.gml</script>
+        <script>scripts\on_pattern_created.gml</script>
+        <scripts name="line_pattern">
+          <script>scripts\on_line_pattern_tick.gml</script>
+        </scripts>
+        <scripts name="stairs_pattern">
+          <script>scripts\on_stairs_pattern_tick.gml</script>
+          <script>scripts\on_stairs_pattern_created.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="waves">
+        <scripts name="random_wave">
+          <script>scripts\on_random_wave_created.gml</script>
+          <script>scripts\on_random_wave_tick.gml</script>
+        </scripts>
+        <script>scripts\on_wave_created.gml</script>
+        <script>scripts\on_wave_tick.gml</script>
+      </scripts>
+      <script>scripts\on_wave_configuration_created.gml</script>
+    </scripts>
     <scripts name="bullet">
       <script>scripts\on_bullet_step.gml</script>
       <script>scripts\on_bullet_created.gml</script>
-      <scripts name="projectiles_manager">
-        <script>scripts\on_projectiles_manager_created.gml</script>
-        <script>scripts\on_wave_tick.gml</script>
-        <scripts name="patterns">
-          <script>scripts\on_pattern_tick.gml</script>
-          <script>scripts\on_pattern_created.gml</script>
-          <scripts name="line_pattern">
-            <script>scripts\on_line_pattern_tick.gml</script>
-            <script>scripts\on_line_pattern_created.gml</script>
-          </scripts>
-        </scripts>
-      </scripts>
     </scripts>
     <scripts name="platform">
-      <script>scripts\on_update_Orpheus_platform.gml</script>
+      <script>scripts\on_platform_update.gml</script>
       <script>scripts\on_platform_created.gml</script>
     </scripts>
     <scripts name="player">
@@ -97,27 +109,46 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_orpheus</object>
-    <object>objects\obj_platform_orpheus</object>
-    <object>objects\obj_bullet</object>
-    <object>objects\vector</object>
-    <object>objects\wall</object>
-    <object>objects\sound_player</object>
-    <object>objects\waving_tile_obj</object>
-    <object>objects\ground_obj</object>
-    <object>objects\moving_view</object>
-    <object>objects\waving_animation</object>
-    <object>objects\ground_tile</object>
-    <object>objects\projectiles_manager</object>
     <objects name="patterns">
       <object>objects\projectile_pattern</object>
       <object>objects\line_pattern</object>
+      <object>objects\stairs_pattern</object>
+    </objects>
+    <objects name="waves">
+      <object>objects\random_wave</object>
+      <object>objects\wave</object>
+    </objects>
+    <objects name="wave_manager">
+      <object>objects\waves_manager</object>
+      <object>objects\wave_frame</object>
+      <objects name="configuration">
+        <object>objects\wave_configuration</object>
+      </objects>
+    </objects>
+    <objects name="ground">
+      <object>objects\ground_obj</object>
+      <object>objects\ground_tile</object>
+      <object>objects\waving_animation</object>
+      <object>objects\waving_tile_obj</object>
+    </objects>
+    <objects name="camera_views">
+      <object>objects\moving_view</object>
+    </objects>
+    <objects name="utils">
+      <object>objects\vector</object>
+    </objects>
+    <objects name="sound">
+      <object>objects\sound_player</object>
+    </objects>
+    <objects name="game_objects">
+      <object>objects\obj_orpheus</object>
+      <object>objects\obj_platform_orpheus</object>
+      <object>objects\wall</object>
+      <object>objects\obj_bullet</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_vertical_minimal_resolution</room>
-    <room>rooms\rm_city_base</room>
-    <room>rooms\rm_test</room>
   </rooms>
   <constants number="20">
     <constant name="HORIZONTAL_COLLISION">12</constant>

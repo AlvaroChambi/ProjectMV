@@ -18,7 +18,7 @@ switch( event ) {
             jump_timer = 0;
         } else {
             spawn_platform();
-            jump_timer = jump_timer_default;                                                               //Any smaller number here wouldn`t work. Not sure if it would just leave a lapse of time too short or if it just doesn`t work. 
+            jump_timer = jump_timer_default;//Any smaller number here wouldn`t work. Not sure if it would just leave a lapse of time too short or if it just doesn`t work. 
             jump_available = true;
         }
         break;

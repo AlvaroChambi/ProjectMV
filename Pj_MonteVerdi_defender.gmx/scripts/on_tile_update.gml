@@ -7,9 +7,6 @@ if( trigger_projectile /*&& !on_animation*/ ) {
     trigger_projectile = false;
     var bullet = instance_create( x, y, obj_bullet );
     audio_play_sound(bullet_spawn, 2, false);
-    with( bullet ) {
-        movement_y = 8 /*bullet speed*/;
-    }
 } else if( !on_animation ){
     switch( animation_view_state ) {
     case AnimationView.UP_STATE:
