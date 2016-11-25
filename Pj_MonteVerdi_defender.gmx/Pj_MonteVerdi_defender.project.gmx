@@ -31,33 +31,33 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="projectiles_manager">
+      <script>scripts\on_waves_manager_created.gml</script>
+      <script>scripts\on_waves_manager_tick.gml</script>
+      <scripts name="patterns">
+        <script>scripts\on_pattern_tick.gml</script>
+        <script>scripts\on_pattern_created.gml</script>
+        <scripts name="line_pattern">
+          <script>scripts\on_line_pattern_tick.gml</script>
+        </scripts>
+        <scripts name="stairs_pattern">
+          <script>scripts\on_stairs_pattern_tick.gml</script>
+          <script>scripts\on_stairs_pattern_created.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="waves">
+        <scripts name="random_wave">
+          <script>scripts\on_random_wave_created.gml</script>
+          <script>scripts\on_random_wave_tick.gml</script>
+        </scripts>
+        <script>scripts\on_wave_created.gml</script>
+        <script>scripts\on_wave_tick.gml</script>
+      </scripts>
+      <script>scripts\on_wave_configuration_created.gml</script>
+    </scripts>
     <scripts name="bullet">
       <script>scripts\on_bullet_step.gml</script>
       <script>scripts\on_bullet_created.gml</script>
-      <scripts name="projectiles_manager">
-        <script>scripts\on_waves_manager_created.gml</script>
-        <script>scripts\on_waves_manager_tick.gml</script>
-        <scripts name="patterns">
-          <script>scripts\on_pattern_tick.gml</script>
-          <script>scripts\on_pattern_created.gml</script>
-          <scripts name="line_pattern">
-            <script>scripts\on_line_pattern_tick.gml</script>
-          </scripts>
-          <scripts name="stairs_pattern">
-            <script>scripts\on_stairs_pattern_tick.gml</script>
-            <script>scripts\on_stairs_pattern_created.gml</script>
-          </scripts>
-        </scripts>
-        <scripts name="waves">
-          <scripts name="random_wave">
-            <script>scripts\on_random_wave_created.gml</script>
-            <script>scripts\on_random_wave_tick.gml</script>
-          </scripts>
-          <script>scripts\on_wave_created.gml</script>
-          <script>scripts\on_wave_tick.gml</script>
-        </scripts>
-        <script>scripts\on_wave_configuration_created.gml</script>
-      </scripts>
     </scripts>
     <scripts name="platform">
       <script>scripts\on_platform_update.gml</script>

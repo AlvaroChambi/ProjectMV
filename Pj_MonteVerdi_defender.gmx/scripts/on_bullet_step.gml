@@ -1,5 +1,5 @@
 //Move
-y-=movement_y;                      
+y-=global.bullet_speed;                      
 
 //Destroys itself when stopped by a platform
 var platform = instance_place(x, y, obj_platform_orpheus);

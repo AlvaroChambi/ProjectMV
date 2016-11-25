@@ -26,6 +26,7 @@ if( frame_update ) {
             }
         }
     }
+    //update frame wave and pattern
     current_wave_frame = frame;
     with( current_wave_frame ) {
         with( tick_pattern ) {
@@ -36,6 +37,12 @@ if( frame_update ) {
             tiles = current_tiles;
             pattern = other.tick_pattern;
         }
+        
+        //update global variables
+        with( moving_view ) {
+            vertical_speed = other.view_speed;
+        }
+        global.bullet_speed = bullet_speed;
     }
 }
 
@@ -46,7 +53,6 @@ with( current_wave_frame ) {
         event_user( 1 );
     }
 }
-
 
 wave_tick++;
 alarm[0] = wave_lenght;
