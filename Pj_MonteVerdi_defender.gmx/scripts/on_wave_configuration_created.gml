@@ -1,7 +1,7 @@
 key_wave_frames[0] = instance_create( 0, 0, wave_frame );
 with( key_wave_frames[0] ) {
-    view_speed = 2;
-    bullet_speed = 4;
+    view_speed = 3;
+    bullet_speed = 6;
     frame_tick = 0;
     current_wave = instance_create( 0, 0, random_wave );
     tick_pattern = instance_create( 0, 0, line_pattern );

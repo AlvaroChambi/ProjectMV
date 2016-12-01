@@ -28,7 +28,9 @@
     <sprite>sprites\wave_bottom_sprite</sprite>
     <sprite>sprites\trigger_bullet_sprite</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="projectiles_manager">
@@ -66,6 +68,7 @@
     <scripts name="player">
       <script>scripts\on_orpheus_created.gml</script>
       <script>scripts\on_orpheus_update.gml</script>
+      <script>scripts\on_orpheus_outside_view.gml</script>
       <scripts name="collision">
         <script>scripts\find_collision.gml</script>
         <script>scripts\collide.gml</script>

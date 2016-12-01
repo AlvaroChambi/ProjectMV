@@ -76,3 +76,5 @@ if( state = OrpheusState.JUMPING_STATE || state = OrpheusState.DIVING_STATE ) {
         jump_available = false;
     }
 }
+ 
+y = clamp(y, view_yview[0] - 16, view_yview[0] + 384);

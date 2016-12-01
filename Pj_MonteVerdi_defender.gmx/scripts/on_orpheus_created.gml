@@ -6,7 +6,7 @@ enum OrpheusState {
     DEATH_STATE
 }
 state = OrpheusState.IDLE_STATE;
-
+speed_count = 0;
 enum Side {
     COLLISION_UP,
     COLLISION_DOWN,
