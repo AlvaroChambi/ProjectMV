@@ -7,8 +7,8 @@ with( key_wave_frames[0] ) {
     tick_pattern = instance_create( 0, 0, line_pattern );
 
     with( tick_pattern ) {
-        num_projectiles = 2;
-        bullet_time_gap = 20;
+        num_projectiles = 3;
+        bullet_time_gap = 10;
     }
 }
 
