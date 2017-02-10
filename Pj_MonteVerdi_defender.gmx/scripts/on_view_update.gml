@@ -6,4 +6,6 @@ for( i = 0; i < array_length_1d( moving_objects ); i++ ) {
     }    
 }
 
+background_y[0] -= vertical_speed;
+
 view_yview[0] -= vertical_speed;

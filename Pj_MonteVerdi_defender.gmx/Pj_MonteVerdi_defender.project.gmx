@@ -12,6 +12,8 @@
     <sound>sound\death_sound</sound>
     <sound>sound\bullet_spawn</sound>
     <sound>sound\background_music</sound>
+    <sound>sound\background_music_1</sound>
+    <sound>sound\entry_screen_music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\character_idle</sprite>
@@ -27,9 +29,14 @@
     <sprite>sprites\wave_down_sprite</sprite>
     <sprite>sprites\wave_bottom_sprite</sprite>
     <sprite>sprites\trigger_bullet_sprite</sprite>
+    <sprite>sprites\light_sprite</sprite>
+    <sprite>sprites\title_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background_shadows</background>
+    <background>background\noise_background</background>
+    <background>background\movement_background</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -110,6 +117,11 @@
         <script>scripts\on_waving_tile_update.gml</script>
       </scripts>
     </scripts>
+    <scripts name="image_utils">
+      <script>scripts\start_fade_in.gml</script>
+      <script>scripts\on_fade_in_step.gml</script>
+      <script>scripts\on_create_fade_in.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="patterns">
@@ -139,6 +151,7 @@
     </objects>
     <objects name="utils">
       <object>objects\vector</object>
+      <object>objects\fade_in_util</object>
     </objects>
     <objects name="sound">
       <object>objects\sound_player</object>
@@ -148,9 +161,12 @@
       <object>objects\obj_platform_orpheus</object>
       <object>objects\wall</object>
       <object>objects\obj_bullet</object>
+      <object>objects\light_object</object>
+      <object>objects\title_object</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room2</room>
     <room>rooms\room_vertical_minimal_resolution</room>
   </rooms>
   <constants number="20">

@@ -1,14 +1,16 @@
 //Move
 y-=global.bullet_speed;                      
 
-//Destroys itself when stopped by a platform
-var platform = instance_place(x, y, obj_platform_orpheus);
-if( platform != noone ) {
-    audio_play_sound(bullet_explode, 2, false);
-    instance_destroy();
-    with( platform ) {
-        //instance_destroy();
+for(i = 0; i < array_length_1d( colliding_objects ); i++) {
+    //Destroys itself when stopped by a platform
+    var platform = instance_place(x, y, colliding_objects[i]);
+    if( platform != noone ) {
+        audio_play_sound(bullet_explode, 2, false);
+        instance_destroy();
+        with( platform ) {
+            //instance_destroy();
     }
+}
 }
 
 var orpheus;

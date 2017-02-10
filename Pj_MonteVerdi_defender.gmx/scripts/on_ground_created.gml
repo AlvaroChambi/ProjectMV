@@ -2,7 +2,7 @@
 //base definition
 tile_object = waving_tile_obj;
 tile_sprite = wave_up_sprite;
-num_tiles = 9;
+num_tiles = 12;
 gap = 0; //gap between tiles
 
 //Create all the defined tile in the correct position
