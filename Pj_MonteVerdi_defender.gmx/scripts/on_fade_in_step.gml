@@ -17,12 +17,17 @@ switch ( fading ) {
         break;
     case Fade.FADE_OUT:
         with( object ) {
-            if( image_alpha > 0 ) {
-            //TODO: Not implemented fade out
-                var alpha_value = exp(other.current_exponent) - exp(-1);
+            if( image_alpha > 0.1 ) {
+                var alpha_value = exp(other.current_exponent);
                 image_alpha = alpha_value;
-                other.current_exponent += other.alpha_progression;
+                other.current_exponent -= other.alpha_progression;
             } else {
+                image_alpha = 0;
+                if( other.listener != undefined ) {
+                    with( other.listener ) {
+                        event_user( 1 );
+                    }
+                }
                 other.fading = Fade.NOT_FADING;
             }
         }

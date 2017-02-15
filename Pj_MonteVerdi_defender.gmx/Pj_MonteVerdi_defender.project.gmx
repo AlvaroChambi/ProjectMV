@@ -170,6 +170,7 @@
     </objects>
     <objects name="rooms">
       <object>objects\main_title_room_manager</object>
+      <object>objects\transition_title_room_manager</object>
     </objects>
   </objects>
   <rooms name="rooms">

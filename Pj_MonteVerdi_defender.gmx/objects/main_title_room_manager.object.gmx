@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Create room 0 handler
+            <string>//Variables
+on_fading_out = false;
 
 //start background music
 if( !audio_is_playing( entry_screen_music ) ) {
@@ -43,13 +44,13 @@ start_fade_in( orpheus_title, 0.01, self );
 //  position (178, 335) center
 //  responds to input normally
 orpheus_charater = instance_create( 178, 335, obj_orpheus );
-start_fade_in( orpheus_charater, 0.05, undefined );
+start_fade_in( orpheus_charater, 0.03, undefined );
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="7" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -66,7 +67,12 @@ start_fade_in( orpheus_charater, 0.05, undefined );
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Handle room events?
+            <string>on_fading_out = false;
+
+global.orpheus_transition_x = orpheus_charater.x;
+global.orpheus_transition_y = orpheus_charater.y;
+
+room_goto( room_1 );
 </string>
           </argument>
         </arguments>
@@ -91,6 +97,33 @@ start_fade_in( orpheus_charater, 0.05, undefined );
             <kind>1</kind>
             <string>start_game_tip = instance_create( 93, 161, tip_object );
 start_fade_in( start_game_tip, 0.05, undefined );
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if( !on_fading_out ) {
+   start_fade_out( orpheus_title, 0.05, self ); 
+   on_fading_out = true;
+}
+
 </string>
           </argument>
         </arguments>
