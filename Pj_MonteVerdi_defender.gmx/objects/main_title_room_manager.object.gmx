@@ -72,6 +72,7 @@ start_fade_in( orpheus_charater, 0.03, undefined );
 global.orpheus_transition_x = orpheus_charater.x;
 global.orpheus_transition_y = orpheus_charater.y;
 
+audio_stop_sound( entry_screen_music );
 room_goto( room_1 );
 </string>
           </argument>

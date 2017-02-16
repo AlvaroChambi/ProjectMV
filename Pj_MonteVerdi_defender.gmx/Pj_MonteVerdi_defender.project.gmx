@@ -14,6 +14,7 @@
     <sound>sound\background_music</sound>
     <sound>sound\background_music_1</sound>
     <sound>sound\entry_screen_music</sound>
+    <sound>sound\norway_intro</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\character_idle</sprite>
@@ -39,6 +40,9 @@
     <background>background\background_shadows</background>
     <background>background\noise_background</background>
     <background>background\movement_background</background>
+    <background>background\degrading_background</background>
+    <background>background\white_background</background>
+    <background>background\back_background</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -124,6 +128,9 @@
       <script>scripts\on_fade_in_step.gml</script>
       <script>scripts\on_create_fade_in.gml</script>
       <script>scripts\start_fade_out.gml</script>
+      <script>scripts\start_background_fade_in.gml</script>
+      <script>scripts\on_background_fade_step.gml</script>
+      <script>scripts\start_background_fade_out.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

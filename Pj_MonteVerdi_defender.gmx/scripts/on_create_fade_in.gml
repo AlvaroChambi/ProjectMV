@@ -9,3 +9,4 @@ object = undefined;
 fading = Fade.NOT_FADING;
 listener = undefined;
 current_exponent = -1;
+index = undefined;
