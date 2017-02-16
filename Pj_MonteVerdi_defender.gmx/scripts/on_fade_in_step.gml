@@ -8,7 +8,7 @@ switch ( fading ) {
             } else {
                 if( other.listener != undefined ) {
                     with( other.listener ) {
-                        event_user( 0 );
+                        event_user( ON_OBJECT_FADE_IN_FINISHED );
                     }
                 }
                 other.fading = Fade.NOT_FADING;
@@ -25,7 +25,7 @@ switch ( fading ) {
                 image_alpha = 0;
                 if( other.listener != undefined ) {
                     with( other.listener ) {
-                        event_user( 1 );
+                        event_user( ON_OBJECT_FADE_OUT_FINISHED );
                     }
                 }
                 other.fading = Fade.NOT_FADING;

@@ -45,6 +45,8 @@ start_fade_in( orpheus_title, 0.01, self );
 //  responds to input normally
 orpheus_charater = instance_create( 178, 335, obj_orpheus );
 start_fade_in( orpheus_charater, 0.03, undefined );
+
+base_platform = instance_create( 0, 367, wall );
 </string>
           </argument>
         </arguments>
