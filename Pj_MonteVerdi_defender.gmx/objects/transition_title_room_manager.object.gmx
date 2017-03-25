@@ -35,9 +35,20 @@ start_game_tip = undefined;
 
 should_draw_text = false;
 
+transition_finished = false;
+view_following_character = true;
+
+void_instance = instance_create( 0, 624, ground_obj );
+with( waving_tile_obj ) {
+    image_alpha = 0;
+}
+
+//Hide backround
+background_alpha[4] = 0;
+
 //start background music
-if( !audio_is_playing( norway_intro ) ) {
-    sound = audio_play_sound( norway_intro, 90, true );
+if( !audio_is_playing( prelude ) ) {
+    sound = audio_play_sound( prelude, 90, true );
     audio_sound_gain(sound, 0, 0);
     audio_sound_gain(sound, 1, 7000);
 }
@@ -63,6 +74,29 @@ start_background_fade_out( black_background_var, 7, self );
 start_background_fade_out( degrading_background_var, 7, undefined );
 
 alarm[0] = 10 * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//On void showned
 </string>
           </argument>
         </arguments>
@@ -118,15 +152,19 @@ with( orpheus_character ) {
     vertical_speed_var = vertical_speed;
 }
 
-view_yview[0] += vertical_speed_var;
-light_object.y += vertical_speed_var;
-background_y[3] += vertical_speed_var;
+waving_tile_obj.y += vertical_speed_var;
+if(view_following_character) {
+    view_yview[0] += vertical_speed_var;
+    light_object.y += vertical_speed_var;
+    background_y[3] += vertical_speed_var;
+    background_y[4] += vertical_speed_var;
 
-var increment = 4 / (640 / room_speed);
+    var increment = 4 / (640 / room_speed);
 
-if( background_y[3] &lt; view_yview[0] + view_hport[0] ) {
-    background_y[3] += increment;
-    background_yscale[3] += 0.01;
+    if( background_y[3] &lt; view_yview[0] + view_hport[0] ) {
+        background_y[3] += increment;
+        background_yscale[3] += 0.01;
+    }
 }
 </string>
           </argument>
@@ -162,6 +200,60 @@ with( orpheus_character ) {
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//On dark background visible
+view_following_character = false;
+start_fade_in( waving_tile_obj, 0.005, self );
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//void fade in finished go to game start room
+var relative_viewy_position = orpheus_character.y - view_yview[0];
+global.orpheus_transition_x = orpheus_character.x;
+global.orpheus_transition_y = relative_viewy_position;
+
+room_goto( room_2 );
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
@@ -179,12 +271,28 @@ with( orpheus_character ) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with( orpheus_character  ) {
-    if( can_jump ) {
-        other.should_draw_text = false;
-        audio_sound_gain(other.sound, 0, 10000);
-        //start other music...
-    }    
+            <string>if(!transition_finished) {
+    with( orpheus_character  ) {
+        other.transition_finished = true;
+        if( can_jump ) {
+            other.should_draw_text = false;
+            
+            global.orpheus_transition_x = x;
+            global.orpheus_transition_y = y;
+            
+            if( audio_is_playing( prelude ) ) {
+                audio_sound_gain(other.sound, 0, 100);
+                audio_sound_gain(other.sound, 0.2, 2000);
+            }    
+            //start void animation and soundtrack
+            start_background_fade_in( 4, 2, other );
+            if( !audio_is_playing( game_music_deerhunter ) ) {
+                other.sound = audio_play_sound( game_music_deerhunter, 60, true );
+                audio_sound_gain(other.sound, 0, 0);
+                audio_sound_gain(other.sound, 0.5, 10000);
+            }
+        }       
+    }
 }
 </string>
           </argument>

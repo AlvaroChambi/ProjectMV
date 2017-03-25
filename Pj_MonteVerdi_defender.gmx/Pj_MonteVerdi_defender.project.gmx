@@ -15,6 +15,9 @@
     <sound>sound\background_music_1</sound>
     <sound>sound\entry_screen_music</sound>
     <sound>sound\norway_intro</sound>
+    <sound>sound\prelude</sound>
+    <sound>sound\interlude</sound>
+    <sound>sound\game_music_deerhunter</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\character_idle</sprite>
@@ -113,6 +116,7 @@
     <scripts name="ground">
       <script>scripts\on_ground_created.gml</script>
       <script>scripts\on_ground_update.gml</script>
+      <script>scripts\enable_shooting.gml</script>
       <scripts name="animation">
         <script>scripts\on_waving_animation_created.gml</script>
         <script>scripts\on_waving_animation_update.gml</script>
@@ -183,6 +187,7 @@
     <objects name="rooms">
       <object>objects\main_title_room_manager</object>
       <object>objects\transition_title_room_manager</object>
+      <object>objects\void_room_manager</object>
     </objects>
   </objects>
   <rooms name="rooms">
