@@ -137,6 +137,7 @@
       <script>scripts\on_background_fade_step.gml</script>
       <script>scripts\start_background_fade_out.gml</script>
     </scripts>
+    <scripts name="room_managers"/>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_screen_font</font>
