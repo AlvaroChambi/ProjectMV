@@ -11,120 +11,41 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>orpheus_x = 178;
-orpheus_y = 335;
-
-orpheus_x = global.orpheus_transition_x;
-orpheus_y = global.orpheus_transition_y;
-
-start_game_tip = undefined;
-
-should_draw_text = false;
-
-transition_finished = false;
-view_following_character = true;
-
-void_instance = instance_create( 0, 624, ground_obj );
-with( waving_tile_obj ) {
-    image_alpha = 0;
-}
-
-//Hide backround
-background_alpha[4] = 0;
-
-//start background music
-if( !audio_is_playing( prelude ) ) {
-    sound = audio_play_sound( prelude, 90, true );
-    audio_sound_gain(sound, 0, 0);
-    audio_sound_gain(sound, 1, 7000);
-}
-
-orpheus_character = instance_create( orpheus_x, orpheus_y, obj_orpheus_no_jump );
-with( orpheus_character ) {
-    can_jump = false;
-}
-
-base_platform = instance_create( 0, 367, wall );
-with( base_platform ) {
-    image_alpha = 0;
-}
-
-//Start light appearing animation 
-animated_light = instance_create( 0, 0, light_object );
-start_fade_in( animated_light, 0.01, undefined );
-
-//Start black background fading
-var black_background_var = 2;
-var degrading_background_var = 3;
-start_background_fade_out( black_background_var, 7, self );
-start_background_fade_out( degrading_background_var, 7, undefined );
-
-alarm[0] = 10 * room_speed;
-</string>
+            <kind>9</kind>
+            <script>on_transition_room_created</script>
           </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
           <argument>
-            <kind>1</kind>
-            <string>//On void showned
-</string>
+            <kind>0</kind>
+            <string></string>
           </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
           <argument>
-            <kind>1</kind>
-            <string>with( orpheus_character ) {
-    can_jump = true;
-}
-
-should_draw_text = true;
-</string>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -132,41 +53,41 @@ should_draw_text = true;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>//move view downwards togheter with orpheus
-var vertical_speed_var = 0;
-with( orpheus_character ) {
-    vertical_speed_var = vertical_speed;
-}
-
-waving_tile_obj.y += vertical_speed_var;
-if(view_following_character) {
-    view_yview[0] += vertical_speed_var;
-    light_object.y += vertical_speed_var;
-    background_y[3] += vertical_speed_var;
-    background_y[4] += vertical_speed_var;
-
-    var increment = 4 / (640 / room_speed);
-
-    if( background_y[3] &lt; view_yview[0] + view_hport[0] ) {
-        background_y[3] += increment;
-        background_yscale[3] += 0.01;
-    }
-}
-</string>
+            <kind>9</kind>
+            <script>on_transition_room_update</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -174,28 +95,41 @@ if(view_following_character) {
     <event eventtype="7" enumb="13">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>with( base_platform ) {
-    instance_destroy();    
-}
-
-with( orpheus_character ) {
-    is_falling = true;
-}
-</string>
+            <kind>9</kind>
+            <script>on_transition_room_shadow_faded_out</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -229,27 +163,41 @@ start_fade_in( waving_tile_obj, 0.005, self );
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>//void fade in finished go to game start room
-var relative_viewy_position = orpheus_character.y - view_yview[0];
-global.orpheus_transition_x = orpheus_character.x;
-global.orpheus_transition_y = relative_viewy_position;
-
-room_goto( room_2 );
-</string>
+            <kind>9</kind>
+            <script>on_void_displayed</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -257,44 +205,41 @@ room_goto( room_2 );
     <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if(!transition_finished) {
-    with( orpheus_character  ) {
-        other.transition_finished = true;
-        if( can_jump ) {
-            other.should_draw_text = false;
-            
-            global.orpheus_transition_x = x;
-            global.orpheus_transition_y = y;
-            
-            if( audio_is_playing( prelude ) ) {
-                audio_sound_gain(other.sound, 0, 100);
-                audio_sound_gain(other.sound, 0.5, 3000);
-            }    
-            //start void animation and soundtrack
-            start_background_fade_in( 4, 2, other );
-            if( !audio_is_playing( game_music_deerhunter ) ) {
-                other.sound = audio_play_sound( game_music_deerhunter, 60, true );
-                /*audio_sound_gain(other.sound, 0, 0);
-                audio_sound_gain(other.sound, 0.5, 10000);*/
-            }
-        }       
-    }
-}
-</string>
+            <kind>9</kind>
+            <script>on_transition_room_space_pressed</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

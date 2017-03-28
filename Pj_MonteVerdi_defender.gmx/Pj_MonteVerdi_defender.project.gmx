@@ -137,7 +137,25 @@
       <script>scripts\on_background_fade_step.gml</script>
       <script>scripts\start_background_fade_out.gml</script>
     </scripts>
-    <scripts name="room_managers"/>
+    <scripts name="room_managers">
+      <scripts name="main_title_room">
+        <script>scripts\on_main_title_manager_created.gml</script>
+        <script>scripts\on_main_title_space_pressed.gml</script>
+        <script>scripts\on_fade_in_completed.gml</script>
+        <script>scripts\on_fade_out_completed.gml</script>
+      </scripts>
+      <scripts name="transition_room">
+        <script>scripts\on_transition_room_created.gml</script>
+        <script>scripts\on_transition_room_update.gml</script>
+        <script>scripts\on_transition_room_space_pressed.gml</script>
+        <script>scripts\on_transition_room_shadow_faded_out.gml</script>
+        <script>scripts\on_void_displayed.gml</script>
+      </scripts>
+      <scripts name="void_room">
+        <script>scripts\on_void_room_created.gml</script>
+        <script>scripts\on_void_room_delay_finished.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_screen_font</font>
