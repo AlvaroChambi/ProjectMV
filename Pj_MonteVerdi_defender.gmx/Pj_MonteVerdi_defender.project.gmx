@@ -64,6 +64,10 @@
           <script>scripts\on_stairs_pattern_tick.gml</script>
           <script>scripts\on_stairs_pattern_created.gml</script>
         </scripts>
+        <scripts name="zigzag_pattern">
+          <script>scripts\on_zigzag_pattern_created.gml</script>
+          <script>scripts\on_zigzag_pattern_tick.gml</script>
+        </scripts>
       </scripts>
       <scripts name="waves">
         <scripts name="random_wave">
@@ -172,6 +176,7 @@
       <object>objects\projectile_pattern</object>
       <object>objects\line_pattern</object>
       <object>objects\stairs_pattern</object>
+      <object>objects\zigzag_pattern</object>
     </objects>
     <objects name="waves">
       <object>objects\random_wave</object>
