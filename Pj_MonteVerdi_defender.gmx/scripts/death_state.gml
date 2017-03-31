@@ -4,10 +4,10 @@ switch( event ) {
    case ON_ANIMATION_END:
         image_speed = 0;
         image_index = image_number - 1;
-        audio_stop_sound( background_music );
+        audio_stop_sound( game_music_deerhunter );
         break;
    case ON_SPACE_PRESSED:
-        if( !audio_is_playing( background_music ) ) {
+        if( !audio_is_playing( game_music_deerhunter ) ) {
             room_restart();
         }
         break;

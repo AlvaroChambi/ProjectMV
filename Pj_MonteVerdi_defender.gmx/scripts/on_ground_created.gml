@@ -15,9 +15,3 @@ animation = instance_create( 0, 0, waving_animation );
 with( animation ) {
     tiles = other.tiles;
 }
-
-/*
-shooting_manager = instance_create(0, 0, waves_manager);
-with( shooting_manager ) {
-    tiles = other.tiles;
-}*/

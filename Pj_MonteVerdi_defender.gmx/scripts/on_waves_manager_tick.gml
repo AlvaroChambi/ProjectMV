@@ -26,11 +26,13 @@ if( frame_update ) {
             }
         }
     }
+    var tick_lenght = wave_lenght;
     //update frame wave and pattern
     current_wave_frame = frame;
     with( current_wave_frame ) {
         with( tick_pattern ) {
             tiles = current_tiles;
+            tick_lenght = num_projectiles * bullet_time_gap;
         }
         with( current_wave ) {
             wave_tick = current_wave_tick;
@@ -44,6 +46,9 @@ if( frame_update ) {
         }
         global.bullet_speed = bullet_speed;
     }
+    
+    //update wave_lenght
+    wave_lenght = tick_lenght;
 }
 
 //trigger current wave frame tick
@@ -55,4 +60,5 @@ with( current_wave_frame ) {
 }
 
 wave_tick++;
-alarm[0] = wave_lenght;
+//offset added to actually give time to the actual pattern to finish
+alarm[0] = wave_lenght + 1;

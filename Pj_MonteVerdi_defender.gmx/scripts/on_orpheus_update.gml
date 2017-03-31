@@ -77,7 +77,10 @@ if( state = OrpheusState.JUMPING_STATE || state = OrpheusState.DIVING_STATE ) {
     }
 }
 
-//Don't allow the character to leave the view
-/*
-var sprite_offset = sprite_get_width( character_idle );
-y = clamp( y, view_yview[0] - sprite_offset, view_yview[0] + view_hview[0] ); */
+var bullet = instance_place( x, y, obj_bullet );
+if( bullet != noone ) {
+    with( bullet ) {
+        instance_destroy();
+    }
+    on_event_received( ON_CHARACTER_DEAD );
+}

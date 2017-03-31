@@ -34,10 +34,11 @@
     <sprite>sprites\wave_down_sprite</sprite>
     <sprite>sprites\wave_bottom_sprite</sprite>
     <sprite>sprites\trigger_bullet_sprite</sprite>
-    <sprite>sprites\light_sprite</sprite>
+    <sprite>sprites\light_sprite_animated</sprite>
     <sprite>sprites\title_sprite</sprite>
     <sprite>sprites\main_tip_sprite</sprite>
     <sprite>sprites\orpheus_shadow_sprite</sprite>
+    <sprite>sprites\light_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -150,11 +151,17 @@
         <script>scripts\on_transition_room_space_pressed.gml</script>
         <script>scripts\on_transition_room_shadow_faded_out.gml</script>
         <script>scripts\on_void_displayed.gml</script>
+        <script>scripts\on_dark_background_visible.gml</script>
       </scripts>
       <scripts name="void_room">
         <script>scripts\on_void_room_created.gml</script>
         <script>scripts\on_void_room_delay_finished.gml</script>
       </scripts>
+    </scripts>
+    <scripts name="light">
+      <script>scripts\on_light_update.gml</script>
+      <script>scripts\on_light_created.gml</script>
+      <script>scripts\on_light_animation_end.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

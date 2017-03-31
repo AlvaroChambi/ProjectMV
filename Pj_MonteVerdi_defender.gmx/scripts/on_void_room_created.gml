@@ -6,5 +6,10 @@ orpheus_character = instance_create( orpheus_x, orpheus_y, obj_orpheus );
 with( orpheus_character ) {
     spawn_platform();
 }
+
 void_instance = instance_create( 0, 624, ground_obj );
 alarm[0] = 5 * room_speed;
+
+if( !audio_is_playing( game_music_deerhunter ) ) {
+    audio_play_sound( game_music_deerhunter, 90, true );
+}

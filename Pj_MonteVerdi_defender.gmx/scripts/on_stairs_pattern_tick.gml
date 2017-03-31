@@ -1,19 +1,17 @@
-var last_tile_index = array_length_1d( tiles );
-var current_tile_index = tile_index;
-
-//restart pattern
-if( bullet_count == 0 ) {
-    current_offset = 0;     
-}  
-
-//control left overflow of the pattern
-if( current_tile_index > last_tile_index - num_projectiles ) {
-    current_tile_index = last_tile_index - num_projectiles;
-}
+if( !sequence_finished ) {
+    var num_tiles = array_length_1d( tiles ); 
+    var current_index = tile_index + current_offset;
+    if( current_index >= num_tiles ) {
+        current_index = current_index - num_tiles;
+    }
+    var tile_id = tiles[current_index];
     
-var tile_id = tiles[current_tile_index + current_offset];
-with( tile_id ) {
-    trigger_projectile = true;
+    with( tile_id ) {
+        trigger_projectile = true;
+    }
+    
+    current_offset++;
+    alarm[0] = bullet_time_gap;    
+} else {
+    current_offset = 0;
 }
-current_offset++;    
-alarm[0] = bullet_time_gap;

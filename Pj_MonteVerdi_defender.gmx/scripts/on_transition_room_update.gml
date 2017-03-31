@@ -4,7 +4,6 @@ with( orpheus_character ) {
     vertical_speed_var = vertical_speed;
 }
 
-waving_tile_obj.y += vertical_speed_var;
 if(view_following_character) {
     view_yview[0] += vertical_speed_var;
     light_object.y += vertical_speed_var;

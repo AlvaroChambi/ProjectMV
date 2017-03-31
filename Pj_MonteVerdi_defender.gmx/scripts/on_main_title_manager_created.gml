@@ -1,3 +1,4 @@
+sound_global_volume( 0 );
 //Variables
 on_fading_out = false;
 can_start_game = false;

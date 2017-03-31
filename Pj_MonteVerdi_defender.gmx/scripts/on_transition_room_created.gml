@@ -8,12 +8,6 @@ should_draw_text = false;
 transition_finished = false;
 view_following_character = true;
 
-//Add and hide void
-void_instance = instance_create( 0, 624, ground_obj );
-with( waving_tile_obj ) {
-    image_alpha = 0;
-}
-
 //Hide backround
 background_alpha[4] = 0;
 
