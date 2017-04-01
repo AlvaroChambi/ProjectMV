@@ -222,10 +222,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\void_test_room</room>
     <room>rooms\room_0</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
+    <room>rooms\void_test_room</room>
   </rooms>
   <constants number="24">
     <constant name="HORIZONTAL_COLLISION">12</constant>
