@@ -44,6 +44,20 @@ if( frame_update ) {
         with( moving_view ) {
             vertical_speed = other.view_speed;
         }
+        //update background music volume
+        if( view_speed < SOUND_LOW_THRESHOLD ) {
+            volume = SOUND_VOLUME_LOW;
+        } else if( view_speed < SOUND_MEDIUM_THRESHOLD ) {
+            volume = SOUND_VOLUME_MEDIUM;
+        } else {
+            volume = SOUND_VOLUME_HIGH;
+        }
+        
+        if( !audio_is_playing( game_music_deerhunter ) ) {
+            global.sound = audio_play_sound( game_music_deerhunter, 60, true );
+        }
+        audio_sound_gain( global.sound, volume, 2000 );
+        
         global.bullet_speed = bullet_speed;
     }
     
@@ -60,5 +74,5 @@ with( current_wave_frame ) {
 }
 
 wave_tick++;
-//offset added to actually give time to the actual pattern to finish
+//offset added to give time to the actual pattern to finish
 alarm[0] = wave_lenght + 1;
