@@ -227,7 +227,7 @@
     <room>rooms\room_2</room>
     <room>rooms\void_test_room</room>
   </rooms>
-  <constants number="24">
+  <constants number="29">
     <constant name="HORIZONTAL_COLLISION">12</constant>
     <constant name="NONE">-10</constant>
     <constant name="CEILING_COLLISION">11</constant>
@@ -252,6 +252,11 @@
     <constant name="ON_OBJECT_FADE_OUT_FINISHED">1</constant>
     <constant name="ON_BACKGROUND_FADE_IN_FINISHED">2</constant>
     <constant name="ON_BACKGROUND_FADE_OUT_FINISHED">3</constant>
+    <constant name="SOUND_VOLUME_LOW">0.3</constant>
+    <constant name="SOUND_VOLUME_MEDIUM">0.5</constant>
+    <constant name="SOUND_VOLUME_HIGH">0.8</constant>
+    <constant name="SOUND_LOW_THRESHOLD">4</constant>
+    <constant name="SOUND_MEDIUM_THRESHOLD">6</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
