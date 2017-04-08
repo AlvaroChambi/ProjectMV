@@ -165,7 +165,14 @@
       <script>scripts\on_light_update.gml</script>
       <script>scripts\on_light_created.gml</script>
     </scripts>
-    <script>scripts\trigger_blink.gml</script>
+    <scripts name="surfaces">
+      <script>scripts\trigger_blink.gml</script>
+      <scripts name="blinking_surface">
+        <script>scripts\on_blinking_surface_created.gml</script>
+        <script>scripts\on_blinking_surface_tick.gml</script>
+        <script>scripts\on_blinking_surface_draw.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\invert_colors_shader.shader</shader>
