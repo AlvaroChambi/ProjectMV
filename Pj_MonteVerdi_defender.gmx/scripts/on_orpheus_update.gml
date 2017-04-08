@@ -82,5 +82,12 @@ if( bullet != noone ) {
     with( bullet ) {
         instance_destroy();
     }
+    trigger_blink();
+    on_event_received( ON_CHARACTER_DEAD );
+}
+
+var light = instance_place( x, y, light_object );
+if( light != noone ) {
+    trigger_blink();
     on_event_received( ON_CHARACTER_DEAD );
 }

@@ -34,7 +34,6 @@
     <sprite>sprites\wave_down_sprite</sprite>
     <sprite>sprites\wave_bottom_sprite</sprite>
     <sprite>sprites\trigger_bullet_sprite</sprite>
-    <sprite>sprites\light_sprite_animated</sprite>
     <sprite>sprites\title_sprite</sprite>
     <sprite>sprites\main_tip_sprite</sprite>
     <sprite>sprites\orpheus_shadow_sprite</sprite>
@@ -165,9 +164,12 @@
     <scripts name="light">
       <script>scripts\on_light_update.gml</script>
       <script>scripts\on_light_created.gml</script>
-      <script>scripts\on_light_animation_end.gml</script>
     </scripts>
+    <script>scripts\trigger_blink.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\invert_colors_shader.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\main_screen_font</font>
   </fonts>
@@ -219,6 +221,9 @@
       <object>objects\main_title_room_manager</object>
       <object>objects\transition_title_room_manager</object>
       <object>objects\void_room_manager</object>
+    </objects>
+    <objects name="surfaces">
+      <object>objects\blinking_surface</object>
     </objects>
   </objects>
   <rooms name="rooms">
