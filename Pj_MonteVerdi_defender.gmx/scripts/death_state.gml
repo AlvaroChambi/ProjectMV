@@ -7,9 +7,7 @@ switch( event ) {
         audio_stop_sound( game_music_deerhunter );
         break;
    case ON_SPACE_PRESSED:
-        if( !audio_is_playing( game_music_deerhunter ) ) {
-            room_restart();
-        }
+        room_restart();
         break;
    case ON_ENTER_STATE:
         image_speed = image_speed/2;
