@@ -13,6 +13,10 @@ enum Side {
     COLLISION_RIGHT,
     COLLISION_LEFT
 }
+
+ORPHEUS_MAX_HP = 5;
+hp = ORPHEUS_MAX_HP;
+
 //Movement variables
 impulse_vector = instance_create( 0, 0, vector );
 friction_vector = instance_create( 0, 0, vector );

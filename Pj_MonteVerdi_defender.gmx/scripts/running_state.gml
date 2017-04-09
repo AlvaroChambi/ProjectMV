@@ -39,9 +39,17 @@ switch( event ) {
     case ON_CHARACTER_DEAD:
         enter_state( OrpheusState.DEATH_STATE );
         break;
+    case ON_DAMAGE_RECEIVED:
+        trigger_blink();
+        if( hp > 0 ) {
+            hp--;
+            if( hp == 0 ) {
+                on_event_received( ON_CHARACTER_DEAD );
+            }
+        }
+        break;
     case ON_ENTER_STATE:
         sprite_index = character_run;
-        //audio_play_sound(step_sound, 10, true);
         key_animation_index[0] = 0;
         key_animation_index[1] = 5;
         key_animation_index[2] = 10;

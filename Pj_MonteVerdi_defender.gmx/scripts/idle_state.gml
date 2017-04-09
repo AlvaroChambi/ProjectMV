@@ -26,6 +26,15 @@ switch( event ) {
     case ON_CHARACTER_DEAD:
         enter_state( OrpheusState.DEATH_STATE );
         break;
+    case ON_DAMAGE_RECEIVED:
+        trigger_blink();
+        if( hp > 0 ) {
+            hp--;
+            if( hp == 0 ) {
+                on_event_received( ON_CHARACTER_DEAD );
+            }
+        }
+        break;
     case ON_ENTER_STATE:
         sprite_index = character_idle;
         impulse_vector.x = OFF;

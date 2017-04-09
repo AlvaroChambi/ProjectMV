@@ -7,7 +7,11 @@ switch( event ) {
         audio_stop_sound( game_music_deerhunter );
         break;
    case ON_SPACE_PRESSED:
+        hp = ORPHEUS_MAX_HP;
         room_restart();
+        break;
+   case ON_DAMAGE_RECEIVED:
+        trigger_blink();
         break;
    case ON_ENTER_STATE:
         image_speed = image_speed/2;
