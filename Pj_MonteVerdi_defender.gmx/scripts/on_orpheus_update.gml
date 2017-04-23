@@ -79,9 +79,7 @@ if( state = OrpheusState.JUMPING_STATE || state = OrpheusState.DIVING_STATE ) {
 
 var bullet = instance_place( x, y, obj_bullet );
 if( bullet != noone ) {
-    with( bullet ) {
-        instance_destroy();
-    }
+    explode_bullet( bullet );
     on_event_received( ON_DAMAGE_RECEIVED );
 }
 

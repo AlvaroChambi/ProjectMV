@@ -43,6 +43,7 @@ switch( event ) {
         break;    
     case ON_DAMAGE_RECEIVED:
         trigger_blink();
+        audio_play_sound(death_sound, 4, false);
         if( hp > 0 ) {
             hp--;
             if( hp == 0 ) {

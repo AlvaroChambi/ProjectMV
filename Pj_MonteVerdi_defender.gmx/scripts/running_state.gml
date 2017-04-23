@@ -41,6 +41,7 @@ switch( event ) {
         break;
     case ON_DAMAGE_RECEIVED:
         trigger_blink();
+        audio_play_sound(death_sound, 4, false);
         if( hp > 0 ) {
             hp--;
             if( hp == 0 ) {
@@ -51,9 +52,9 @@ switch( event ) {
     case ON_ENTER_STATE:
         sprite_index = character_run;
         key_animation_index[0] = 0;
-        key_animation_index[1] = 5;
-        key_animation_index[2] = 10;
-        key_animation_index[3] = 15;
+        key_animation_index[1] = 10;
+        //key_animation_index[2] = 10;
+        //key_animation_index[3] = 15;
         sound = play_sound( step_sound, key_animation_index );
         break;
 }

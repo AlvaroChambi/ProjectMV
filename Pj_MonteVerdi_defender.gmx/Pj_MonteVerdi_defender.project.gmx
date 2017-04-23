@@ -81,6 +81,7 @@
     <scripts name="bullet">
       <script>scripts\on_bullet_step.gml</script>
       <script>scripts\on_bullet_created.gml</script>
+      <script>scripts\explode_bullet.gml</script>
     </scripts>
     <scripts name="platform">
       <script>scripts\on_platform_update.gml</script>
@@ -265,9 +266,9 @@
     <constant name="ON_OBJECT_FADE_OUT_FINISHED">1</constant>
     <constant name="ON_BACKGROUND_FADE_IN_FINISHED">2</constant>
     <constant name="ON_BACKGROUND_FADE_OUT_FINISHED">3</constant>
-    <constant name="SOUND_VOLUME_LOW">0.3</constant>
-    <constant name="SOUND_VOLUME_MEDIUM">0.5</constant>
-    <constant name="SOUND_VOLUME_HIGH">0.8</constant>
+    <constant name="SOUND_VOLUME_LOW">0.2</constant>
+    <constant name="SOUND_VOLUME_MEDIUM">0.4</constant>
+    <constant name="SOUND_VOLUME_HIGH">0.6</constant>
     <constant name="SOUND_LOW_THRESHOLD">4</constant>
     <constant name="SOUND_MEDIUM_THRESHOLD">6</constant>
   </constants>

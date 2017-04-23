@@ -2,8 +2,8 @@ var bullet = instance_place( x, y, obj_bullet );
 if( bullet != noone ) {
     with( bullet ) {
         other.hp -= damage;
-        instance_destroy();
     }
+    explode_bullet( bullet );
     trigger_blink();
 }
 

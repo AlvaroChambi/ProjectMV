@@ -10,8 +10,5 @@ if( !sustain ) {
 var collision_boundary_offset = 10;
 var bullet = instance_place( x, y + 10, obj_bullet );
 if( bullet != noone ) {
-    with( bullet ) {
-        instance_destroy();    
-    }
-    audio_play_sound( bullet_explode, 2, false );
+    explode_bullet( bullet );
 }
