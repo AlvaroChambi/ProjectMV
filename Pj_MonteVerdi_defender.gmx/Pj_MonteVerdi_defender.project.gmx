@@ -233,12 +233,14 @@
     <objects name="surfaces">
       <object>objects\blinking_surface</object>
     </objects>
+    <object>objects\android_input_handler</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\void_test_room</room>
     <room>rooms\room_0</room>
+    <room>rooms\test</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
-    <room>rooms\void_test_room</room>
   </rooms>
   <constants number="30">
     <constant name="HORIZONTAL_COLLISION">12</constant>
