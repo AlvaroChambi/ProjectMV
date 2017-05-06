@@ -1,7 +1,7 @@
 orpheus_x = global.orpheus_transition_x;
 orpheus_y = global.orpheus_transition_y;
 
-//surface = instance_create( 0, 0, blinking_surface );
+surface = instance_create( 0, 0, blinking_surface );
 
 camera_view = instance_create( 0, 0, moving_view );
 orpheus_character = instance_create( orpheus_x, orpheus_y, obj_orpheus );

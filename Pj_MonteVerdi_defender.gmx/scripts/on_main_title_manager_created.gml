@@ -1,6 +1,11 @@
 //Variables
 on_fading_out = false;
 can_start_game = false;
+//setup input handler
+input_handler = instance_create(0, 0, android_input_handler);
+with( input_handler ) {
+    persistent = true
+}
 
 //start background music
 if( !audio_is_playing( entry_screen_music ) ) {
@@ -11,8 +16,6 @@ if( !audio_is_playing( entry_screen_music ) ) {
 orpheus_title = instance_create( 8, 34, title_object );
 //  start fade in for the title (exponential fade in)
 start_fade_in( orpheus_title, 0.01, self );
-//  on fade in animation finished: add main title tip: "Press space to start"
-//  position (93, 161)
 
 //Create Opheus character: character standing in the middle of the screen
 //  position (178, 335) center

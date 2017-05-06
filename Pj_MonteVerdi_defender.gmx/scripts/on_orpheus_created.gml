@@ -47,7 +47,7 @@ gravity_acceleration = 2;
 horizontal_speed = 0;
 vertical_speed = 0;
 
-max_vertical_speed = 10;
+max_vertical_speed = 20;
 
 max_ground_horizontal_speed = 10;  
 max_air_horizontal_speed = 10;

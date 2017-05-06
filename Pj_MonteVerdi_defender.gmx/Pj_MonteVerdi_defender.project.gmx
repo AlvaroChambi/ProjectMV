@@ -174,6 +174,13 @@
         <script>scripts\on_blinking_surface_draw.gml</script>
       </scripts>
     </scripts>
+    <scripts name="input_handler">
+      <scripts name="android">
+        <script>scripts\on_input_handler_created.gml</script>
+        <script>scripts\on_input_handle_update.gml</script>
+        <script>scripts\on_input_handler_click.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\invert_colors_shader.shader</shader>
@@ -233,14 +240,16 @@
     <objects name="surfaces">
       <object>objects\blinking_surface</object>
     </objects>
-    <object>objects\android_input_handler</object>
+    <objects name="input_handler">
+      <object>objects\android_input_handler</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\void_test_room</room>
     <room>rooms\room_0</room>
-    <room>rooms\test</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
+    <room>rooms\test</room>
+    <room>rooms\void_test_room</room>
   </rooms>
   <constants number="30">
     <constant name="HORIZONTAL_COLLISION">12</constant>
